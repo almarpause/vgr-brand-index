@@ -108,7 +108,7 @@ def _rows_html(top: pd.DataFrame) -> str:
     out = []
     for _, r in top.iterrows():
         idx = float(r["interest_index"])
-        pv, gd, tr = r.get("pv_12mo"), r.get("gdelt_12mo"), r.get("trends_score")
+        pv, gd, tr = r.get("pv_median"), r.get("gdelt_12mo"), r.get("trends_score")
         brand = html.escape(str(r["brand"]))
         out.append(
             f'<tr data-brand="{html.escape(str(r["brand"]).lower(), quote=True)}" '

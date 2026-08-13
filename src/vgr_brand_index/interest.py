@@ -97,7 +97,8 @@ def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = Non
     df = signals.copy()
 
     # Cross-sectional score per dynamic source: sqrt-ratio to that source's top 5.
-    raw_cols = {"pv": "pv_12mo", "gdelt": "gdelt_12mo", "trends": "trends_score",
+    # pv uses the MEDIAN monthly (spike-robust sustained attention), not the sum.
+    raw_cols = {"pv": "pv_median", "gdelt": "gdelt_12mo", "trends": "trends_score",
                 "reddit": "reddit_vol"}
     scores = {s: sqrt_ratio_to_top5(df[raw_cols[s]].astype(float).fillna(0.0)) for s in DYNAMIC_SOURCES}
     elig = {s: df[f"elig_{s}"].astype(bool) for s in DYNAMIC_SOURCES}
@@ -206,10 +207,10 @@ def main() -> int:
     top["review_flag"] = [review_flag(b, d) for b, d in zip(top["brand"], top["description"])]
 
     full_cols = ["rank", "tier", "interest_index", "qid", "brand", "description",
-                 "sitelinks", "pv_12mo", "reddit_vol", "gdelt_12mo", "trends_score",
-                 "sources", "n_wikipedias", "en_title"]
+                 "sitelinks", "pv_median", "pv_recent", "pv_12mo", "reddit_vol",
+                 "gdelt_12mo", "trends_score", "sources", "n_wikipedias", "en_title"]
     cols = ["rank", "tier", "interest_index", "qid", "brand", "description", "review_flag",
-            "sitelinks", "pv_12mo", "reddit_vol", "gdelt_12mo", "trends_score",
+            "sitelinks", "pv_median", "pv_recent", "reddit_vol", "gdelt_12mo", "trends_score",
             "breadth", "attention", "sources", "n_wikipedias", "wikipedia_langs",
             ] + [f"{lang}_title" for lang in LANGUAGES]
 

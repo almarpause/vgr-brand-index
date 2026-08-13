@@ -13,6 +13,9 @@ the composite can renormalise over what is available — missing is missing.
 
 from __future__ import annotations
 
+import statistics
+from collections import defaultdict
+
 import pandas as pd
 
 from .gdelt import GdeltClient
@@ -21,17 +24,29 @@ from .trends import TrendsClient
 from .universe import UniverseItem
 
 
-def _pv_all_editions(
-    item: UniverseItem, editions: dict[str, str], pv: PageviewsClient, window, cache_only: bool
-) -> tuple[int, bool]:
-    """(total pageviews across editions, any_edition_cached)."""
-    total = 0
-    cached = False
+def _pv_monthly(
+    editions: dict[str, str], pv: PageviewsClient, window, cache_only: bool
+) -> dict[str, int]:
+    """All-edition pageviews per calendar month: {YYYY-MM: total views}."""
+    monthly: dict[str, int] = defaultdict(int)
     for lang, title in editions.items():
-        v = pv.trailing_12mo_total(title, lang, window, cache_only=cache_only)
-        total += v
-        cached = True  # a returned value (even 0) means the edition was reachable
-    return total, cached
+        for ts, v in pv.fetch(title, lang, window[0], window[1], "monthly", cache_only=cache_only):
+            monthly[ts[:7]] += v
+    return monthly
+
+
+def pv_stats(monthly: dict[str, int]) -> tuple[int, float, int]:
+    """(median monthly, recent-3-month mean, 12-month total) from the series.
+
+    The MEDIAN is the level signal — robust to one-off spikes (a designer's death,
+    a scandal, a viral collab) that a 12-month sum would bank as lasting attention.
+    """
+    series = [monthly[k] for k in sorted(monthly)]
+    if not series:
+        return 0, 0.0, 0
+    median = int(statistics.median(series))
+    recent = statistics.mean(series[-3:]) if len(series) >= 3 else statistics.mean(series)
+    return median, round(recent, 1), sum(series)
 
 
 def gather_signals(
@@ -56,7 +71,8 @@ def gather_signals(
     rows: list[dict] = []
     for n, item in enumerate(items, 1):
         editions = editions_by_qid.get(item.qid, {})
-        pv_total, pv_cached = _pv_all_editions(item, editions, pv, window, cache_only)
+        monthly = _pv_monthly(editions, pv, window, cache_only)
+        pv_median, pv_recent, pv_total = pv_stats(monthly)
 
         gdelt_total: int | None = None
         if gdelt is not None:
@@ -73,6 +89,8 @@ def gather_signals(
                 "description": item.description,
                 "sitelinks": item.sitelinks,
                 "en_title": item.en_title,
+                "pv_median": pv_median,
+                "pv_recent": pv_recent,
                 "pv_12mo": pv_total,
                 "gdelt_12mo": gdelt_total,
                 "reddit_vol": reddit_vol,
@@ -93,7 +111,7 @@ def gather_signals(
     df["trends_score"] = df["brand"].map(lambda b: trends_by_label.get(b))
 
     # Eligibility: a source counts for a brand only when it returned a real value.
-    df["elig_pv"] = (df["pv_12mo"].fillna(0) > 0)
+    df["elig_pv"] = (df["pv_median"].fillna(0) > 0)
     df["elig_gdelt"] = df["gdelt_12mo"].notna()
     df["elig_trends"] = df["trends_score"].notna()
     df["elig_reddit"] = df["reddit_vol"].notna()
