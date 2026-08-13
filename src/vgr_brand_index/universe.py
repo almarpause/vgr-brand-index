@@ -112,6 +112,7 @@ def build_root_query(prop: str, root_qid: str, keyword_filter: bool = False) -> 
 SELECT ?item ?itemLabel ?itemDescription ?sitelinks ?enTitle WHERE {{
     ?item wdt:{prop}/wdt:P279* wd:{root_qid} .
     ?item wikibase:sitelinks ?sitelinks .
+    FILTER NOT EXISTS {{ ?item wdt:P576 ?dissolved }}   # drop dissolved / defunct
     {kw}
     OPTIONAL {{
         ?art schema:about ?item ;
