@@ -1,78 +1,109 @@
 # VGR Brand Index — data pipeline
 
-A fashion-brand *attention* tracker: ranks 60 brands on a single 0–100 scale
-from free, retroactive public sources. This repo is the **data pipeline only**
-(fetchers, normalisation, backtest, Supabase load). The public pages that read
-from Supabase are built separately in Lovable.
+A fashion-brand *attention* tracker: ranks the top **500** brands on a single
+interest scale and tiers them **A / B / C**, from free, retroactive public
+sources. This repo is the **data pipeline only** (universe, fetchers,
+normalisation, backtest, load). The public pages that read from it are built
+separately in Lovable.
 
 Stack: Python 3.13, [uv](https://docs.astral.sh/uv/), pandas, httpx, pytest.
-No paid APIs.
+No paid APIs. **Never fabricate, estimate or interpolate a data point — missing
+is missing.**
 
-## Sources
-
-| Source | Signal | Depth |
-|---|---|---|
-| Wikipedia pageviews | Entity curiosity | Daily, back to 2015 — the backbone |
-| GDELT | News mention volume | Back to 2017 |
-| Google Trends (pytrends) | Search interest | Deep but fragile |
-
-Every brand is keyed on its **Wikidata Q-ID**, never an article title. One Q-ID
-resolves to the correct article in every language edition, survives renames,
-and keeps homonyms apart (`Mango` the retailer vs. the fruit are different
-Q-IDs, so the ambiguity never enters the data).
-
-## Build phases
-
-The pipeline is built and reviewed in gated phases:
-
-1. **Entity resolution** ✅ — resolve every brand to a Q-ID + per-language
-   article titles; produce a resolution report for manual review.
-2. Fetchers — one module per source, common `fetch(entity, start, end)` interface, disk-cached.
-3. Normalisation — log → z-score (104-week window) → inverse-variance weight, per-source eligibility flags.
-4. Backtest — does the composite track/lead reported quarterly sales? (the real deliverable)
-5. Supabase schema + weekly refresh.
-
-## Phase 1 — entity resolution
+## The index in one screen
 
 ```bash
-uv run vgr-resolve          # or: uv run python -m vgr_brand_index.resolve
+uv run python -m vgr_brand_index.interest
 ```
 
-Reads [`brands.yaml`](brands.yaml) (60 brands, four tiers of 15) and writes
-`output/resolution.csv` — one row per brand with its Q-ID, matched label,
-Wikidata description, coverage flag, and the article title in each of the seven
-tracked languages (`en es fr it de ja zh`).
+Writes `output/index_500.csv` — the ranked, A/B/C-tiered top 500 — and
+`output/index_full_ranked.csv` (the full scored pool, for audit).
 
-**Resolution never trusts the first search hit.** It searches Wikidata, fetches
-each candidate's sitelinks in one batched call, then — walking the search's own
-relevance order — picks the first candidate that both reads as a fashion/retail
-entity *and* has an English Wikipedia article (the en pageview series is the
-index backbone). Brands the spec flags as ambiguous, plus every hand-verified
-disambiguation, are pinned by Q-ID in `brands.yaml` with a rationale note.
+## Method
 
-### What Phase 1 found
+### 1. Universe — queried, never typed
 
-Of 60 brands: **54 resolve cleanly** (Q-ID + English article). The rest are
-honest coverage gaps in a Wikipedia-backed index, recorded rather than faked:
+The 500 are not hand-listed (which would risk inventing brands or wrong Q-IDs).
+The candidate universe is **queried from Wikidata** so every brand arrives with
+a real Q-ID already attached, and global groups are naturally decomposed — each
+banner (Zara, Bershka, Pull&Bear …) is its own Wikidata item, which is exactly
+the VGR-50 criterion.
 
-| Coverage | Brands | Handling |
+Recall is a union of the productive Wikidata roots (chosen by counting entities
+per root, `universe.py`):
+
+- **instance of** `fashion brand`, `fashion house`
+- **industry** = fashion · clothing · shoe · sporting goods · sportswear · luxury goods
+
+`textile industry` (fabric mills) and the product-instance classes (individual
+shoes/equipment) are excluded as noise. This yields ~2,465 distinct brands,
+~875 with an English Wikipedia article.
+
+### 2. Interest — a blend of breadth and attention
+
+Per brand, two free signals:
+
+| Signal | What it captures | Source |
 |---|---|---|
-| French Wikipedia only, no en | Sézane, Arket, Maje | Usable — non-en pageviews only |
-| Valid Q-ID, no article anywhere | Nanushka | Wikipedia ineligible |
-| No Wikipedia entity at all | Totême, Reformation | Wikipedia ineligible — GDELT/Trends only |
+| Wikipedia **sitelink count** | breadth of global notability | Wikidata |
+| Trailing-12-month **English pageviews** | current attention | Wikimedia REST |
 
-These feed directly into the per-entity **source eligibility flags** in Phase 3:
-a brand with no English article isn't zero-filled, its Wikipedia weight is
-dropped and the remaining sources renormalised.
+Each is `sqrt`-transformed (the variance-stabilising transform for count data —
+tames the heavy tail without erasing real concentration the way `log` does),
+expressed as a **ratio to the mean of that signal's top 5**, then blended
+**50 / 50**.
+
+> Pageviews use English Wikipedia only — the index backbone and the single most
+> comparable global attention series. Cross-language breadth is already rewarded
+> by the sitelink half, so a French-only brand still earns interest. A brand with
+> no English article scores 0 pageviews (a real 'no signal', not an estimate) and
+> rides on sitelinks. Multi-language pageview blending is a later refinement.
+
+### 3. Index — anchored to the top 5
+
+The blended score is scaled so the **mean of the top 5 brands = 100**:
+
+```
+interest_index = blended_score / mean(top-5 blended_score) × 100
+```
+
+### 4. Tiers — A / B / C on the top-5-anchored scale
+
+| Tier | Interest index | Meaning |
+|---|---|---|
+| **A** | ≥ 66 | elite (~26 brands) |
+| **B** | 33 – 65 | established (~108) |
+| **C** | < 33 | the long tail (~366) |
+
+Then the **top 500** by interest are kept. Tier sizes fall out of the real
+concentration of attention — a small A, a broad C.
+
+### Review flags
+
+The pipeline **flags but never drops** parent groups / holding companies
+(Inditex, Tapestry, Capri, SMCP …), which the VGR rule keeps out of the brand
+layer, plus obvious non-brands. The exclusion decision stays with the human
+review at the gate (`review_flag` column).
 
 ## Layout
 
 ```
-brands.yaml                     60-brand seed list + verified Q-ID pins
 src/vgr_brand_index/
-  wikidata.py                   Wikidata client, candidate scoring, selection
-  resolve.py                    Phase 1 entrypoint -> output/resolution.csv
-tests/test_choose.py            no-network tests for the selection rule
-cache/                          raw API responses (gitignored, re-runs read these)
-output/                         generated reports (gitignored)
+  universe.py     query the brand universe from Wikidata (union of roots)
+  pageviews.py    Wikimedia REST pageviews (interest window + Phase-2 daily)
+  interest.py     blend -> index -> A/B/C -> top 500  (entrypoint)
+  wikidata.py     Wikidata client (Q-ID resolution, sitelinks, labels)
+  resolve.py      legacy: the original hand-curated 60-brand resolver
+tests/            no-network unit tests
+cache/            raw API responses (gitignored — re-runs read these)
+output/           generated index CSVs (gitignored)
 ```
+
+## Build phases
+
+0. **Universe + interest index** ✅ — the 500-brand A/B/C leaderboard.
+1. ~~60-brand entity resolution~~ — superseded by the queried universe (kept as `resolve.py`).
+2. Fetchers — GDELT + Google Trends alongside pageviews, common interface, cached.
+3. Normalisation — log → z-score (104-week window) → inverse-variance weight, per-source eligibility flags.
+4. Backtest — does the composite track/lead reported quarterly sales? (the real deliverable)
+5. Supabase schema + weekly refresh.
