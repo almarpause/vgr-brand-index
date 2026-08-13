@@ -1,109 +1,117 @@
 # VGR Brand Index — data pipeline
 
 A fashion-brand *attention* tracker: ranks the top **500** brands on a single
-interest scale and tiers them **A / B / C**, from free, retroactive public
-sources. This repo is the **data pipeline only** (universe, fetchers,
-normalisation, backtest, load). The public pages that read from it are built
-separately in Lovable.
+interest scale, tiers them **A / B / C**, refreshes on a **monthly cadence**, and
+writes an Economist-styled **.docx report** for each monthly shot. Built from
+free, retroactive public sources. €0 — no paid APIs.
 
-Stack: Python 3.13, [uv](https://docs.astral.sh/uv/), pandas, httpx, pytest.
-No paid APIs. **Never fabricate, estimate or interpolate a data point — missing
-is missing.**
+Stack: Python 3.13, [uv](https://docs.astral.sh/uv/), pandas, httpx, matplotlib,
+python-docx, pytrends. **Never fabricate, estimate or interpolate a data point —
+missing is missing.**
 
-## The index in one screen
+## Two jobs, staggered and at night
+
+Fetching is spread gently across the month so no endpoint is ever hammered;
+assembly and the report happen once a month.
+
+| Job | Cadence | Command | Does |
+|---|---|---|---|
+| **Nightly fetch** | daily 02:30 | `vgr-fetch-nightly` | fetches one shard (~1/28th) of brand signals into cache |
+| **Monthly assemble** | 1st, 04:00 | `vgr-run-monthly` | scores from cache → shot + history → report → email |
 
 ```bash
-uv run python -m vgr_brand_index.interest
+uv run vgr-fetch-nightly            # today's shard (pageviews + GDELT + Trends)
+uv run vgr-run-monthly --dry-run    # build this month's shot + report, no email
+uv run vgr-run-monthly              # build + email the report
 ```
 
-Writes `output/index_500.csv` — the ranked, A/B/C-tiered top 500 — and
-`output/index_full_ranked.csv` (the full scored pool, for audit).
+## Sources — all free, all keyless (except Trends' unofficial endpoint)
+
+| Source | Signal | Depth | Role |
+|---|---|---|---|
+| Wikidata | universe, Q-IDs, sitelink breadth | current | selection + breadth |
+| Wikipedia pageviews (all languages) | reader attention | 2015 → | attention |
+| GDELT | news mention volume | 2017 → | attention |
+| Google Trends (pytrends) | search interest | 2004 →* | attention (best-effort) |
+
+Every brand is keyed on its **Wikidata Q-ID**, so homonyms stay separate and
+global groups are already decomposed to banners. *Trends is an unofficial
+endpoint: cached hard, retried, and dropped gracefully when blocked — a brand
+simply carries no Trends signal and the composite renormalises over the rest.
 
 ## Method
 
-### 1. Universe — queried, never typed
+1. **Universe** — queried from Wikidata by industry/instance roots (~2,465 brands).
+2. **Signals** — per brand: all-language pageviews, GDELT volume, Trends interest,
+   gathered by the nightly job into cache; the monthly job reads cache only.
+3. **Attention composite** — each dynamic source is `sqrt`-scaled to its top-5 mean,
+   then combined by inverse-variance weighting over the brand's **eligible** sources
+   (missing sources dropped and renormalised, never zero-filled).
+4. **Interest index** — `0.5 · sitelink breadth + 0.5 · attention composite`, scaled so
+   the **top-5 average = 100**.
+5. **Tiers** — **A ≥ 66 · B 33–65 · C < 33**; keep the **top 500**. Parent groups
+   (Inditex, Tapestry …) are flagged and dropped, backfilled from rank 501+.
 
-The 500 are not hand-listed (which would risk inventing brands or wrong Q-IDs).
-The candidate universe is **queried from Wikidata** so every brand arrives with
-a real Q-ID already attached, and global groups are naturally decomposed — each
-banner (Zara, Bershka, Pull&Bear …) is its own Wikidata item, which is exactly
-the VGR-50 criterion.
+## Following the trend
 
-Recall is a union of the productive Wikidata roots (chosen by counting entities
-per root, `universe.py`):
+Each run writes a dated shot (`output/<YYYY-MM>/`) and upserts the month into
+`history/index_history.parquet`, keyed `(qid, month)` so re-running a month
+corrects it in place. `deltas.py` reads history for the report: the winner and
+its growth, biggest movers, and tier migrations (A↔B↔C, in/out of the 500) —
+"who changed in the top and in the middle vs last month".
 
-- **instance of** `fashion brand`, `fashion house`
-- **industry** = fashion · clothing · shoe · sporting goods · sportswear · luxury goods
+## The monthly report
 
-`textile industry` (fabric mills) and the product-instance classes (individual
-shoes/equipment) are excluded as noise. This yields ~2,465 distinct brands,
-~875 with an English Wikipedia article.
+`report.py` builds a VGR/Economist-navy `.docx` (engine + logo vendored under the
+package, so the headless job needs no skills plugin): cover with logo, an
+executive summary in **vgr-voice register** composed from the deltas, an
+economist-chart-style figure, ledger tables (top of index, movers), method and
+colophon. A separate Claude pass can rewrite the summary in full five-moves voice;
+the facts do not change.
 
-### 2. Interest — a blend of breadth and attention
+## Deploy (Windows Task Scheduler)
 
-Per brand, two free signals:
-
-| Signal | What it captures | Source |
-|---|---|---|
-| Wikipedia **sitelink count** | breadth of global notability | Wikidata |
-| Trailing-12-month **English pageviews** | current attention | Wikimedia REST |
-
-Each is `sqrt`-transformed (the variance-stabilising transform for count data —
-tames the heavy tail without erasing real concentration the way `log` does),
-expressed as a **ratio to the mean of that signal's top 5**, then blended
-**50 / 50**.
-
-> Pageviews use English Wikipedia only — the index backbone and the single most
-> comparable global attention series. Cross-language breadth is already rewarded
-> by the sitelink half, so a French-only brand still earns interest. A brand with
-> no English article scores 0 pageviews (a real 'no signal', not an estimate) and
-> rides on sitelinks. Multi-language pageview blending is a later refinement.
-
-### 3. Index — anchored to the top 5
-
-The blended score is scaled so the **mean of the top 5 brands = 100**:
-
-```
-interest_index = blended_score / mean(top-5 blended_score) × 100
+```powershell
+# elevated PowerShell (SYSTEM, unattended) — or add -CurrentUser to run as you
+powershell -ExecutionPolicy Bypass -File schedule\register_schedule.ps1
+schtasks /Run /TN VBI-FetchNightly     # trigger one shard now
+schtasks /Run /TN VBI-Monthly          # build + email now
+powershell -ExecutionPolicy Bypass -File schedule\unregister_schedule.ps1
 ```
 
-### 4. Tiers — A / B / C on the top-5-anchored scale
-
-| Tier | Interest index | Meaning |
-|---|---|---|
-| **A** | ≥ 66 | elite (~26 brands) |
-| **B** | 33 – 65 | established (~108) |
-| **C** | < 33 | the long tail (~366) |
-
-Then the **top 500** by interest are kept. Tier sizes fall out of the real
-concentration of attention — a small A, a broad C.
-
-### Review flags
-
-The pipeline **flags but never drops** parent groups / holding companies
-(Inditex, Tapestry, Capri, SMCP …), which the VGR rule keeps out of the brand
-layer, plus obvious non-brands. The exclusion decision stays with the human
-review at the gate (`review_flag` column).
+SMTP is reused from the Zara parser's git-ignored `email.ini` (path in
+`config/settings.json`), overridable by `VBI_SMTP_*` / `ZARA_SMTP_*` env vars. No
+secrets in this repo; with no credentials the email is skipped and the report is
+still built and saved.
 
 ## Layout
 
 ```
 src/vgr_brand_index/
-  universe.py     query the brand universe from Wikidata (union of roots)
-  pageviews.py    Wikimedia REST pageviews (interest window + Phase-2 daily)
-  interest.py     blend -> index -> A/B/C -> top 500  (entrypoint)
-  wikidata.py     Wikidata client (Q-ID resolution, sitelinks, labels)
-  resolve.py      legacy: the original hand-curated 60-brand resolver
-tests/            no-network unit tests
-cache/            raw API responses (gitignored — re-runs read these)
-output/           generated index CSVs (gitignored)
+  universe.py     query the brand universe from Wikidata
+  pageviews.py    Wikipedia pageviews (all editions), cache + backoff
+  gdelt.py        GDELT news volume, gentle throttle
+  trends.py       Google Trends, anchor-chained, best-effort
+  signals.py      gather all signals per brand (cache_only for scoring)
+  normalize.py    sqrt-ratio, z-score, inverse-variance combination
+  interest.py     compose -> index -> A/B/C -> top 500   (vgr-index)
+  store.py        dated shots + append-only history
+  deltas.py       month-over-month movers + migrations
+  report.py       Economist .docx + chart (vendored economist_navy.py)
+  emailer.py      SMTP send (reused external ini + env)
+  fetch_nightly.py  one staggered shard        (vgr-fetch-nightly)
+  run_monthly.py    assemble + report + email  (vgr-run-monthly)
+schedule/         Task Scheduler registrar + .bat launchers
+config/           settings.json (recipients, cadence, smtp_ini path)
+history/          index_history.parquet (tracked)
+cache/ output/ logs/   (gitignored)
 ```
 
 ## Build phases
 
-0. **Universe + interest index** ✅ — the 500-brand A/B/C leaderboard.
-1. ~~60-brand entity resolution~~ — superseded by the queried universe (kept as `resolve.py`).
-2. Fetchers — GDELT + Google Trends alongside pageviews, common interface, cached.
-3. Normalisation — log → z-score (104-week window) → inverse-variance weight, per-source eligibility flags.
-4. Backtest — does the composite track/lead reported quarterly sales? (the real deliverable)
-5. Supabase schema + weekly refresh.
+0. Universe + interest index ✅
+1. ~~60-brand entity resolution~~ — superseded (kept as `resolve.py`).
+2. Four sources + normalisation + monthly shots + report + schedule ✅
+3. Backtest — does the composite track/lead reported quarterly sales? (next)
+4. Optional cloud: Supabase + Edge Function cron.
+```

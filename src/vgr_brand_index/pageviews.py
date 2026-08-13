@@ -14,7 +14,9 @@ Every raw response is cached to disk; re-runs never re-fetch.
 
 from __future__ import annotations
 
+import hashlib
 import json
+import re
 import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -58,10 +60,12 @@ class PageviewsClient:
         self._last_call = 0.0
         self._client = httpx.Client(headers={"User-Agent": USER_AGENT}, timeout=30.0)
 
-    def _get(self, url: str, cache_key: str) -> dict | None:
+    def _get(self, url: str, cache_key: str, cache_only: bool = False) -> dict | None:
         cache_file = self.cache_dir / f"{cache_key}.json"
         if cache_file.exists():
             return json.loads(cache_file.read_text(encoding="utf-8"))
+        if cache_only:
+            return None            # scoring pass: never hit the network
 
         for attempt in range(self._max_retries):
             wait = self._min_interval - (time.monotonic() - self._last_call)
@@ -88,22 +92,32 @@ class PageviewsClient:
         raise RuntimeError(f"pageviews API kept throttling after {self._max_retries} retries: {url}")
 
     def fetch(
-        self, article: str, lang: str, start: str, end: str, granularity: str = "monthly"
+        self, article: str, lang: str, start: str, end: str,
+        granularity: str = "monthly", cache_only: bool = False,
     ) -> list[tuple[str, int]]:
         """Return [(timestamp, views)] for one article in one language."""
         # Article title -> API path: spaces to underscores, then percent-encode.
         title = quote(article.replace(" ", "_"), safe="")
         url = f"{REST_BASE}/{_project(lang)}/all-access/user/{title}/{granularity}/{start}/{end}"
-        safe_title = article.replace("/", "__").replace(" ", "_")[:80]
-        cache_key = f"{lang}_{granularity}_{start}_{end}_{safe_title}"
-        data = self._get(url, cache_key)
+        # Filesystem-safe cache key: an ASCII slug for readability plus a hash of
+        # the full identifier, so non-Latin titles and Windows-illegal characters
+        # (" : ? * etc.) can never break the filename.
+        slug = re.sub(r"[^A-Za-z0-9_-]", "", article.replace(" ", "_"))[:40]
+        digest = hashlib.sha256(
+            f"{lang}|{granularity}|{start}|{end}|{article}".encode("utf-8")
+        ).hexdigest()[:16]
+        cache_key = f"{lang}_{granularity}_{start}_{end}_{slug}_{digest}"
+        data = self._get(url, cache_key, cache_only=cache_only)
         if not data:
             return []
         return [(it["timestamp"], it.get("views", 0)) for it in data.get("items", [])]
 
-    def trailing_12mo_total(self, article: str, lang: str, window: tuple[str, str]) -> int:
+    def trailing_12mo_total(
+        self, article: str, lang: str, window: tuple[str, str], cache_only: bool = False
+    ) -> int:
         """Total user pageviews over the trailing-12-month window."""
-        series = self.fetch(article, lang, window[0], window[1], granularity="monthly")
+        series = self.fetch(article, lang, window[0], window[1],
+                            granularity="monthly", cache_only=cache_only)
         return sum(v for _, v in series)
 
     def close(self) -> None:

@@ -74,6 +74,34 @@ def _wiki_key(lang: str) -> str:
     return f"{lang}wiki"
 
 
+# Sitelink site keys that end in 'wiki' but are NOT Wikipedia language editions.
+_NON_WIKIPEDIA_STEMS = {
+    "commons", "species", "meta", "wikidata", "mediawiki", "sources",
+    "foundation", "incubator", "wikimania", "outreach", "test", "test2",
+    "login", "beta", "quote", "voyage",
+}
+_NON_WIKIPEDIA_MARKERS = (
+    "wikisource", "wikiquote", "wikibooks", "wiktionary",
+    "wikinews", "wikiversity", "wikivoyage", "wikimedia",
+)
+
+
+def wikipedia_edition(site: str) -> str | None:
+    """Map a Wikidata sitelink key to a pageviews project language code, or None
+    if the sitelink is not a Wikipedia language edition.
+
+    'enwiki' -> 'en', 'zh_yuewiki' -> 'zh-yue', 'commonswiki' -> None.
+    """
+    if not site.endswith("wiki"):
+        return None
+    if any(m in site for m in _NON_WIKIPEDIA_MARKERS):
+        return None
+    stem = site[:-4]
+    if stem in _NON_WIKIPEDIA_STEMS or not stem:
+        return None
+    return stem.replace("_", "-")
+
+
 @dataclass
 class Candidate:
     qid: str
@@ -199,6 +227,28 @@ class WikidataClient:
             }
         )
         return data.get("entities", {})
+
+    def wikipedia_sitelinks(self, qids: list[str]) -> dict[str, dict[str, str]]:
+        """For each Q-ID, {pageviews-lang-code: article title} across EVERY
+        Wikipedia language edition (no tracked-language filter)."""
+        out: dict[str, dict[str, str]] = {}
+        for start in range(0, len(qids), 50):
+            batch = qids[start : start + 50]
+            data = self._get(
+                {
+                    "action": "wbgetentities",
+                    "ids": "|".join(batch),
+                    "props": "sitelinks",
+                }
+            )
+            for qid, entity in data.get("entities", {}).items():
+                editions: dict[str, str] = {}
+                for site, link in entity.get("sitelinks", {}).items():
+                    lang = wikipedia_edition(site)
+                    if lang:
+                        editions[lang] = link.get("title", "")
+                out[qid] = editions
+        return out
 
     def enrich(self, candidates: list[Candidate]) -> None:
         """Fill each candidate's per-language titles (and sharpen its en label/

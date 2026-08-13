@@ -1,20 +1,20 @@
-"""Interest scoring, indexing and A/B/C tiering — Phase 0 deliverable.
+"""Interest scoring, indexing and A/B/C tiering.
 
 Pipeline:
   1. universe   — query the fashion/footwear/sportswear/luxury pool from Wikidata
-  2. pageviews  — trailing-12-month English Wikipedia views per brand (attention)
-  3. blend      — 50/50 of normalised log(sitelinks) and log(pageviews)
-  4. index      — scale so the mean score of the top 5 brands = 100
-  5. tier        — A >= 66, B 33-65, C < 33 on that top-5-anchored scale
-  6. cut         — keep the top 500 by interest
+  2. signals    — per brand: all-language Wikipedia pageviews, GDELT news volume,
+                  Google Trends search interest (gathered by signals.gather, read
+                  from cache during scoring)
+  3. attention  — each dynamic source -> sqrt-ratio-to-top-5, combined by
+                  inverse-variance weighting over the ELIGIBLE sources only
+  4. blend      — 50/50 of sitelink breadth + the attention composite
+  5. index      — scale so the mean blended score of the top 5 brands = 100
+  6. tier       — A >= 66, B 33-65, C < 33 on that top-5-anchored scale
+  7. cut        — keep the top 500 by interest
 
-Design choices, stated plainly:
-  * The pageview signal is English Wikipedia only (the index backbone and the
-    single most comparable global attention series). Cross-language breadth is
-    already rewarded by the sitelink half of the blend, so French-only brands
-    still earn interest. Multi-language pageview blending is a later refinement.
-  * Never invent a figure: a brand with no English article gets 0 pageviews
-    (a real 'no signal', not an estimate) and rides on its sitelink score.
+Design rule: never invent a figure. A source that returned no value for a brand
+is ineligible for that brand and the composite renormalises over the rest —
+missing is missing, never zero-filled.
 """
 
 from __future__ import annotations
@@ -25,7 +25,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from .normalize import combine_sources, sqrt_ratio_to_top5
 from .pageviews import PageviewsClient, trailing_12_month_window
+from .signals import gather_signals
 from .universe import SparqlClient, UniverseItem, fetch_universe
 from .wikidata import LANGUAGES, WikidataClient
 
@@ -37,6 +39,8 @@ TIER_A_MIN = 66.0   # interest index (top-5 avg = 100)
 TIER_B_MIN = 33.0
 TOP_N = 500
 
+# The three dynamic attention sources that form the composite.
+DYNAMIC_SOURCES = ["pv", "gdelt", "trends"]
 
 # Parent groups / holding companies. The VGR rule is that global groups are
 # decomposed to banners and never appear as their own brand row. We FLAG rather
@@ -68,65 +72,47 @@ def tier_of(index: float) -> str:
     return "C"
 
 
-def fetch_pageviews(items: list[UniverseItem], pv: PageviewsClient, window, verbose=True) -> dict[str, int]:
-    """Trailing-12-month English pageviews per brand, keyed on Q-ID."""
-    out: dict[str, int] = {}
-    en_items = [i for i in items if i.en_title]
-    for n, item in enumerate(en_items, 1):
-        out[item.qid] = pv.trailing_12mo_total(item.en_title, "en", window)
-        if verbose and (n % 100 == 0 or n == len(en_items)):
-            print(f"    pageviews {n}/{len(en_items)}")
-    return out
+def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = None) -> pd.DataFrame:
+    """Blend breadth + attention composite, index to the top-5 average, tier.
 
-
-def _sqrt_ratio_to_top5(x: pd.Series) -> pd.Series:
-    """sqrt(value) expressed as a ratio to the mean of the signal's top 5.
-
-    sqrt is the variance-stabilising transform for count data (pageviews and
-    sitelinks are both counts): it tames the heavy tail without erasing the real
-    concentration of attention the way log does. Dividing by the top-5 mean puts
-    both signals on the same 'share of the elite' scale before they are blended.
+    `signals` is the DataFrame from signals.gather_signals (indexed by qid):
+    sitelinks, pv_12mo, gdelt_12mo, trends_score, elig_pv/gdelt/trends.
     """
-    t = np.sqrt(x.astype(float))
-    top5_mean = t.sort_values(ascending=False).head(5).mean()
-    return t / top5_mean if top5_mean else t * 0.0
+    df = signals.copy()
 
+    # Cross-sectional score per dynamic source: sqrt-ratio to that source's top 5.
+    raw_cols = {"pv": "pv_12mo", "gdelt": "gdelt_12mo", "trends": "trends_score"}
+    scores = {s: sqrt_ratio_to_top5(df[raw_cols[s]].astype(float).fillna(0.0)) for s in DYNAMIC_SOURCES}
+    elig = {s: df[f"elig_{s}"].astype(bool) for s in DYNAMIC_SOURCES}
+    for s in DYNAMIC_SOURCES:
+        df[f"{s}_score"] = scores[s]
 
-def score_universe(items: list[UniverseItem], pv_by_qid: dict[str, int]) -> pd.DataFrame:
-    """Blend, index to the top-5 average, tier. Returns the full ranked pool."""
-    rows = [
-        {
-            "qid": i.qid,
-            "brand": i.label,
-            "description": i.description,
-            "sitelinks": i.sitelinks,
-            "pv_12mo": pv_by_qid.get(i.qid, 0),
-            "en_title": i.en_title,
-        }
-        for i in items
-        # viable index members must be reachable by at least one Wikipedia edition
-        if i.sitelinks > 0 and i.label
-    ]
-    df = pd.DataFrame(rows)
+    # Attention composite over eligible dynamic sources (renormalised per brand).
+    df["attention"] = combine_sources(scores, elig, weights)
+    # Breadth from Wikipedia sitelink count.
+    df["breadth"] = sqrt_ratio_to_top5(df["sitelinks"].astype(float).fillna(0.0))
 
-    # 50/50 blend of the two sqrt-ratio-to-top-5 signals
-    df["sl_ratio"] = _sqrt_ratio_to_top5(df["sitelinks"])
-    df["pv_ratio"] = _sqrt_ratio_to_top5(df["pv_12mo"])
-    df["raw"] = 0.5 * df["sl_ratio"] + 0.5 * df["pv_ratio"]
+    # 50/50 blend; a brand with no eligible dynamic source (attention NaN) rides
+    # on breadth alone rather than being dropped.
+    df["raw"] = np.where(
+        df["attention"].notna(),
+        0.5 * df["breadth"] + 0.5 * df["attention"],
+        df["breadth"],
+    )
 
-    df = df.sort_values("raw", ascending=False).reset_index(drop=True)
+    df = df.sort_values("raw", ascending=False).reset_index()
     df["rank"] = df.index + 1
-
-    # Interest index: scale so the mean raw score of the top 5 brands = 100
     benchmark = df["raw"].head(5).mean()
     df["interest_index"] = (df["raw"] / benchmark * 100).round(1)
-    df["score"] = (df["raw"] * 100).round(2)
     df["tier"] = df["interest_index"].map(tier_of)
+    df["sources"] = df.apply(
+        lambda r: "+".join(s for s in DYNAMIC_SOURCES if r[f"elig_{s}"]), axis=1
+    )
     return df
 
 
 def enrich_titles(df: pd.DataFrame, wd: WikidataClient) -> pd.DataFrame:
-    """Add per-language article titles for the (top-N) rows, batched 50 at a time."""
+    """Add per-language article titles for the rows, batched 50 at a time."""
     qids = df["qid"].tolist()
     titles: dict[str, dict[str, str]] = {}
     for start in range(0, len(qids), 50):
@@ -145,56 +131,69 @@ def enrich_titles(df: pd.DataFrame, wd: WikidataClient) -> pd.DataFrame:
     return df
 
 
-def main() -> int:
-    OUTPUT.mkdir(parents=True, exist_ok=True)
-    today = date.today()
-    window = trailing_12_month_window(today)
-    print(f"Interest run — trailing-12mo window {window[0]}..{window[1]}")
+def build_index(cache_only: bool = True, do_trends: bool = True, verbose: bool = True) -> pd.DataFrame:
+    """End-to-end: universe -> signals (from cache) -> scored, ranked full pool."""
+    window = trailing_12_month_window(date.today())
+    if verbose:
+        print(f"Interest run — trailing-12mo window {window[0]}..{window[1]}")
 
     sp = SparqlClient(CACHE / "sparql")
-    print("Fetching universe from Wikidata...")
     items = fetch_universe(sp)
     sp.close()
-    print(f"  {len(items)} distinct brands; {sum(1 for i in items if i.en_title)} with English article")
+    viable = [i for i in items if i.sitelinks > 0 and i.label]
+    if verbose:
+        print(f"  universe {len(items)}; viable {len(viable)}")
 
+    wd = WikidataClient(CACHE / "wikidata")
+    editions = wd.wikipedia_sitelinks([i.qid for i in viable])
+
+    from .gdelt import GdeltClient
+    from .trends import TrendsClient
     pv = PageviewsClient(CACHE / "pageviews")
-    print("Fetching trailing-12mo English pageviews...")
-    pv_by_qid = fetch_pageviews(items, pv, window)
-    pv.close()
+    gdelt = GdeltClient(CACHE / "gdelt")
+    trends = TrendsClient(CACHE / "trends")
+    signals = gather_signals(
+        viable, editions, pv, gdelt, trends, window,
+        cache_only=cache_only, do_trends=do_trends, verbose=verbose,
+    )
+    pv.close(); gdelt.close(); trends.close()
 
-    df = score_universe(items, pv_by_qid)
-    print(f"  scored {len(df)} viable brands (>=1 sitelink)")
+    df = score_universe(signals)
+    df["n_wikipedias"] = df["qid"].map(lambda q: len(editions.get(q, {})))
+    df = enrich_titles(df, wd)
+    wd.close()
+    return df
+
+
+def main() -> int:
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    df = build_index(cache_only=True, do_trends=True, verbose=True)
 
     top = df.head(TOP_N).copy()
     top["review_flag"] = [review_flag(b, d) for b, d in zip(top["brand"], top["description"])]
 
-    wd = WikidataClient(CACHE / "wikidata")
-    print(f"Fetching per-language titles for top {TOP_N}...")
-    top = enrich_titles(top, wd)
-    wd.close()
-
-    # Full ranked pool for audit; the 500-brand index as the deliverable.
-    cols = [
-        "rank", "tier", "interest_index", "score", "qid", "brand", "description",
-        "review_flag", "sitelinks", "pv_12mo", "wikipedia_langs",
-    ] + [f"{lang}_title" for lang in LANGUAGES]
-    full_cols = ["rank", "tier", "interest_index", "score", "qid", "brand",
-                 "description", "sitelinks", "pv_12mo", "en_title"]
+    full_cols = ["rank", "tier", "interest_index", "qid", "brand", "description",
+                 "sitelinks", "pv_12mo", "gdelt_12mo", "trends_score", "sources",
+                 "n_wikipedias", "en_title"]
+    cols = ["rank", "tier", "interest_index", "qid", "brand", "description", "review_flag",
+            "sitelinks", "pv_12mo", "gdelt_12mo", "trends_score",
+            "breadth", "attention", "sources", "n_wikipedias", "wikipedia_langs",
+            ] + [f"{lang}_title" for lang in LANGUAGES]
 
     df[full_cols].to_csv(OUTPUT / "index_full_ranked.csv", index=False, encoding="utf-8")
     top[cols].to_csv(OUTPUT / "index_500.csv", index=False, encoding="utf-8")
 
     counts = top["tier"].value_counts().reindex(["A", "B", "C"]).fillna(0).astype(int)
-    flagged = top[top["review_flag"] != ""]
+    src_counts = {s: int(top[f"elig_{s}"].sum()) for s in DYNAMIC_SOURCES}
     print()
-    print(f"Wrote {OUTPUT / 'index_500.csv'}  (top {TOP_N})")
-    print(f"Wrote {OUTPUT / 'index_full_ranked.csv'}  ({len(df)} ranked)")
-    print(f"  tiers within top {TOP_N}: A={counts['A']}  B={counts['B']}  C={counts['C']}")
-    print(f"  cut line: rank {TOP_N} interest_index = {top['interest_index'].iloc[-1]}")
-    print(f"  flagged as parent group (review): {len(flagged)}  ({', '.join(flagged['brand'].head(12))})")
+    print(f"Wrote {OUTPUT / 'index_500.csv'} (top {TOP_N}) and index_full_ranked.csv ({len(df)})")
+    print(f"  tiers: A={counts['A']}  B={counts['B']}  C={counts['C']}")
+    print(f"  source eligibility in top {TOP_N}: {src_counts}")
     print("  top 10:")
     for _, r in top.head(10).iterrows():
-        print(f"    {r['rank']:>3} [{r['tier']}] {r['interest_index']:>5}  {r['brand'][:32]:<32} sl={r['sitelinks']:>3} pv={r['pv_12mo']:,}")
+        g = "" if pd.isna(r["gdelt_12mo"]) else f"{int(r['gdelt_12mo']):,}"
+        print(f"    {r['rank']:>3} [{r['tier']}] {r['interest_index']:>5}  {r['brand'][:26]:<26} "
+              f"pv={int(r['pv_12mo']):>9,} gdelt={g:<8} src={r['sources']}")
     return 0
 
 

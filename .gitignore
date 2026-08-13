@@ -16,3 +16,8 @@ cache/
 # regenerated and reviewed each run.
 output/
 logs/
+
+# never commit SMTP secrets (reused from the Zara parser's git-ignored email.ini)
+config/*.ini
+
+# history/ (index_history.parquet) IS tracked on purpose — it is the trend store.
