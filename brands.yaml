@@ -1,0 +1,122 @@
+# VGR Brand Index — 60-brand seed list, four tiers of 15.
+#
+# Each entry is either a plain brand name (string) or a mapping with:
+#   name      : display name used everywhere downstream (required)
+#   search    : term for the Wikidata search API when it differs from `name`
+#   expect    : lowercase keywords; the chosen candidate's description must
+#               contain one, else the row is flagged
+#   qid       : hard pin to a verified Wikidata Q-ID. Every pin below was
+#               checked by hand against the Phase-1 resolution CSV and direct
+#               en.wikipedia lookups — see notes.
+#   wikipedia : set to "none" for brands that have NO usable Wikipedia article
+#               or brand item in any tracked language. These stay in the index
+#               but Wikipedia is marked ineligible; they rely on GDELT/Trends.
+#   note      : free-text rationale, surfaced in the resolution CSV for review.
+#
+# Tracked languages: en es fr it de ja zh. An empty title column in the CSV
+# means that brand has no article in that language edition.
+
+meta:
+  languages: [en, es, fr, it, de, ja, zh]
+
+tiers:
+  luxury:
+    - Hermès
+    - Chanel
+    - Louis Vuitton
+    - Dior
+    - Gucci
+    - Prada
+    - Miu Miu
+    - Saint Laurent
+    - Bottega Veneta
+    - name: "Loewe"
+      qid: Q966905          # Loewe (fashion brand) — Spanish luxury house. Verified.
+    - name: "The Row"
+      qid: Q25351941        # The Row (fashion label), New York. Verified.
+    - name: "Alaïa"
+      qid: Q2553832         # Azzedine Alaïa (designer). No standalone brand article;
+      note: designer proxy — house has no dedicated Wikipedia article
+    - Balenciaga
+    - name: "Celine"
+      qid: Q948531          # Celine (brand) — French luxury house. NOT Céline Dion.
+      note: disambiguated from the singer Céline Dion (Q5105)
+    - name: "Jacquemus"
+      qid: Q21030814        # 'Jacquemus' redirects to Simon Porte Jacquemus (designer).
+      note: designer proxy — brand article redirects to the founder
+
+  contemporary:
+    - Ganni
+    - name: "Totême"
+      wikipedia: none       # No brand article or fashion Wikidata item in any tracked
+      note: no Wikipedia presence — Wikipedia ineligible, GDELT/Trends only
+    - Khaite
+    - Acne Studios
+    - Isabel Marant         # resolves to the designer (Q440616), full en article
+    - name: "Reformation"
+      wikipedia: none       # 'Reformation' en article is the religious movement; the LA
+      note: no brand article — Wikipedia ineligible, GDELT/Trends only
+    - name: "Sézane"
+      qid: Q86682767        # Sézane — French fashion brand. French-only article, no en.
+      note: French Wikipedia only, no English article
+    - name: "Arket"
+      qid: Q86668300        # Arket — Swedish fashion brand (H&M group). French-only, no en.
+      note: French Wikipedia only, no English article
+    - name: "COS"
+      qid: Q60772401        # COS (fashion brand) — London-based, H&M group. NOT a commune.
+      note: disambiguated from Cos, a commune in Ariège, France
+    - Polo Ralph Lauren
+    - Tommy Hilfiger
+    - Hugo Boss
+    - name: "Sandro"
+      qid: Q3472022         # Sandro Paris — French clothing company. NOT the singer.
+      note: disambiguated from Sandro the Argentine singer (Q2175443)
+    - name: "Maje"
+      qid: Q3280458         # Maje — French fashion brand. French-only, no en article.
+      note: French Wikipedia only, no English article
+    - name: "Nanushka"
+      qid: Q136646824       # Nanushka — fashion brand. Valid Q-ID but zero sitelinks.
+      note: Wikidata item has no article in any tracked language
+
+  mass:
+    - name: "Zara"
+      qid: Q147662          # Zara (retailer), Inditex. NOT the given name (Q4023853).
+      note: disambiguated from the given name "Zara"
+    - H&M
+    - name: "Mango"
+      qid: Q136503          # Mango (retailer) — Spanish clothing company. Verified.
+    - Uniqlo
+    - Massimo Dutti
+    - Bershka
+    - Pull&Bear
+    - Stradivarius
+    - Primark
+    - Shein
+    - Temu
+    - ASOS
+    - name: "Boohoo"
+      qid: Q30688042        # boohoo group — en article now titled 'Debenhams Group'
+      note: parent group; en article renamed to Debenhams Group after 2025 rebrand
+    - Zalando
+    - name: "Next"
+      qid: Q246655          # Next plc — British clothing retailer. NOT NeXT the computer co.
+      note: disambiguated from NeXT, the Steve Jobs computer company (Q308993)
+
+  sport_street:
+    - Nike
+    - Adidas
+    - name: "On"
+      qid: Q43452713        # On (company) — Swiss running/sportswear. Verified.
+    - Hoka
+    - New Balance
+    - Salomon
+    - Asics
+    - Lululemon
+    - Alo Yoga
+    - Vuori
+    - Puma
+    - Under Armour
+    - Arc'teryx
+    - Patagonia
+    - name: "Supreme"
+      qid: Q1659229         # Supreme (brand) — skate/streetwear. Verified.

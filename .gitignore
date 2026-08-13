@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Cached raw API responses — re-runs read these instead of re-fetching
+cache/
+
+# Generated run outputs (CSVs, reports). Keep these out of git; they are
+# regenerated and reviewed each run.
+output/
+logs/
