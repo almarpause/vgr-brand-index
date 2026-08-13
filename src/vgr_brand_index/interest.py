@@ -50,12 +50,13 @@ MIN_SOURCE_FRAC = 0.05
 BREADTH_WEIGHT = 0.15
 ATTENTION_WEIGHT = 1.0 - BREADTH_WEIGHT
 
-# Within the attention composite: search interest is the best proxy for
-# commercial attention, pageviews next, news volume the noisiest.
-SOURCE_WEIGHTS = {"pv": 0.35, "gdelt": 0.15, "trends": 0.50}
+# Within the attention composite: consumer signals (Reddit buzz, Google search)
+# are the best proxies for commercial attention; pageviews next; news noisiest.
+# combine_sources renormalises per brand over whichever sources are eligible.
+SOURCE_WEIGHTS = {"pv": 0.25, "gdelt": 0.10, "trends": 0.30, "reddit": 0.35}
 
-# The three dynamic attention sources that form the composite.
-DYNAMIC_SOURCES = ["pv", "gdelt", "trends"]
+# The dynamic attention sources that form the composite.
+DYNAMIC_SOURCES = ["pv", "gdelt", "trends", "reddit"]
 
 # Parent groups / holding companies. The VGR rule is that global groups are
 # decomposed to banners and never appear as their own brand row. We FLAG rather
@@ -96,7 +97,8 @@ def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = Non
     df = signals.copy()
 
     # Cross-sectional score per dynamic source: sqrt-ratio to that source's top 5.
-    raw_cols = {"pv": "pv_12mo", "gdelt": "gdelt_12mo", "trends": "trends_score"}
+    raw_cols = {"pv": "pv_12mo", "gdelt": "gdelt_12mo", "trends": "trends_score",
+                "reddit": "reddit_vol"}
     scores = {s: sqrt_ratio_to_top5(df[raw_cols[s]].astype(float).fillna(0.0)) for s in DYNAMIC_SOURCES}
     elig = {s: df[f"elig_{s}"].astype(bool) for s in DYNAMIC_SOURCES}
 
@@ -177,15 +179,17 @@ def build_index(cache_only: bool = True, do_trends: bool = True, verbose: bool =
     editions = wd.wikipedia_sitelinks([i.qid for i in viable])
 
     from .gdelt import GdeltClient
+    from .reddit import RedditClient
     from .trends import TrendsClient
     pv = PageviewsClient(CACHE / "pageviews")
     gdelt = GdeltClient(CACHE / "gdelt")
     trends = TrendsClient(CACHE / "trends")
+    reddit = RedditClient(CACHE / "reddit")
     signals = gather_signals(
         viable, editions, pv, gdelt, trends, window,
-        cache_only=cache_only, do_trends=do_trends, verbose=verbose,
+        reddit=reddit, cache_only=cache_only, do_trends=do_trends, verbose=verbose,
     )
-    pv.close(); gdelt.close(); trends.close()
+    pv.close(); gdelt.close(); trends.close(); reddit.close()
 
     df = score_universe(signals)
     df["n_wikipedias"] = df["qid"].map(lambda q: len(editions.get(q, {})))
@@ -202,10 +206,10 @@ def main() -> int:
     top["review_flag"] = [review_flag(b, d) for b, d in zip(top["brand"], top["description"])]
 
     full_cols = ["rank", "tier", "interest_index", "qid", "brand", "description",
-                 "sitelinks", "pv_12mo", "gdelt_12mo", "trends_score", "sources",
-                 "n_wikipedias", "en_title"]
+                 "sitelinks", "pv_12mo", "reddit_vol", "gdelt_12mo", "trends_score",
+                 "sources", "n_wikipedias", "en_title"]
     cols = ["rank", "tier", "interest_index", "qid", "brand", "description", "review_flag",
-            "sitelinks", "pv_12mo", "gdelt_12mo", "trends_score",
+            "sitelinks", "pv_12mo", "reddit_vol", "gdelt_12mo", "trends_score",
             "breadth", "attention", "sources", "n_wikipedias", "wikipedia_langs",
             ] + [f"{lang}_title" for lang in LANGUAGES]
 

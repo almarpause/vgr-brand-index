@@ -42,6 +42,7 @@ def gather_signals(
     trends: TrendsClient | None,
     window: tuple[str, str],
     *,
+    reddit=None,
     cache_only: bool = True,
     do_trends: bool = True,
     verbose: bool = False,
@@ -49,7 +50,7 @@ def gather_signals(
     """Return a DataFrame indexed by qid with the raw signals + eligibility flags.
 
     Columns: brand, description, sitelinks, en_title, pv_12mo, gdelt_12mo,
-    trends_score, elig_pv, elig_gdelt, elig_trends.
+    reddit_vol, trends_score, elig_pv/gdelt/reddit/trends.
     """
     gstart, gend = window
     rows: list[dict] = []
@@ -61,6 +62,10 @@ def gather_signals(
         if gdelt is not None:
             gdelt_total = gdelt.monthly_total(item.label, gstart, gend, cache_only=cache_only)
 
+        reddit_vol: int | None = None
+        if reddit is not None:
+            reddit_vol = reddit.fetch(item.label, cache_only=cache_only)
+
         rows.append(
             {
                 "qid": item.qid,
@@ -70,6 +75,7 @@ def gather_signals(
                 "en_title": item.en_title,
                 "pv_12mo": pv_total,
                 "gdelt_12mo": gdelt_total,
+                "reddit_vol": reddit_vol,
             }
         )
         if verbose and (n % 200 == 0 or n == len(items)):
@@ -90,4 +96,5 @@ def gather_signals(
     df["elig_pv"] = (df["pv_12mo"].fillna(0) > 0)
     df["elig_gdelt"] = df["gdelt_12mo"].notna()
     df["elig_trends"] = df["trends_score"].notna()
+    df["elig_reddit"] = df["reddit_vol"].notna()
     return df

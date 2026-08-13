@@ -73,10 +73,18 @@ FASHION_DESC_REGEX = (
     "streetwear|lingerie|denim|jeans|sneaker|handbag|couture|swimwear|knitwear|"
     "outerwear|leather goods|eyewear|watch|hosiery|menswear|womenswear|boutique"
 )
-# Retail matches that are plainly not a fashion brand, dropped from the broad root.
+# Descriptions that are plainly not a live fashion brand — dropped from ALL roots.
 _EXCLUDE_DESC = re.compile(
     r"\b(toy|grocery|supermarket|electronics|furniture|hardware|pharmac|drugstore|"
-    r"bookshop|bookstore|automotive|appliance|convenience store|pet |garden|DIY)\b",
+    r"bookshop|bookstore|automotive|appliance|convenience store|pet shop|garden centre|"
+    r"DIY|video game|software|airline|bank|insurance|restaurant|hotel chain)\b",
+    re.IGNORECASE,
+)
+# Defunct / closed brands — real Wikipedia readers, but no live commercial attention.
+_DEFUNCT_DESC = re.compile(
+    r"(defunct|bankrupt|liquidat|ceased (trading|operations|to)|out of business|"
+    r"now.?defunct|shuttered|shut down|no longer (in business|operat)|"
+    r"former(ly)? .*(retailer|chain|store|brand|company).*(closed|defunct))",
     re.IGNORECASE,
 )
 
@@ -206,9 +214,10 @@ def fetch_universe(client: SparqlClient, verbose: bool = False) -> list[Universe
             qid, item = _row_to_item(row)
             if qid in items or qid in _ROOT_QIDS:
                 continue
-            # The broad retail root can still catch toy/grocery/etc. chains that
-            # happen to mention a garment; drop those by description.
-            if kw_filter and _EXCLUDE_DESC.search(item.description or ""):
+            # Drop non-fashion (toy/grocery/…) and defunct/closed brands from every
+            # root — an attention index tracks live fashion brands.
+            desc = item.description or ""
+            if _EXCLUDE_DESC.search(desc) or _DEFUNCT_DESC.search(desc):
                 continue
             items[qid] = item
             added += 1

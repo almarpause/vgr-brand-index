@@ -60,14 +60,16 @@ def main(argv: list[str] | None = None) -> int:
     editions = wd.wikipedia_sitelinks([i.qid for i in mine])
     wd.close()
 
+    from .reddit import RedditClient
     pv = PageviewsClient(CACHE / "pageviews")
     gdelt = GdeltClient(CACHE / "gdelt")
     trends = TrendsClient(CACHE / "trends")
+    reddit = RedditClient(CACHE / "reddit")
 
-    # pv + GDELT are per-brand: fetch this brand-shard. cache_only=False -> fetch.
+    # pv + GDELT + Reddit are per-brand: fetch this brand-shard. cache_only=False.
     df = gather_signals(
         mine, editions, pv, gdelt, trends, window,
-        cache_only=False, do_trends=False, verbose=True,
+        reddit=reddit, cache_only=False, do_trends=False, verbose=True,
     )
 
     # Trends is anchor-batched, so it is sharded by BATCH over the whole universe
@@ -79,9 +81,10 @@ def main(argv: list[str] | None = None) -> int:
         tscores = trends.score_brands(all_labels, cache_only=False,
                                       only_shard=shard, n_shards=args.shards)
         n_trends = sum(1 for v in tscores.values() if v is not None)
-    pv.close(); gdelt.close(); trends.close()
+    pv.close(); gdelt.close(); trends.close(); reddit.close()
 
-    got = {"pv": int(df["elig_pv"].sum()), "gdelt": int(df["elig_gdelt"].sum()), "trends": n_trends}
+    got = {"pv": int(df["elig_pv"].sum()), "gdelt": int(df["elig_gdelt"].sum()),
+           "reddit": int(df["elig_reddit"].sum()), "trends": n_trends}
     print(f"  fetched — pv/gdelt for {len(df)} brands, trends batch-shard: {got}")
     return 0
 

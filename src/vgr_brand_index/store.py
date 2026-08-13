@@ -20,7 +20,7 @@ HISTORY_FILE = HISTORY / "index_history.parquet"
 # Columns carried into the history store (per brand, per month).
 HISTORY_COLS = [
     "rank", "tier", "interest_index", "qid", "brand", "description",
-    "sitelinks", "pv_12mo", "gdelt_12mo", "trends_score",
+    "sitelinks", "pv_12mo", "reddit_vol", "gdelt_12mo", "trends_score",
     "breadth", "attention", "sources", "n_wikipedias",
 ]
 

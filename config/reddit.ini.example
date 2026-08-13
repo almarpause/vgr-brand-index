@@ -1,0 +1,14 @@
+# Reddit API credentials for the consumer-buzz signal.
+#
+# Reddit's free API requires OAuth. Create an app (2 minutes, free):
+#   1. Sign in at https://www.reddit.com/prefs/apps
+#   2. Click "create another app...", choose type **script**
+#   3. name: vgr-brand-index   ·   redirect uri: http://localhost:8080 (unused)
+#   4. Copy the client id (under the app name) and the secret.
+#
+# Then copy this file to  config/reddit.ini  (git-ignored) and fill in the values,
+# OR set env vars VBI_REDDIT_CLIENT_ID / VBI_REDDIT_CLIENT_SECRET.
+
+[reddit]
+client_id = YOUR_CLIENT_ID
+client_secret = YOUR_CLIENT_SECRET
