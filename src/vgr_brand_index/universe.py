@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -39,6 +40,17 @@ SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
 INSTANCE_ROOTS = [
     ("Q1618899", "fashion brand"),
     ("Q1941779", "fashion house"),
+    ("Q76213285", "clothing store chain"),   # catches Lululemon & apparel chains
+]
+
+# Brands Wikidata classifies only as generic "company / retail" (so no root
+# catches them) but that plainly belong in a fashion attention index. Verified
+# Q-IDs, force-included. Extend as the monthly review surfaces more.
+EXTRA_QIDS = [
+    "Q6702957",    # Lululemon Athletica
+    "Q123700068",  # Alo Yoga
+    "Q56246099",   # Gymshark
+    "Q16992933",   # Fabletics
 ]
 INDUSTRY_ROOTS = [
     ("Q12684", "fashion"),
@@ -48,6 +60,25 @@ INDUSTRY_ROOTS = [
     ("Q645292", "sportswear"),
     ("Q949715", "luxury goods"),
 ]
+
+# Broad industry roots that also catch non-fashion companies (grocery,
+# electronics), so their rows are kept only when the brand's own description
+# reads as apparel/fashion/footwear/sport/luxury. This is what catches the DTC
+# and athleisure brands Wikidata files only as generic "retail".
+KEYWORD_INDUSTRY_ROOTS = [
+    ("Q126793", "retail (apparel-filtered)"),
+]
+FASHION_DESC_REGEX = (
+    "clothing|fashion|apparel|footwear|sportswear|shoe|athletic|luxury|activewear|"
+    "streetwear|lingerie|denim|jeans|sneaker|handbag|couture|swimwear|knitwear|"
+    "outerwear|leather goods|eyewear|watch|hosiery|menswear|womenswear|boutique"
+)
+# Retail matches that are plainly not a fashion brand, dropped from the broad root.
+_EXCLUDE_DESC = re.compile(
+    r"\b(toy|grocery|supermarket|electronics|furniture|hardware|pharmac|drugstore|"
+    r"bookshop|bookstore|automotive|appliance|convenience store|pet |garden|DIY)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass
@@ -59,13 +90,21 @@ class UniverseItem:
     en_title: str  # "" if the brand has no English Wikipedia article
 
 
-def build_root_query(prop: str, root_qid: str) -> str:
+def build_root_query(prop: str, root_qid: str, keyword_filter: bool = False) -> str:
     """One root at a time — far lighter on the query service than a big UNION,
-    so it does not time out or 503. Results are merged (de-duped) in Python."""
+    so it does not time out or 503. Results are merged (de-duped) in Python.
+
+    With keyword_filter, only items whose English description reads as fashion/
+    apparel are returned (used for the broad `retail` root)."""
+    kw = ""
+    if keyword_filter:
+        kw = (f'?item schema:description ?dd . FILTER(LANG(?dd)="en") '
+              f'FILTER(REGEX(?dd, "{FASHION_DESC_REGEX}", "i"))')
     return f"""
 SELECT ?item ?itemLabel ?itemDescription ?sitelinks ?enTitle WHERE {{
     ?item wdt:{prop}/wdt:P279* wd:{root_qid} .
     ?item wikibase:sitelinks ?sitelinks .
+    {kw}
     OPTIONAL {{
         ?art schema:about ?item ;
              schema:isPartOf <https://en.wikipedia.org/> ;
@@ -76,10 +115,11 @@ SELECT ?item ?itemLabel ?itemDescription ?sitelinks ?enTitle WHERE {{
 """
 
 
-def all_root_queries() -> list[tuple[str, str, str]]:
-    """(property, root_qid, label) for every root in the universe definition."""
-    queries = [("P31", qid, lbl) for qid, lbl in INSTANCE_ROOTS]
-    queries += [("P452", qid, lbl) for qid, lbl in INDUSTRY_ROOTS]
+def all_root_queries() -> list[tuple[str, str, str, bool]]:
+    """(property, root_qid, label, keyword_filter) for every root."""
+    queries = [("P31", qid, lbl, False) for qid, lbl in INSTANCE_ROOTS]
+    queries += [("P452", qid, lbl, False) for qid, lbl in INDUSTRY_ROOTS]
+    queries += [("P452", qid, lbl, True) for qid, lbl in KEYWORD_INDUSTRY_ROOTS]
     return queries
 
 
@@ -124,26 +164,66 @@ class SparqlClient:
 
 # The root concepts themselves (e.g. "fashion" Q12684) can match their own
 # P279* chain and must never appear as brands.
-_ROOT_QIDS = frozenset(q for q, _ in INSTANCE_ROOTS) | frozenset(q for q, _ in INDUSTRY_ROOTS)
+_ROOT_QIDS = (frozenset(q for q, _ in INSTANCE_ROOTS)
+              | frozenset(q for q, _ in INDUSTRY_ROOTS)
+              | frozenset(q for q, _ in KEYWORD_INDUSTRY_ROOTS))
+
+
+def build_values_query(qids: list[str]) -> str:
+    """Fetch specific Q-IDs by VALUES — used for the force-included extras."""
+    values = " ".join(f"wd:{q}" for q in qids)
+    return f"""
+SELECT ?item ?itemLabel ?itemDescription ?sitelinks ?enTitle WHERE {{
+    VALUES ?item {{ {values} }}
+    ?item wikibase:sitelinks ?sitelinks .
+    OPTIONAL {{
+        ?art schema:about ?item ;
+             schema:isPartOf <https://en.wikipedia.org/> ;
+             schema:name ?enTitle .
+    }}
+    SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+}}
+"""
+
+
+def _row_to_item(row: dict) -> tuple[str, UniverseItem]:
+    qid = row["item"]["value"].rsplit("/", 1)[-1]
+    return qid, UniverseItem(
+        qid=qid,
+        label=row.get("itemLabel", {}).get("value", ""),
+        description=row.get("itemDescription", {}).get("value", ""),
+        sitelinks=int(row.get("sitelinks", {}).get("value", 0)),
+        en_title=row.get("enTitle", {}).get("value", ""),
+    )
 
 
 def fetch_universe(client: SparqlClient, verbose: bool = False) -> list[UniverseItem]:
     items: dict[str, UniverseItem] = {}
-    for prop, root_qid, label in all_root_queries():
-        rows = client.query(build_root_query(prop, root_qid))
+    for prop, root_qid, label, kw_filter in all_root_queries():
+        rows = client.query(build_root_query(prop, root_qid, keyword_filter=kw_filter))
         added = 0
         for row in rows:
-            qid = row["item"]["value"].rsplit("/", 1)[-1]
+            qid, item = _row_to_item(row)
             if qid in items or qid in _ROOT_QIDS:
                 continue
-            items[qid] = UniverseItem(
-                qid=qid,
-                label=row.get("itemLabel", {}).get("value", ""),
-                description=row.get("itemDescription", {}).get("value", ""),
-                sitelinks=int(row.get("sitelinks", {}).get("value", 0)),
-                en_title=row.get("enTitle", {}).get("value", ""),
-            )
+            # The broad retail root can still catch toy/grocery/etc. chains that
+            # happen to mention a garment; drop those by description.
+            if kw_filter and _EXCLUDE_DESC.search(item.description or ""):
+                continue
+            items[qid] = item
             added += 1
         if verbose:
             print(f"  {prop:<5} {root_qid:<11} {label:<18} rows={len(rows):>5}  new={added:>5}  total={len(items)}")
+
+    # Force-include the curated extras (mis-classified by Wikidata).
+    if EXTRA_QIDS:
+        extra_rows = client.query(build_values_query(EXTRA_QIDS))
+        added = 0
+        for row in extra_rows:
+            qid, item = _row_to_item(row)
+            if qid not in items:
+                items[qid] = item
+                added += 1
+        if verbose:
+            print(f"  EXTRA {'(curated)':<11} {'force-include':<18} rows={len(extra_rows):>5}  new={added:>5}  total={len(items)}")
     return list(items.values())

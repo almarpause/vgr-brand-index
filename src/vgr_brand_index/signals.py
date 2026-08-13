@@ -77,11 +77,13 @@ def gather_signals(
 
     df = pd.DataFrame(rows).set_index("qid")
 
-    # Trends is batched (anchor-chained), so score every brand label at once.
+    # Trends is batched (anchor-chained). Batch in pageviews-descending order so
+    # the highest-attention brands land in the earliest batches (fetched first)
+    # and the batch/cache keys are stable across runs.
     trends_by_label: dict[str, float | None] = {}
     if trends is not None and do_trends:
-        labels = [i.label for i in items]
-        trends_by_label = trends.score_brands(labels, cache_only=cache_only)
+        labels_pv_desc = df.sort_values("pv_12mo", ascending=False)["brand"].tolist()
+        trends_by_label = trends.score_brands(labels_pv_desc, cache_only=cache_only)
     df["trends_score"] = df["brand"].map(lambda b: trends_by_label.get(b))
 
     # Eligibility: a source counts for a brand only when it returned a real value.

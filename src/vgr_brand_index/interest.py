@@ -41,8 +41,18 @@ TOP_N = 500
 
 # A dynamic source must cover at least this many brands to count (guards against
 # a near-empty source maxing out a few brands during ramp-up).
-MIN_SOURCE_ABS = 30
-MIN_SOURCE_FRAC = 0.20
+MIN_SOURCE_ABS = 60
+MIN_SOURCE_FRAC = 0.05
+
+# Wikipedia sitelink breadth is a slow legacy-notability signal, not current
+# attention — a small co-factor, not the driver. The attention composite (what
+# people actually read, search and read news about) carries the rest.
+BREADTH_WEIGHT = 0.15
+ATTENTION_WEIGHT = 1.0 - BREADTH_WEIGHT
+
+# Within the attention composite: search interest is the best proxy for
+# commercial attention, pageviews next, news volume the noisiest.
+SOURCE_WEIGHTS = {"pv": 0.35, "gdelt": 0.15, "trends": 0.50}
 
 # The three dynamic attention sources that form the composite.
 DYNAMIC_SOURCES = ["pv", "gdelt", "trends"]
@@ -110,18 +120,17 @@ def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = Non
         "+".join(s for s in DYNAMIC_SOURCES if elig[s].iloc[i]) for i in range(len(df))
     ]
 
-    # Attention composite over eligible dynamic sources (renormalised per brand).
-    df["attention"] = combine_sources(scores, elig, weights)
-    # Breadth from Wikipedia sitelink count.
+    # Attention composite over eligible dynamic sources (renormalised per brand),
+    # with search weighted highest.
+    df["attention"] = combine_sources(scores, elig, weights or SOURCE_WEIGHTS)
+    # Breadth from Wikipedia sitelink count — a minor co-factor only.
     df["breadth"] = sqrt_ratio_to_top5(df["sitelinks"].astype(float).fillna(0.0))
 
-    # 50/50 blend; a brand with no eligible dynamic source (attention NaN) rides
-    # on breadth alone rather than being dropped.
-    df["raw"] = np.where(
-        df["attention"].notna(),
-        0.5 * df["breadth"] + 0.5 * df["attention"],
-        df["breadth"],
-    )
+    # Attention-dominant blend. A brand with no eligible dynamic source
+    # (attention NaN) scores on its breadth component ALONE (still weighted at
+    # BREADTH_WEIGHT) — it must never out-rank brands that have real attention
+    # data just because it has many Wikipedia editions.
+    df["raw"] = BREADTH_WEIGHT * df["breadth"] + ATTENTION_WEIGHT * df["attention"].fillna(0.0)
 
     df = df.sort_values("raw", ascending=False).reset_index()
     df["rank"] = df.index + 1

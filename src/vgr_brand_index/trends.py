@@ -1,19 +1,22 @@
 """Google Trends search-interest fetcher — attention source #3 (best-effort).
 
-Trends is an *unofficial* endpoint reached through `pytrends`: it rate-limits and
-blocks readily, and its 0-100 scale is relative to each query's own maximum, so
-raw values are not comparable across queries. Two design consequences:
+Trends is an *unofficial* endpoint reached through `pytrends`. Three hard problems
+are handled here:
 
-  * Anchor chaining — every batch of up to four brands is queried together with
-    one constant reference term; each brand's score is expressed as a ratio to
-    the anchor's mean, which puts all brands on one absolute (anchor = 100) scale.
+  * Comparability — raw values are relative to each query's own maximum, so every
+    batch of up to four brands is queried together with a constant anchor and
+    rescaled to the anchor (anchor = 100), putting all brands on one scale.
 
-  * Graceful degradation — pytrends may be missing or blocked. Import is lazy and
-    every failure is swallowed into a per-entity *ineligible* result: the brand
-    simply carries no Trends signal and the composite renormalises over its other
-    sources. The index never blocks on Trends and never fabricates a value.
+  * Disambiguation & relevance — a raw brand string is a bad search term: "HEAD"
+    matches the body part, "On" the preposition, and "Lululemon Athletica" is not
+    what anyone types. So each brand is first resolved to a Google **topic entity**
+    (a `/m/...` mid via the suggestions API), preferring a company/brand topic.
+    Querying the topic gives disambiguated, relevant interest. Falls back to a
+    cleaned keyword when no topic is found.
 
-Staggering (few batches per night) lives in the caller, not here.
+  * Fragility — pytrends may be missing or blocked. Every failure is swallowed
+    into a per-brand *ineligible* result; the index never blocks and never
+    fabricates a value.
 """
 
 from __future__ import annotations
@@ -21,29 +24,40 @@ from __future__ import annotations
 import hashlib
 import json
 import random
+import re
 import time
 from pathlib import Path
 
-DEFAULT_ANCHOR = "Adidas"          # globally known, mid-high — rarely saturates
+DEFAULT_ANCHOR = "Adidas"
 DEFAULT_TIMEFRAME = "today 12-m"
-BATCH_BRANDS = 4                    # +1 anchor = the Trends max of 5 terms
+BATCH_BRANDS = 4
+
+# Suggestion types that mark a topic as the right (brand/company) sense.
+_BRAND_TYPES = ("compan", "brand", "retail", "clothing", "fashion", "footwear",
+                "apparel", "label", "manufacturer", "house", "corporation",
+                "business", "enterprise")
+# Corporate suffixes stripped for the keyword fallback (when no topic is found).
+_SUFFIX_RE = re.compile(
+    r"\s*(,?\s*(inc\.?|incorporated|corp\.?|corporation|co\.?|company|group|holdings?|"
+    r"ltd\.?|limited|plc|s\.?a\.?|s\.?e\.?|a\.?g\.?|b\.?v\.?|n\.?v\.?|athletica|"
+    r"international|brands?))+\s*$",
+    re.IGNORECASE,
+)
+
+
+def clean_term(label: str) -> str:
+    t = _SUFFIX_RE.sub("", label).strip()
+    return t or label
 
 
 class TrendsUnavailable(Exception):
-    """Raised internally when pytrends is missing or a batch keeps failing."""
+    pass
 
 
 class TrendsClient:
-    def __init__(
-        self,
-        cache_dir: Path,
-        anchor: str = DEFAULT_ANCHOR,
-        timeframe: str = DEFAULT_TIMEFRAME,
-        geo: str = "",
-        min_interval: float = 4.0,
-        jitter: float = 3.0,
-        max_retries: int = 3,
-    ):
+    def __init__(self, cache_dir: Path, anchor: str = DEFAULT_ANCHOR,
+                 timeframe: str = DEFAULT_TIMEFRAME, geo: str = "",
+                 min_interval: float = 4.0, jitter: float = 3.0, max_retries: int = 3):
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.anchor = anchor
@@ -53,15 +67,19 @@ class TrendsClient:
         self._jitter = jitter
         self._max_retries = max_retries
         self._last_call = 0.0
-        self._pt = None            # lazy TrendReq
+        self._pt = None
+        self._qmap_path = self.cache_dir / "_query_map.json"
+        self._qmap: dict[str, str] = (
+            json.loads(self._qmap_path.read_text(encoding="utf-8")) if self._qmap_path.exists() else {}
+        )
 
-    # -- pytrends plumbing ---------------------------------------------------
+    # -- plumbing ------------------------------------------------------------
 
     def _trendreq(self):
         if self._pt is None:
             try:
                 from pytrends.request import TrendReq
-            except Exception as exc:  # not installed / import error
+            except Exception as exc:
                 raise TrendsUnavailable(f"pytrends unavailable: {exc}") from exc
             self._pt = TrendReq(hl="en-US", tz=0, timeout=(10, 30))
         return self._pt
@@ -72,87 +90,127 @@ class TrendsClient:
         if wait > 0:
             time.sleep(wait)
 
-    def _cache_path(self, terms: list[str]) -> Path:
-        key = "|".join(terms) + f"|{self.timeframe}|{self.geo}"
-        digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]
-        slug = "".join(c for c in "_".join(terms) if c.isalnum() or c == "_")[:48]
-        return self.cache_dir / f"{slug}_{digest}.json"
+    def _save_qmap(self) -> None:
+        self._qmap_path.write_text(json.dumps(self._qmap, ensure_ascii=False), encoding="utf-8")
 
-    # -- one batch -----------------------------------------------------------
+    # -- topic resolution ----------------------------------------------------
 
-    def _fetch_batch(self, terms: list[str], cache_only: bool = False) -> dict[str, float]:
-        """Mean interest-over-time per term for one batch (anchor first).
+    def resolve_query(self, label: str, cache_only: bool = False) -> str | None:
+        """Return the Trends query token for a brand: a topic mid when one exists,
+        else a cleaned keyword. None when cache_only and not yet resolved."""
+        if label in self._qmap:
+            return self._qmap[label]
+        if cache_only:
+            return None
+        token = clean_term(label)
+        try:
+            self._throttle()
+            pt = self._trendreq()
+            sugg = pt.suggestions(label) or []
+            self._last_call = time.monotonic()
+            best = None
+            for s in sugg:
+                typ = (s.get("type") or "").lower()
+                if any(k in typ for k in _BRAND_TYPES):
+                    best = s.get("mid"); break
+            if best is None and sugg:
+                # no clear brand topic; take the first topic that isn't the raw
+                # dictionary sense (skip type "Topic" with no brand words)
+                first = sugg[0]
+                if first.get("type") and "topic" not in first["type"].lower():
+                    best = first.get("mid")
+            token = best or clean_term(label)
+        except TrendsUnavailable:
+            raise
+        except Exception:
+            token = clean_term(label)          # suggestions failed — keyword fallback
+        self._qmap[label] = token
+        self._save_qmap()
+        return token
 
-        Cached. Raises TrendsUnavailable if pytrends errors after retries (or if
-        cache_only and the batch is not cached); a cached empty dict means
-        'queried, genuinely no data'.
-        """
-        cache_file = self._cache_path(terms)
+    # -- batch fetch ---------------------------------------------------------
+
+    def _cache_path(self, tokens: list[str]) -> Path:
+        key = "|".join(tokens) + f"|{self.timeframe}|{self.geo}"
+        digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:20]
+        return self.cache_dir / f"batch_{digest}.json"
+
+    def _fetch_batch(self, tokens: list[str], cache_only: bool = False) -> dict[str, float]:
+        """Mean interest per query token for one batch (anchor token first)."""
+        cache_file = self._cache_path(tokens)
         if cache_file.exists():
             return json.loads(cache_file.read_text(encoding="utf-8"))
         if cache_only:
             raise TrendsUnavailable("not cached (cache_only)")
 
-        last_exc: Exception | None = None
+        last_exc = None
         for attempt in range(self._max_retries):
             self._throttle()
             try:
                 pt = self._trendreq()
-                pt.build_payload(terms, timeframe=self.timeframe, geo=self.geo)
+                pt.build_payload(tokens, timeframe=self.timeframe, geo=self.geo)
                 df = pt.interest_over_time()
                 self._last_call = time.monotonic()
                 means: dict[str, float] = {}
                 if df is not None and not df.empty:
-                    for t in terms:
+                    for t in tokens:
                         if t in df.columns:
                             means[t] = float(df[t].mean())
                 cache_file.write_text(json.dumps(means, ensure_ascii=False), encoding="utf-8")
                 return means
             except TrendsUnavailable:
                 raise
-            except Exception as exc:  # 429 / network / parse — back off and retry
+            except Exception as exc:
                 self._last_call = time.monotonic()
                 last_exc = exc
                 time.sleep(8 * (attempt + 1) + random.random() * 4)
         raise TrendsUnavailable(f"batch failed after {self._max_retries} retries: {last_exc}")
 
-    # -- public: score a list of brands --------------------------------------
+    # -- public --------------------------------------------------------------
 
     def score_brands(self, terms: list[str], cache_only: bool = False,
                      only_shard: int | None = None, n_shards: int | None = None) -> dict[str, float | None]:
-        """Absolute (anchor = 100) search-interest score per brand term.
+        """Absolute (anchor = 100) search-interest score per brand label.
 
-        Batches are formed over the **globally sorted** unique terms, so the same
-        grouping (and therefore the same cache key) is produced no matter which
-        subset of brands is in scope — this is what lets the nightly fetch and the
-        monthly read share the Trends cache. Pass only_shard/n_shards to fetch
-        just one rotating slice of the batches (the nightly stagger).
-
-        A term maps to None when its batch could not be fetched (ineligible).
+        Brands are resolved to topic entities, batched in the order given (callers
+        pass a stable order, e.g. pageviews-descending). None = ineligible.
         """
         out: dict[str, float | None] = {}
-        brand_terms = sorted({t for t in terms if t and t != self.anchor})
-        for bi, i in enumerate(range(0, len(brand_terms), BATCH_BRANDS)):
+        anchor_token = self.resolve_query(self.anchor, cache_only=cache_only)
+        if anchor_token is None:
+            anchor_token = self.anchor
+
+        seen: set[str] = set()
+        brands = [t for t in terms if t and t != self.anchor and not (t in seen or seen.add(t))]
+        for bi, i in enumerate(range(0, len(brands), BATCH_BRANDS)):
             if only_shard is not None and n_shards and (bi % n_shards) != only_shard:
                 continue
-            batch = brand_terms[i : i + BATCH_BRANDS]
-            query = [self.anchor, *batch]
+            batch = brands[i : i + BATCH_BRANDS]
+            tokens, tok_of = [anchor_token], {}
+            for b in batch:
+                tk = self.resolve_query(b, cache_only=cache_only)
+                if tk is None:
+                    out[b] = None
+                    continue
+                tokens.append(tk)
+                tok_of[b] = tk
+            if len(tokens) < 2:
+                continue
             try:
-                means = self._fetch_batch(query, cache_only=cache_only)
+                means = self._fetch_batch(tokens, cache_only=cache_only)
             except TrendsUnavailable:
                 for b in batch:
-                    out[b] = None            # ineligible — renormalised away
+                    out.setdefault(b, None)
                 continue
-            anchor_mean = means.get(self.anchor, 0.0)
+            anchor_mean = means.get(anchor_token, 0.0)
             for b in batch:
-                bv = means.get(b, 0.0)
-                if anchor_mean and anchor_mean > 0:
+                if b not in tok_of:
+                    continue
+                bv = means.get(tok_of[b], 0.0)
+                if anchor_mean > 0:
                     out[b] = round(bv / anchor_mean * 100.0, 2)
-                elif bv > 0:
-                    # anchor flat but brand has signal — keep raw as a floor
-                    out[b] = round(bv, 2)
                 else:
-                    out[b] = 0.0
+                    out[b] = round(bv, 2) if bv > 0 else 0.0
         return out
 
     def close(self) -> None:
