@@ -18,6 +18,7 @@ dependencies = [
 vgr-index = "vgr_brand_index.interest:main"
 vgr-fetch-nightly = "vgr_brand_index.fetch_nightly:main"
 vgr-run-monthly = "vgr_brand_index.run_monthly:main"
+vgr-dashboard = "vgr_brand_index.dashboard:main"
 vgr-resolve = "vgr_brand_index.resolve:main"
 
 [build-system]

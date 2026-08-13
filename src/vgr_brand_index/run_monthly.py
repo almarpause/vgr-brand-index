@@ -56,11 +56,14 @@ def main(argv: list[str] | None = None) -> int:
     d = deltas_mod.compute(hist, month)
     print(f"  history months: {store.months_in_history()}; prior = {d.prev_month or 'none (baseline)'}")
 
-    # report
+    # report + dashboard
     docx = dest / f"VGR_Brand_Index_{month}.docx"
     report_mod.build_report(top, d, docx)
+    from . import dashboard
+    dash = dashboard.write_dashboard(top, d, month)
     print(f"  wrote shot -> {dest}")
     print(f"  wrote report -> {docx}")
+    print(f"  wrote dashboard -> {dash}")
 
     # email
     if args.dry_run or args.no_email:

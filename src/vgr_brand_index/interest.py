@@ -39,6 +39,11 @@ TIER_A_MIN = 66.0   # interest index (top-5 avg = 100)
 TIER_B_MIN = 33.0
 TOP_N = 500
 
+# A dynamic source must cover at least this many brands to count (guards against
+# a near-empty source maxing out a few brands during ramp-up).
+MIN_SOURCE_ABS = 30
+MIN_SOURCE_FRAC = 0.20
+
 # The three dynamic attention sources that form the composite.
 DYNAMIC_SOURCES = ["pv", "gdelt", "trends"]
 
@@ -84,10 +89,26 @@ def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = Non
     raw_cols = {"pv": "pv_12mo", "gdelt": "gdelt_12mo", "trends": "trends_score"}
     scores = {s: sqrt_ratio_to_top5(df[raw_cols[s]].astype(float).fillna(0.0)) for s in DYNAMIC_SOURCES}
     elig = {s: df[f"elig_{s}"].astype(bool) for s in DYNAMIC_SOURCES}
+
+    # Coverage gate: a source only counts once enough brands carry it. With just a
+    # handful eligible (ramp-up, or a throttled night), the sqrt-ratio-to-top-5 is
+    # taken over a near-empty distribution and those few brands max out, distorting
+    # the index. Below the threshold the whole source is held back until the
+    # nightly fetch fills it in.
+    min_cov = max(MIN_SOURCE_ABS, int(MIN_SOURCE_FRAC * len(df)))
+    for s in DYNAMIC_SOURCES:
+        if int(elig[s].sum()) < min_cov:
+            elig[s] = pd.Series(False, index=df.index)
+
     # store the normalised per-source ratio under a distinct name — never reuse a
-    # raw column name (e.g. 'trends_score'), which would clobber the raw value
+    # raw column name (e.g. 'trends_score'), which would clobber the raw value.
+    # 'sources' reflects what actually contributed (post coverage-gate); computed
+    # here while the frame is still qid-indexed so it survives the later sort.
     for s in DYNAMIC_SOURCES:
         df[f"{s}_ratio"] = scores[s]
+    df["sources"] = [
+        "+".join(s for s in DYNAMIC_SOURCES if elig[s].iloc[i]) for i in range(len(df))
+    ]
 
     # Attention composite over eligible dynamic sources (renormalised per brand).
     df["attention"] = combine_sources(scores, elig, weights)
@@ -107,9 +128,6 @@ def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = Non
     benchmark = df["raw"].head(5).mean()
     df["interest_index"] = (df["raw"] / benchmark * 100).round(1)
     df["tier"] = df["interest_index"].map(tier_of)
-    df["sources"] = df.apply(
-        lambda r: "+".join(s for s in DYNAMIC_SOURCES if r[f"elig_{s}"]), axis=1
-    )
     return df
 
 
