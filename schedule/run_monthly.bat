@@ -11,12 +11,12 @@ set "PY=%VBI_ROOT%\.venv\Scripts\python.exe"
 
 if not exist "%PY%" (
   echo [task] venv python not found at %PY%>>"%LOG%"
-  popd ^& exit /b 9
+  popd & exit /b 9
 )
 
 echo [task] %DATE% %TIME% VGR Brand Index monthly assemble>>"%LOG%"
 "%PY%" -m vgr_brand_index.run_monthly %* 1>>"%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
-echo [task] finished rc=%RC%>>"%LOG%"
+>>"%LOG%" echo [task] finished rc=%RC%
 popd
-endlocal ^& exit /b %RC%
+endlocal & exit /b %RC%
