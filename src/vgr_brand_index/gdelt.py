@@ -98,11 +98,14 @@ class GdeltClient:
         print(f"    [gdelt] gave up (throttled) on {cache_key}", flush=True)
         return None
 
-    def fetch(self, query: str, start: str, end: str, cache_only: bool = False) -> list[tuple[str, int]]:
+    def fetch(self, query: str, start: str, end: str,
+              cache_only: bool = False) -> list[tuple[str, int]] | None:
         """Monthly raw article counts for `query` over [start, end] (YYYYMMDD).
 
-        Returns [(YYYY-MM-01, count)] sorted by month. Missing months are absent
-        (a real zero-signal), never fabricated.
+        Returns [(YYYY-MM-01, count)] sorted by month, or **None** when the query
+        was not fetched (throttled give-up, or a cache miss under cache_only) —
+        which the caller must treat as ineligible, distinct from an empty list
+        (fetched, genuinely no coverage). Missing months are absent, never faked.
         """
         phrase = f'"{query}"' if not query.startswith('"') else query
         params = {
@@ -115,8 +118,8 @@ class GdeltClient:
         digest = hashlib.sha256(f"{phrase}|{start}|{end}".encode("utf-8")).hexdigest()[:16]
         slug = "".join(c for c in query if c.isalnum())[:40]
         data = self._get(params, f"{slug}_{start}_{end}_{digest}", cache_only=cache_only)
-        if not data:
-            return []
+        if data is None:
+            return None            # not fetched -> ineligible
 
         monthly: dict[str, int] = defaultdict(int)
         for series in data.get("timeline", []):
@@ -131,19 +134,13 @@ class GdeltClient:
     def monthly_total(self, query: str, start: str, end: str, cache_only: bool = False) -> int | None:
         """Total matching articles over the window (a scalar attention level).
 
-        Returns None when cache_only and the window is not cached (ineligible),
-        distinct from 0 (queried, genuinely no coverage).
+        None = not fetched (throttled or, under cache_only, not cached) →
+        ineligible. 0 = fetched, genuinely no coverage.
         """
         series = self.fetch(query, start, end, cache_only=cache_only)
-        if cache_only and not series and not self._is_cached(query, start, end):
+        if series is None:
             return None
         return sum(v for _, v in series)
-
-    def _is_cached(self, query: str, start: str, end: str) -> bool:
-        phrase = f'"{query}"' if not query.startswith('"') else query
-        digest = hashlib.sha256(f"{phrase}|{start}|{end}".encode("utf-8")).hexdigest()[:16]
-        slug = "".join(c for c in query if c.isalnum())[:40]
-        return (self.cache_dir / f"{slug}_{start}_{end}_{digest}.json").exists()
 
     def close(self) -> None:
         self._client.close()

@@ -63,20 +63,26 @@ def main(argv: list[str] | None = None) -> int:
     pv = PageviewsClient(CACHE / "pageviews")
     gdelt = GdeltClient(CACHE / "gdelt")
     trends = TrendsClient(CACHE / "trends")
-    # cache_only=False -> actually fetch (gently). Populates the caches the
-    # monthly assemble reads.
+
+    # pv + GDELT are per-brand: fetch this brand-shard. cache_only=False -> fetch.
     df = gather_signals(
         mine, editions, pv, gdelt, trends, window,
-        cache_only=False, do_trends=not args.no_trends, verbose=True,
+        cache_only=False, do_trends=False, verbose=True,
     )
+
+    # Trends is anchor-batched, so it is sharded by BATCH over the whole universe
+    # (globally sorted -> stable cache keys the monthly read can find), not by the
+    # pv/gdelt brand-shard.
+    n_trends = 0
+    if not args.no_trends:
+        all_labels = [i.label for i in viable]
+        tscores = trends.score_brands(all_labels, cache_only=False,
+                                      only_shard=shard, n_shards=args.shards)
+        n_trends = sum(1 for v in tscores.values() if v is not None)
     pv.close(); gdelt.close(); trends.close()
 
-    got = {
-        "pv": int(df["elig_pv"].sum()),
-        "gdelt": int(df["elig_gdelt"].sum()),
-        "trends": int(df["elig_trends"].sum()),
-    }
-    print(f"  fetched signals for {len(df)} brands — eligible: {got}")
+    got = {"pv": int(df["elig_pv"].sum()), "gdelt": int(df["elig_gdelt"].sum()), "trends": n_trends}
+    print(f"  fetched — pv/gdelt for {len(df)} brands, trends batch-shard: {got}")
     return 0
 
 

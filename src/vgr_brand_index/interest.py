@@ -84,8 +84,10 @@ def score_universe(signals: pd.DataFrame, weights: dict[str, float] | None = Non
     raw_cols = {"pv": "pv_12mo", "gdelt": "gdelt_12mo", "trends": "trends_score"}
     scores = {s: sqrt_ratio_to_top5(df[raw_cols[s]].astype(float).fillna(0.0)) for s in DYNAMIC_SOURCES}
     elig = {s: df[f"elig_{s}"].astype(bool) for s in DYNAMIC_SOURCES}
+    # store the normalised per-source ratio under a distinct name — never reuse a
+    # raw column name (e.g. 'trends_score'), which would clobber the raw value
     for s in DYNAMIC_SOURCES:
-        df[f"{s}_score"] = scores[s]
+        df[f"{s}_ratio"] = scores[s]
 
     # Attention composite over eligible dynamic sources (renormalised per brand).
     df["attention"] = combine_sources(scores, elig, weights)

@@ -118,16 +118,23 @@ class TrendsClient:
 
     # -- public: score a list of brands --------------------------------------
 
-    def score_brands(self, terms: list[str], cache_only: bool = False) -> dict[str, float | None]:
+    def score_brands(self, terms: list[str], cache_only: bool = False,
+                     only_shard: int | None = None, n_shards: int | None = None) -> dict[str, float | None]:
         """Absolute (anchor = 100) search-interest score per brand term.
 
-        A term maps to None when its batch could not be fetched (Trends
-        ineligible for that brand). Anchor is prepended to every batch and its
-        own score is not returned.
+        Batches are formed over the **globally sorted** unique terms, so the same
+        grouping (and therefore the same cache key) is produced no matter which
+        subset of brands is in scope — this is what lets the nightly fetch and the
+        monthly read share the Trends cache. Pass only_shard/n_shards to fetch
+        just one rotating slice of the batches (the nightly stagger).
+
+        A term maps to None when its batch could not be fetched (ineligible).
         """
         out: dict[str, float | None] = {}
-        brand_terms = [t for t in terms if t and t != self.anchor]
-        for i in range(0, len(brand_terms), BATCH_BRANDS):
+        brand_terms = sorted({t for t in terms if t and t != self.anchor})
+        for bi, i in enumerate(range(0, len(brand_terms), BATCH_BRANDS)):
+            if only_shard is not None and n_shards and (bi % n_shards) != only_shard:
+                continue
             batch = brand_terms[i : i + BATCH_BRANDS]
             query = [self.anchor, *batch]
             try:
