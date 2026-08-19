@@ -22,8 +22,13 @@ import pandas as pd
 
 from . import deltas as deltas_mod
 from . import store
-from .interest import OUTPUT, ROOT
+from .interest import ATTENTION_WEIGHT, BREADTH_WEIGHT, OUTPUT, ROOT, SOURCE_WEIGHTS
 from .report import month_label
+
+# Display names for the four attention signals, in table/method order.
+SIGNAL_NAMES = {"trends": "Google Search", "pv": "Wikipedia pageviews",
+                "gdelt": "News", "reddit": "Reddit mentions"}
+SIGNAL_ORDER = ["trends", "pv", "gdelt", "reddit"]
 
 TEMPLATE = ROOT / "dashboard_template.html"
 LOGO = Path(__file__).resolve().parent / "assets" / "vgr-logo-black.png"
@@ -50,6 +55,20 @@ def _sources_html(s: str) -> str:
     if not s:
         return "—"
     return " · ".join(f"<b>{html.escape(x)}</b>" for x in s.split("+"))
+
+
+def _weights_html() -> str:
+    """Attention-composite weight bars, straight from SOURCE_WEIGHTS."""
+    total = sum(SOURCE_WEIGHTS[s] for s in SIGNAL_ORDER)
+    out = []
+    for s in SIGNAL_ORDER:
+        pct = SOURCE_WEIGHTS[s] / total * 100
+        out.append(
+            f'<div class="wrow"><span class="wname">{SIGNAL_NAMES[s]}</span>'
+            f'<span class="wbar"><i style="width:{pct:.0f}%"></i></span>'
+            f'<span class="wpct">{pct:.0f}%</span></div>'
+        )
+    return "".join(out)
 
 
 def _tiers_html(top: pd.DataFrame) -> str:
@@ -108,22 +127,24 @@ def _rows_html(top: pd.DataFrame) -> str:
     out = []
     for _, r in top.iterrows():
         idx = float(r["interest_index"])
-        pv, gd, tr = r.get("pv_median"), r.get("gdelt_12mo"), r.get("trends_score")
+        pv, gd, tr, rd = r.get("pv_median"), r.get("gdelt_12mo"), r.get("trends_score"), r.get("reddit_vol")
         brand = html.escape(str(r["brand"]))
         out.append(
             f'<tr data-brand="{html.escape(str(r["brand"]).lower(), quote=True)}" '
             f'data-tier="{r["tier"]}" data-rank="{int(r["rank"])}" data-index="{idx:.1f}" '
+            f'data-trends="{"" if _isna(tr) else round(float(tr), 1)}" '
             f'data-pv="{"" if _isna(pv) else int(pv)}" data-gdelt="{"" if _isna(gd) else int(gd)}" '
-            f'data-trends="{"" if _isna(tr) else round(float(tr), 1)}">'
+            f'data-reddit="{"" if _isna(rd) else int(rd)}">'
             f'<td class="num">{int(r["rank"])}</td>'
             f'<td><a href="https://www.wikidata.org/wiki/{r["qid"]}" target="_blank" rel="noopener">{brand}</a></td>'
             f'<td><span class="badge {r["tier"]}">{r["tier"]}</span></td>'
             f'<td class="num"><div class="idxcell"><div class="mini"><i style="width:{idx / mx * 100:.0f}%"></i></div>'
             f'<span>{idx:.1f}</span></div></td>'
             f'<td class="src">{_sources_html(r.get("sources", "") or "")}</td>'
+            f'<td class="num">{"—" if _isna(tr) else f"{float(tr):.0f}"}</td>'
             f'<td class="num">{_fmt(pv)}</td>'
             f'<td class="num">{_fmt(gd)}</td>'
-            f'<td class="num">{"—" if _isna(tr) else f"{float(tr):.0f}"}</td>'
+            f'<td class="num">{_fmt(rd)}</td>'
             f"</tr>"
         )
     return "".join(out)
@@ -146,6 +167,9 @@ def build_html(top: pd.DataFrame, d: deltas_mod.Deltas, generated: str | None = 
         "%%ROWS%%": _rows_html(top),
         "%%N%%": str(n),
         "%%GEN%%": f"Monthly shot {d.month} · prior {d.prev_month or 'none (baseline)'}.",
+        "%%WEIGHTS%%": _weights_html(),
+        "%%ATT_PCT%%": f"{ATTENTION_WEIGHT * 100:.0f}",
+        "%%BREADTH_PCT%%": f"{BREADTH_WEIGHT * 100:.0f}",
     }
     out = TEMPLATE.read_text(encoding="utf-8")
     for k, v in repl.items():

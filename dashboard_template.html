@@ -79,6 +79,23 @@
   .src{font-size:10.5px;color:var(--sub);white-space:nowrap}
   .src b{color:var(--navy)}
 
+  .method{margin-top:34px;background:var(--card);border:1px solid var(--hair);padding:18px 20px}
+  .method h2{font-size:20px;margin-bottom:6px}
+  .method h3{font-family:Georgia,serif;font-size:15px;margin:0 0 6px}
+  .mtext{font-size:13px;color:#333;max-width:60ch;margin:.4em 0}
+  .mtext.note{color:var(--sub)}
+  .fbox{margin:12px 0 18px;padding:12px 16px;background:var(--paper);border-left:3px solid var(--red);
+    font-family:Georgia,serif;font-size:16px}
+  .fbox .hl{color:var(--red-dk);font-weight:700}
+  .mcols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:760px){ .mcols{grid-template-columns:1fr} }
+  .weights{margin-top:8px}
+  .wrow{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13px}
+  .wname{width:150px;flex:none;color:#333}
+  .wbar{flex:1;background:var(--plot);height:14px}
+  .wbar i{display:block;height:14px;background:var(--navy)}
+  .wrow:first-child .wbar i{background:var(--red)}
+  .wpct{width:34px;flex:none;text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
   .foot{margin-top:34px;border-top:2px solid var(--ink);padding-top:14px;
     font-size:12px;color:var(--sub);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .footlogo{width:96px;height:26px;background-image:url(%%LOGO_DATAURI%%);background-repeat:no-repeat;
@@ -128,20 +145,48 @@
       <th data-k="tier" data-t="s">Tier</th>
       <th class="num" data-k="index" data-t="n">Interest</th>
       <th data-k="sources" data-t="s">Signals</th>
-      <th class="num" data-k="pv" data-t="n">Pageviews/mo</th>
+      <th class="num" data-k="trends" data-t="n">Google Search</th>
+      <th class="num" data-k="pv" data-t="n">Wikipedia pageviews</th>
       <th class="num" data-k="gdelt" data-t="n">News</th>
-      <th class="num" data-k="trends" data-t="n">Search</th>
+      <th class="num" data-k="reddit" data-t="n">Reddit mentions</th>
     </tr></thead>
     <tbody id="rows">%%ROWS%%</tbody>
   </table>
   </div>
 
+  <section class="method">
+    <h2>How the Interest score is built</h2>
+    <p class="mtext">Every brand's <b>Interest</b> is a single number, rescaled so the average of the
+      top-5 brands = 100. It is built in two layers:</p>
+    <div class="fbox">
+      <b>Interest</b> &nbsp;=&nbsp; <span class="hl">%%ATT_PCT%%%</span> Attention
+      &nbsp;+&nbsp; <span class="hl">%%BREADTH_PCT%%%</span> Breadth
+      &nbsp;&nbsp;→&nbsp;&nbsp; rescaled so the top-5 average = 100, then tiered A / B / C
+    </div>
+    <div class="mcols">
+      <div>
+        <h3>Attention · %%ATT_PCT%%% of the score — four signals</h3>
+        <p class="mtext">The four signals below, each √-scaled against the top-5 brands then blended by
+          the weights shown. If a brand is missing a signal, the weights renormalise over the ones it
+          has (a source with no value is dropped, never counted as zero).</p>
+        <div class="weights">%%WEIGHTS%%</div>
+      </div>
+      <div>
+        <h3>Breadth · %%BREADTH_PCT%%% of the score</h3>
+        <p class="mtext">A steadying factor: how many Wikipedia language editions the brand has an
+          article in — a rough "is this a globally-known brand" check, so one viral month in a single
+          market can't top the chart.</p>
+        <p class="mtext note"><b>Wikipedia pageviews</b> use the <b>median</b> monthly views across all
+          languages — robust to one-off spikes (a designer's death, a viral collab) that a 12-month
+          total would bank as lasting attention. No figure is estimated; missing is missing.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="foot">
     <div class="disc">
-      <b>Method.</b> Interest blends Wikipedia sitelink breadth with an attention composite of
-      all-language pageviews, GDELT news volume and Google Trends, each square-root-scaled to its
-      top-5 mean and combined over the sources available per brand. Top-5 average = 100.
-      No figure is estimated. Sources: Wikipedia, GDELT, Google Trends, Wikidata. Not investment advice.
+      Sources: Google Trends, Wikipedia pageviews, GDELT news, Reddit, Wikidata. Free public data
+      only; not investment advice.
       <div style="margin-top:6px">%%GEN%%</div>
     </div>
     <div class="footlogo"></div>
