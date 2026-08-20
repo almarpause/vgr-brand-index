@@ -20,4 +20,7 @@ logs/
 # never commit SMTP secrets (reused from the Zara parser's git-ignored email.ini)
 config/*.ini
 
+# headless-browser profile (may hold cookies) — never commit
+config/reddit_profile/
+
 # history/ (index_history.parquet) IS tracked on purpose — it is the trend store.

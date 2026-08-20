@@ -46,6 +46,14 @@ class RedditUnavailable(Exception):
     pass
 
 
+def cache_file_for(cache_dir: Path, brand: str, timeframe: str) -> Path:
+    """Shared cache path so the OAuth client and the browser client read/write the
+    same files: {slug}_{timeframe}_{hash}.json holding {"posts": P, "comments": C}."""
+    digest = hashlib.sha256(f"{brand}|{timeframe}".encode("utf-8")).hexdigest()[:16]
+    slug = "".join(c for c in brand if c.isalnum())[:36]
+    return cache_dir / f"{slug}_{timeframe}_{digest}.json"
+
+
 def load_credentials() -> tuple[str, str] | None:
     cid = os.environ.get("VBI_REDDIT_CLIENT_ID", "")
     sec = os.environ.get("VBI_REDDIT_CLIENT_SECRET", "")
@@ -102,9 +110,7 @@ class RedditClient:
         None = not fetched (cache miss under cache_only, or creds/API error) →
         ineligible. An integer (incl. 0) = fetched.
         """
-        digest = hashlib.sha256(f"{brand}|{self.timeframe}".encode("utf-8")).hexdigest()[:16]
-        slug = "".join(c for c in brand if c.isalnum())[:36]
-        cache_file = self.cache_dir / f"{slug}_{self.timeframe}_{digest}.json"
+        cache_file = cache_file_for(self.cache_dir, brand, self.timeframe)
         if cache_file.exists():
             return json.loads(cache_file.read_text(encoding="utf-8")).get("comments")
         if cache_only:

@@ -60,11 +60,11 @@ def main(argv: list[str] | None = None) -> int:
     editions = wd.wikipedia_sitelinks([i.qid for i in mine])
     wd.close()
 
-    from .reddit import RedditClient
+    from .reddit_browser import RedditBrowserClient
     pv = PageviewsClient(CACHE / "pageviews")
     gdelt = GdeltClient(CACHE / "gdelt")
     trends = TrendsClient(CACHE / "trends")
-    reddit = RedditClient(CACHE / "reddit")
+    reddit = RedditBrowserClient(CACHE / "reddit")   # public search via headless browser
 
     # pv + GDELT + Reddit are per-brand: fetch this brand-shard. cache_only=False.
     df = gather_signals(
