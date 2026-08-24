@@ -140,7 +140,6 @@ def _rows_html(top: pd.DataFrame) -> str:
             f'<td><span class="badge {r["tier"]}">{r["tier"]}</span></td>'
             f'<td class="num"><div class="idxcell"><div class="mini"><i style="width:{idx / mx * 100:.0f}%"></i></div>'
             f'<span>{idx:.1f}</span></div></td>'
-            f'<td class="src">{_sources_html(r.get("sources", "") or "")}</td>'
             f'<td class="num">{"—" if _isna(tr) else f"{float(tr):.0f}"}</td>'
             f'<td class="num">{_fmt(pv)}</td>'
             f'<td class="num">{_fmt(gd)}</td>'
