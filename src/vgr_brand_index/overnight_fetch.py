@@ -54,8 +54,10 @@ def _top_labels(top_n: int) -> list[str]:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Overnight staggered fetch of all signals.")
     ap.add_argument("--top", type=int, default=600, help="how many top brands (by pageviews) to fetch")
+    ap.add_argument("--hours", type=float, default=None,
+                    help="run for this many hours from now instead of stopping at 09:00")
     args = ap.parse_args(argv)
-    end = deadline()
+    end = (datetime.now() + timedelta(hours=args.hours)) if args.hours else deadline()
     print(f"=== overnight fetch — until {end:%Y-%m-%d %H:%M} ===", flush=True)
 
     labels = _top_labels(args.top)
