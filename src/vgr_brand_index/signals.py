@@ -24,6 +24,25 @@ from .trends import TrendsClient
 from .universe import UniverseItem
 
 
+# Single-word brand names that ARE common English words — string-search signals
+# can't tell the brand from the word, so those sources are dropped for them.
+# (Distinctive short names like Nike/Zara/Puma/Fila are NOT here — length is not
+# the test, being an actual common word is.)
+_COMMON_WORD_BRANDS = {
+    "we", "on", "gap", "cos", "next", "head", "boss", "coach", "guess", "theory",
+    "bench", "supreme", "stadium", "mango", "mark", "marks", "reserved", "champion",
+    "element", "obey", "everyday", "common", "pull", "off", "true", "life", "diesel",
+    "weekday", "quiet", "case", "born",
+}
+
+
+def _is_ambiguous_name(label: str) -> bool:
+    t = str(label).strip().lower()
+    if " " in t or "-" in t:          # multi-word names are unambiguous enough
+        return False
+    return t in _COMMON_WORD_BRANDS
+
+
 def _pv_monthly(
     editions: dict[str, str], pv: PageviewsClient, window, cache_only: bool
 ) -> dict[str, int]:
@@ -111,8 +130,13 @@ def gather_signals(
     df["trends_score"] = df["brand"].map(lambda b: trends_by_label.get(b))
 
     # Eligibility: a source counts for a brand only when it returned a real value.
+    # Pageviews are keyed on the Wikidata Q-ID, so they are never ambiguous. The
+    # string-search sources (News, Search, Reddit) are made INELIGIBLE for
+    # common-word brand names ("WE", "On", "Gap", "Guess", "Theory", "Bench"…),
+    # where the query counts unrelated posts about the word, not the brand.
+    amb = df["brand"].map(_is_ambiguous_name)
     df["elig_pv"] = (df["pv_median"].fillna(0) > 0)
-    df["elig_gdelt"] = df["gdelt_12mo"].notna()
-    df["elig_trends"] = df["trends_score"].notna()
-    df["elig_reddit"] = df["reddit_vol"].notna()
+    df["elig_gdelt"] = df["gdelt_12mo"].notna() & ~amb
+    df["elig_trends"] = df["trends_score"].notna() & ~amb
+    df["elig_reddit"] = df["reddit_vol"].notna() & ~amb
     return df

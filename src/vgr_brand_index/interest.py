@@ -50,10 +50,12 @@ MIN_SOURCE_FRAC = 0.05
 BREADTH_WEIGHT = 0.15
 ATTENTION_WEIGHT = 1.0 - BREADTH_WEIGHT
 
-# Within the attention composite: consumer signals (Reddit buzz, Google search)
-# are the best proxies for commercial attention; pageviews next; news noisiest.
-# combine_sources renormalises per brand over whichever sources are eligible.
-SOURCE_WEIGHTS = {"pv": 0.25, "gdelt": 0.10, "trends": 0.30, "reddit": 0.35}
+# Within the attention composite. Pageviews (Wikidata-Q-ID-keyed) are the clean,
+# unambiguous backbone and carry the index. Google Search is entity-disambiguated
+# (topic mids) so it earns real weight as it accrues. Reddit and News match on the
+# brand STRING, so they are polluted by common-word names ("WE", "Guess", "C&A")
+# and are kept near-zero — plumbing retained, but they must not drive the rank.
+SOURCE_WEIGHTS = {"pv": 0.65, "trends": 0.30, "gdelt": 0.03, "reddit": 0.02}
 
 # The dynamic attention sources that form the composite.
 DYNAMIC_SOURCES = ["pv", "gdelt", "trends", "reddit"]
