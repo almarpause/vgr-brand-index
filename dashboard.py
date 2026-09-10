@@ -103,6 +103,19 @@ def fmt_level(v):
 
 df = pd.read_csv(REFRESH / "index_500_refreshed.csv")
 
+# Repair any brand whose display label failed to resolve during collection and
+# fell back to a raw Wikidata id (e.g. "Q849724"). Use the English Wikipedia
+# title, stripped of a trailing disambiguator, so this self-heals each refresh.
+def _repair_label(row):
+    b = str(row["brand"]).strip()
+    if re.match(r"^Q\d+$", b):
+        t = str(row.get("en_title") or "").strip()
+        t = re.sub(r"\s*\((?:brand|company|clothing|label|fashion house|retailer|"
+                   r"clothing brand|clothing company)\)\s*$", "", t, flags=re.I)
+        return t or b
+    return b
+df["brand"] = df.apply(_repair_label, axis=1)
+
 # Google News interest LEVEL (display), merged by qid from the news collection.
 _news_path = REFRESH / "gtrends_news_500.csv"
 if _news_path.exists():
@@ -125,6 +138,19 @@ with open(REFRESH / "aug_vgr_reconstructed.csv", encoding="utf-8") as f:
             aug_index[r["qid"]] = float(r["vgr_aug"])
         except (KeyError, ValueError):
             pass
+
+# Reference the headline VGR interest to the SAME frozen 8-brand basket used by
+# the Google sub-indices, whose average = 1,000. This puts VGR interest, g search
+# and g news all on one 1,000 baseline. It is a monotonic rescale: ranks and
+# tiers are unchanged, and because the identical factor scales both September and
+# the reconstructed August, the like-for-like MoM % is unaffected.
+BASKET = ["Nike", "Adidas", "Zara", "H&M", "Hermès", "Louis Vuitton", "Gucci", "Uniqlo"]
+_basket_mean = df.loc[df["brand"].isin(BASKET), "interest_index"].mean()
+SCALE = 1000.0 / _basket_mean if _basket_mean and not pd.isna(_basket_mean) else 1.0
+df["interest_index"] = df["interest_index"] * SCALE
+aug_index = {q: v * SCALE for q, v in aug_index.items()}
+# Tier cut-offs (defined at 66 / 33 on the old top-5=100 scale) rescaled to match.
+TIER_A_LO, TIER_B_LO, TIER_B_HI = round(66 * SCALE), round(33 * SCALE), round(65 * SCALE)
 
 
 def vgr_mom_val(cur, qid):
@@ -175,7 +201,7 @@ for _, r in df.iterrows():
         f'<td><a href="https://www.wikidata.org/wiki/{r["qid"]}" target="_blank" rel="noopener">{brand}</a></td>'
         f'<td><span class="badge {r["tier"]}">{r["tier"]}</span></td>'
         f'<td class="num vgr-l"><div class="idxcell"><div class="mini"><i style="width:{idx/mx_idx*100:.0f}%"></i></div>'
-        f'<span class="vgrval">{idx:.1f}</span></div></td>'
+        f'<span class="vgrval">{idx:,.0f}</span></div></td>'
         f'<td class="num">{vmom_html}</td>'
         f'<td class="num det det-l">{search_html}</td>'
         f'<td class="num det">{smom_html}</td>'
@@ -190,7 +216,7 @@ tc = df["tier"].value_counts().to_dict()
 tiers_html = "".join(
     f'<div class="tcard {cls}"><div class="n">{int(tc.get(t,0))}</div>'
     f'<div class="l">{lab}</div><div class="rng">index {rng}</div></div>'
-    for cls, t, lab, rng in [("a","A","A — elite","≥ 66"),("b","B","B — established","33–65"),("c","C","C — long tail","< 33")]
+    for cls, t, lab, rng in [("a","A","A — elite",f"≥ {TIER_A_LO:,}"),("b","B","B — established",f"{TIER_B_LO:,}–{TIER_B_HI:,}"),("c","C","C — long tail",f"< {TIER_B_LO:,}")]
 )
 
 # ---- chart top 20
@@ -199,7 +225,7 @@ cmax = float(lead["interest_index"].max()) or 1.0
 chart_html = "".join(
     f'<div class="bar {"lead" if i==0 else ""}"><div class="nm">{esc(r["brand"])}</div>'
     f'<div class="track"><div class="fill" style="width:{float(r["interest_index"])/cmax*100:.1f}%"></div></div>'
-    f'<div class="v">{float(r["interest_index"]):.0f}</div></div>'
+    f'<div class="v">{float(r["interest_index"]):,.0f}</div></div>'
     for i, (_, r) in enumerate(lead.iterrows())
 )
 
@@ -235,7 +261,7 @@ gen = datetime.now().strftime("%d %b %Y")
 repl = {
     "%%LOGO_DATAURI%%": logo_uri(),
     "%%DECK%%": esc(DECK),
-    "%%META%%": f"<b>{MONTH}</b> · {n} brands · top-5 average = 100 · GDELT + Reddit removed · generated {gen}",
+    "%%META%%": f"<b>{MONTH}</b> · {n} brands · 8-brand basket = 1,000 · GDELT + Reddit removed · generated {gen}",
     "%%TIERS%%": tiers_html,
     "%%CHARTSUB%%": f"Interest index, top 20 of {n}",
     "%%CHART%%": chart_html,
@@ -393,7 +419,7 @@ feed = {
     "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     "month": MONTH,
     "n_brands": n,
-    "scale": "top-5 average = 100",
+    "scale": "8-brand basket = 1000",
     "method": {
         "google_search_pct": 50, "google_news_pct": 30, "wikipedia_pct": 20,
         "attention_pct": 85, "breadth_pct": 15,
