@@ -1,0 +1,65 @@
+name: Refresh VGR Brand Index
+
+# Rebuilds the dashboard + data feed from the committed collection and publishes
+# them to GitHub Pages. Unlike VGR 40, the Brand Index's data collection (Google
+# Trends / News via pytrends, Wikipedia pageviews) is rate-limited and run locally
+# — so this job does NOT re-collect data. It deterministically regenerates the site
+# from the CSVs in refresh_500/ that you commit. To refresh the numbers: run the
+# collection locally, commit the new refresh_500/*.csv, and push — this republishes.
+#
+# The published files:
+#   https://<user>.github.io/<repo>/                       -> the dashboard (index.html)
+#   https://<user>.github.io/<repo>/brand_index_data.json  -> the data feed (CORS-open)
+# Your Lovable Intelligence page reads one of those (see WEB_DEPLOY.md).
+
+on:
+  push:
+    branches: [main, master]     # republish whenever the code / CSVs change
+  schedule:
+    - cron: "0 6 * * 1"          # weekly, Monday 06:00 UTC (a safety re-publish)
+  workflow_dispatch: {}           # lets you run it manually from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-web.txt
+
+      - name: Generate dashboard + data feed
+        run: python dashboard.py
+
+      - name: Assemble the published site
+        run: |
+          mkdir -p site
+          cp Brand_Index_Dashboard.html site/index.html
+          cp brand_index_data.json site/brand_index_data.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

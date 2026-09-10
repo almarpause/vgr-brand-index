@@ -51,7 +51,55 @@ EXTRA_QIDS = [
     "Q123700068",  # Alo Yoga
     "Q56246099",   # Gymshark
     "Q16992933",   # Fabletics
+    "Q3895",       # Adidas — the flagship brand itself (no root catches it; it was
+                   # only ever present as the Trends anchor, never a ranked member).
 ]
+
+# Display-name normalisation, keyed by Q-ID. Wikidata often labels an item by its
+# legal/corporate name ("Levi Strauss & Co.", "The North Face, Inc.") or a
+# disambiguated form; the index shows the consumer brand name instead, so the
+# roster reads homogeneously. Applied to every row (roots + extras) as it is built.
+# Q-ID keyed (not name-keyed) so it is immune to the very label variation it fixes.
+BRAND_RENAMES = {
+    "Q152784": "The North Face",
+    "Q127962": "Levi's",
+    "Q6702957": "Lululemon",
+    "Q1660552": "Patagonia",
+    "Q43452713": "On",
+    "Q817139": "Benetton",
+    "Q482539": "Fila",
+    "Q688082": "Bata",
+    "Q1641437": "Ralph Lauren",
+    "Q532310": "Hummel",
+    "Q1156731": "Mizuno",
+    "Q5213855": "Jimmy Choo",
+    "Q142691": "Montblanc",
+    "Q1539185": "Timberland",
+    "Q664543": "Deichmann",
+    "Q463378": "American Apparel",
+    "Q600986": "Escada",
+    "Q7629175": "Stüssy",        # Stüssy
+    "Q2096177": "Globe",
+    "Q2988422": "Canada Goose",
+    "Q23672312": "Herschel",
+    "Q1095857": "Clarks",
+    "Q246655": "Next",
+    "Q110225120": "Max Mara",
+    "Q113992257": "Cotton On",
+    "Q3323911": "Morellato",
+    "Q430230": "Coleman",
+    "Q842174": "Eddie Bauer",
+}
+
+# Sub-brands, collabs and lines that Wikidata lists as their own items but which
+# are NOT standalone brands for this index — an attention index ranks the parent
+# brand, not its capsules. Removed from EVERY source (roots and EXTRA_QIDS alike).
+DROP_QIDS = frozenset({
+    "Q4682711",    # Adidas Originals   (sub-brand of Adidas)
+    "Q22101752",   # Adidas Yeezy       (collab line)
+    "Q96657862",   # Yeezy Gap          (collab line)
+    "Q96791543",   # Yeezy              (collab line)
+})
 INDUSTRY_ROOTS = [
     ("Q12684", "fashion"),
     ("Q11828862", "clothing industry"),
@@ -197,9 +245,12 @@ SELECT ?item ?itemLabel ?itemDescription ?sitelinks ?enTitle WHERE {{
 
 def _row_to_item(row: dict) -> tuple[str, UniverseItem]:
     qid = row["item"]["value"].rsplit("/", 1)[-1]
+    # Show the consumer brand name where Wikidata labels the item by its corporate
+    # or disambiguated form; fall back to the Wikidata label otherwise.
+    label = BRAND_RENAMES.get(qid, row.get("itemLabel", {}).get("value", ""))
     return qid, UniverseItem(
         qid=qid,
-        label=row.get("itemLabel", {}).get("value", ""),
+        label=label,
         description=row.get("itemDescription", {}).get("value", ""),
         sitelinks=int(row.get("sitelinks", {}).get("value", 0)),
         en_title=row.get("enTitle", {}).get("value", ""),
@@ -213,7 +264,7 @@ def fetch_universe(client: SparqlClient, verbose: bool = False) -> list[Universe
         added = 0
         for row in rows:
             qid, item = _row_to_item(row)
-            if qid in items or qid in _ROOT_QIDS:
+            if qid in items or qid in _ROOT_QIDS or qid in DROP_QIDS:
                 continue
             # Drop non-fashion (toy/grocery/…) and defunct/closed brands from every
             # root — an attention index tracks live fashion brands.
@@ -231,7 +282,7 @@ def fetch_universe(client: SparqlClient, verbose: bool = False) -> list[Universe
         added = 0
         for row in extra_rows:
             qid, item = _row_to_item(row)
-            if qid not in items:
+            if qid not in items and qid not in DROP_QIDS:
                 items[qid] = item
                 added += 1
         if verbose:

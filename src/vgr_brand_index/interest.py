@@ -55,7 +55,7 @@ ATTENTION_WEIGHT = 1.0 - BREADTH_WEIGHT
 # (topic mids) so it earns real weight as it accrues. Reddit and News match on the
 # brand STRING, so they are polluted by common-word names ("WE", "Guess", "C&A")
 # and are kept near-zero — plumbing retained, but they must not drive the rank.
-SOURCE_WEIGHTS = {"pv": 0.65, "trends": 0.30, "gdelt": 0.03, "reddit": 0.02}
+SOURCE_WEIGHTS = {"pv": 0.55, "trends": 0.45, "gdelt": 0.03, "reddit": 0.02}
 
 # The dynamic attention sources that form the composite.
 DYNAMIC_SOURCES = ["pv", "gdelt", "trends", "reddit"]

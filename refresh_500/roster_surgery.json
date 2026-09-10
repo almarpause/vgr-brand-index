@@ -1,0 +1,49 @@
+{
+  "remove_qids": {
+    "Q4682711":  "Adidas Originals (sub-brand)",
+    "Q22101752": "Adidas Yeezy (collab)",
+    "Q96657862": "Yeezy Gap (collab)",
+    "Q96791543": "Yeezy (sub-brand/company)"
+  },
+  "add": [
+    {"qid": "Q3895", "brand": "Adidas", "en_title": "Adidas", "sitelinks": 105,
+     "description": "German multinational corporation", "n_wikipedias": 105,
+     "reason": "parent brand, was only the anchor; missing from Wikidata universe roots"}
+  ],
+  "backfill_pool_provisional": [
+    {"qid": "Q56246099", "brand": "Gymshark"},
+    {"qid": "Q23823668", "brand": "TK Maxx"},
+    {"qid": "Q842174",   "brand": "Eddie Bauer"}
+  ],
+  "rename": {
+    "Q152784":  "The North Face",
+    "Q127962":  "Levi's",
+    "Q6702957": "Lululemon",
+    "Q1660552": "Patagonia",
+    "Q43452713":"On",
+    "Q817139":  "Benetton",
+    "Q482539":  "Fila",
+    "Q688082":  "Bata",
+    "Q1641437": "Ralph Lauren",
+    "Q532310":  "Hummel",
+    "Q1156731": "Mizuno",
+    "Q5213855": "Jimmy Choo",
+    "Q142691":  "Montblanc",
+    "Q1539185": "Timberland",
+    "Q664543":  "Deichmann",
+    "Q463378":  "American Apparel",
+    "Q600986":  "Escada",
+    "Q7629175": "Stüssy",
+    "Q2096177": "Globe",
+    "Q2988422": "Canada Goose",
+    "Q23672312":"Herschel",
+    "Q1095857": "Clarks",
+    "Q246655":  "Next",
+    "Q110225120":"Max Mara",
+    "Q113992257":"Cotton On",
+    "Q3323911": "Morellato",
+    "Q430230":  "Coleman",
+    "Q842174":  "Eddie Bauer"
+  },
+  "keep_as_written": ["Q7747373 The Limited", "Q1066858 Tiffany & Co.", "Q55205917 Best Company", "Q429204 C.P. Company", "Q1281935 Ecko Unltd.", "Q5392021 IC Group", "Q272361 Calik Holding"]
+}

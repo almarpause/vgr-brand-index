@@ -24,3 +24,16 @@ config/*.ini
 config/reddit_profile/
 
 # history/ (index_history.parquet) IS tracked on purpose — it is the trend store.
+
+# refresh_500: keep the curated collection CSVs, HANDOFF and build scripts, but
+# NOT the bulky raw per-brand pulls, run logs, backups, or transient caches.
+# (These would only add ~1,100 scratch files and noise to the public repo; the
+# site is built from the curated CSVs by dashboard.py.)
+refresh_500/gdelt_csv/
+refresh_500/wiki_csv/
+refresh_500/*.log
+refresh_500/*.bak_*
+refresh_500/*_checkpoint.json
+refresh_500/adidas_mom_cache.json
+refresh_500/dashboard_refreshed.html
+trends_out/

@@ -57,11 +57,22 @@ class TrendsUnavailable(Exception):
 class TrendsClient:
     def __init__(self, cache_dir: Path, anchor: str = DEFAULT_ANCHOR,
                  timeframe: str = DEFAULT_TIMEFRAME, geo: str = "",
-                 min_interval: float = 4.0, jitter: float = 3.0, max_retries: int = 3):
+                 min_interval: float = 4.0, jitter: float = 3.0, max_retries: int = 3,
+                 gprop: str = ""):
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.anchor = anchor
         self.timeframe = timeframe
+        # Google property the interest is measured on: "" = web search (the default
+        # index signal), "news" = Google News search, also "images"/"youtube"/"froogle".
+        # Anchor-chaining, basket rescale and resolver are property-agnostic, so the
+        # exact same method yields a comparable level for any property.
+        self.gprop = gprop
+        # Worldwide is the index's fixed geography (geo="" == all countries). A
+        # non-empty geo would make levels country-specific and non-comparable with
+        # the stored basket, so flag it loudly rather than silently drift.
+        if geo:
+            print(f"[trends] WARNING: geo={geo!r} is NOT worldwide; index expects geo=''")
         self.geo = geo
         self._min_interval = min_interval
         self._jitter = jitter
@@ -97,7 +108,15 @@ class TrendsClient:
 
     def resolve_query(self, label: str, cache_only: bool = False) -> str | None:
         """Return the Trends query token for a brand: a topic mid when one exists,
-        else a cleaned keyword. None when cache_only and not yet resolved."""
+        else a cleaned keyword. None when cache_only and not yet resolved.
+
+        Disambiguation policy: when a brand name yields more than one brand/company
+        topic candidate, pick the one with the largest *worldwide* search interest
+        (one comparison query; Trends normalises within a batch, so candidate means
+        are directly comparable). This resolves the corporate-vs-consumer split in
+        favour of the entity people actually search — e.g. the "Levi's" brand topic
+        over the "Levi Strauss & Co." company topic, "On" the running brand over the
+        holding company. Falls back to suggestion order if the comparison fails."""
         if label in self._qmap:
             return self._qmap[label]
         if cache_only:
@@ -108,18 +127,23 @@ class TrendsClient:
             pt = self._trendreq()
             sugg = pt.suggestions(label) or []
             self._last_call = time.monotonic()
-            best = None
+            # brand/company topic candidates, in suggestion order, de-duplicated
+            cands, seen = [], set()
             for s in sugg:
+                mid = s.get("mid")
                 typ = (s.get("type") or "").lower()
-                if any(k in typ for k in _BRAND_TYPES):
-                    best = s.get("mid"); break
-            if best is None and sugg:
-                # no clear brand topic; take the first topic that isn't the raw
+                if mid and mid not in seen and any(k in typ for k in _BRAND_TYPES):
+                    cands.append(mid); seen.add(mid)
+            if len(cands) >= 2:
+                token = self._pick_highest_traffic(cands)
+            elif len(cands) == 1:
+                token = cands[0]
+            elif sugg:
+                # no brand topic; take the first topic that isn't the raw
                 # dictionary sense (skip type "Topic" with no brand words)
                 first = sugg[0]
                 if first.get("type") and "topic" not in first["type"].lower():
-                    best = first.get("mid")
-            token = best or clean_term(label)
+                    token = first.get("mid") or clean_term(label)
         except TrendsUnavailable:
             raise
         except Exception:
@@ -128,12 +152,26 @@ class TrendsClient:
         self._save_qmap()
         return token
 
+    def _pick_highest_traffic(self, mids: list[str]) -> str:
+        """Among candidate topic mids, the one with the largest worldwide mean
+        interest. Single cached comparison query; falls back to the first mid."""
+        mids = mids[:5]                        # Trends payload cap
+        try:
+            means = self._fetch_batch(mids, cache_only=False)
+        except Exception:
+            return mids[0]
+        if not means:
+            return mids[0]
+        return max(mids, key=lambda m: means.get(m, 0.0))
+
     # -- batch fetch ---------------------------------------------------------
 
     def _cache_path(self, tokens: list[str]) -> Path:
-        key = "|".join(tokens) + f"|{self.timeframe}|{self.geo}"
+        # gprop is part of the key so news batches never collide with web batches.
+        key = "|".join(tokens) + f"|{self.timeframe}|{self.geo}|{self.gprop}"
         digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:20]
-        return self.cache_dir / f"batch_{digest}.json"
+        tag = f"{self.gprop}_" if self.gprop else ""
+        return self.cache_dir / f"batch_{tag}{digest}.json"
 
     def _fetch_batch(self, tokens: list[str], cache_only: bool = False) -> dict[str, float]:
         """Mean interest per query token for one batch (anchor token first)."""
@@ -148,7 +186,7 @@ class TrendsClient:
             self._throttle()
             try:
                 pt = self._trendreq()
-                pt.build_payload(tokens, timeframe=self.timeframe, geo=self.geo)
+                pt.build_payload(tokens, timeframe=self.timeframe, geo=self.geo, gprop=self.gprop)
                 df = pt.interest_over_time()
                 self._last_call = time.monotonic()
                 means: dict[str, float] = {}

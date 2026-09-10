@@ -1,0 +1,1947 @@
+rank_seed,brand,qid,gdelt_median_vol,mom,yoy,status
+1,Nike,Q483915,,,,throttled
+2,Gucci,Q178516,,,,throttled
+1,Nike,Q483915,,,,throttled
+2,Gucci,Q178516,670,+44%,-19%,ok
+3,Louis Vuitton,Q191485,596,-18%,-15%,ok
+4,Uniqlo,Q26070,222,+34%,-7%,ok
+5,H&M,Q188326,315,+27%,-28%,ok
+6,Zara,Q147662,,,,throttled
+7,Hermès,Q843887,,,,throttled
+8,Hugo Boss,Q491627,68,-12%,-13%,ok
+9,Shein,Q107377209,326,+32%,-54%,ok
+10,Victoria’s Secret,Q332477,0,,,ok
+11,Prada,Q193136,,,,throttled
+12,Versace,Q696376,503,+28%,-1%,ok
+13,Swarovski,Q611115,154,-38%,-50%,ok
+14,New Balance,Q742988,270,-15%,-39%,ok
+15,Levi Strauss & Co.,Q127962,34,+50%,+15%,ok
+16,Lacoste,Q309031,54,-20%,-49%,ok
+17,Air Jordan,Q420953,40,-8%,-31%,ok
+18,Giorgio Armani,Q635484,192,-52%,-56%,ok
+19,Dolce & Gabbana,Q214480,186,-53%,-3%,ok
+20,Lululemon Athletica,Q6702957,52,+22%,-46%,ok
+21,Primark,Q137023,,,,throttled
+22,"The North Face, Inc.",Q152784,,,,parse_fail
+23,On AG,Q43452713,,,,throttled
+24,Under Armour,Q2031485,,,,throttled
+25,Calvin Klein,Q1068628,,,,throttled
+26,Tiffany & Co.,Q1066858,96,-10%,-6%,ok
+27,"Fila, Inc.",Q482539,,,,parse_fail
+28,Yves Saint Laurent,Q2282172,102,+1%,+1%,ok
+29,Bata Limited,Q688082,0,,,ok
+30,Burberry,Q390107,,,,throttled
+31,Chrome Hearts,Q5113774,32,+31%,-69%,ok
+32,Bulgari,Q752515,,,,throttled
+33,"Patagonia, Inc.",Q1660552,,,,throttled
+34,C&A,Q701338,,,,throttled
+35,Ralph Lauren Corporation,Q1641437,,,,throttled
+36,Skechers,Q2945643,90,-30%,-38%,ok
+37,Dr. Martens,Q1126126,,,,throttled
+38,Supreme,Q1659229,3438,-4%,-27%,ok
+39,Fendi,Q926575,141,+102%,+6%,ok
+40,Abercrombie & Fitch,Q319344,,,,throttled
+41,Loro Piana,Q1686544,34,-17%,-72%,ok
+42,Kappa,Q735873,58,+28%,+18%,ok
+43,Benetton Group,Q817139,,,,throttled
+44,Maison Margiela,Q1726925,60,+132%,+7%,ok
+45,Givenchy,Q759210,,,,throttled
+46,Stone Island,Q950042,16,-19%,-43%,ok
+47,Miu Miu,Q552230,,,,throttled
+48,Loewe,Q966905,150,-56%,-32%,ok
+49,Zalando,Q136570,50,+112%,+8%,ok
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,parse_fail
+52,Comme des Garçons,Q1115170,33,+160%,-21%,ok
+53,Massimo Dutti,Q788231,24,+15%,+44%,ok
+54,Birkenstock,Q648458,,,,throttled
+55,Guess,Q2470307,3216,+23%,-6%,ok
+56,Bottega Veneta,Q894874,120,-52%,-56%,ok
+57,Moncler,Q1548951,,,,throttled
+58,Bershka,Q827258,22,-44%,+56%,ok
+59,Mango,Q136503,860,-9%,-21%,ok
+60,Diesel,Q158285,2614,-4%,-37%,ok
+61,Tommy Hilfiger B.V.,Q634881,,,,parse_fail
+62,Montblanc International GmbH,Q142691,,,,throttled
+63,American Eagle Outfitters,Q2842931,,,,throttled
+64,Vertu,Q1130409,,,,throttled
+65,"Stüssy, Inc.",Q7629175,,,,parse_fail
+66,Valentino,Q649646,296,-26%,-50%,ok
+67,Celine,Q948531,224,+86%,+3%,ok
+68,Nordstrom,Q174310,225,-17%,-20%,ok
+69,Macron,Q1439645,,,,throttled
+70,Hummel International,Q532310,0,,,ok
+71,Brandy Melville,Q25387414,4,+50%,-77%,ok
+72,Superdry,Q1684445,,,,throttled
+73,Alo Yoga,Q123700068,29,-21%,-67%,ok
+74,The Timberland Company,Q1539185,,,,throttled
+75,Thor Steinar,Q2003244,0,,,ok
+76,Pull&Bear,Q691029,8,+40%,+17%,ok
+77,Hoka,Q16908664,,,,throttled
+78,Chloé,Q1075391,,,,throttled
+79,Jaeger-LeCoultre,Q378698,,,,throttled
+80,LC Waikiki,Q3205965,,,,throttled
+81,Forever 21,Q1060537,,,,throttled
+82,Hollister Co.,Q1257477,,,,throttled
+83,Wrangler,Q1445358,170,-3%,-40%,ok
+84,Off-White,Q53472173,224,+19%,-12%,ok
+85,Gymshark,Q56246099,18,-46%,-53%,ok
+86,Zegna,Q1355904,42,-18%,-12%,ok
+87,HEAD,Q631894,,,,timeout
+88,Banana Republic,Q806085,56,-33%,-56%,ok
+89,Pepco,Q11815580,8,+220%,-90%,ok
+90,Puig,Q3410623,,,,throttled
+91,Balmain,Q1385309,96,-57%,-68%,ok
+92,JD Sports,Q6108019,67,+71%,-29%,ok
+93,Le Bon Marché,Q1200698,,,,throttled
+94,American Apparel Inc.,Q463378,,,,throttled
+95,Moschino,Q659863,54,+32%,-52%,ok
+96,Fjällräven,Q1422481,4,-75%,-83%,ok
+97,New Yorker,Q706421,,,,throttled
+98,100 Thieves,Q24908552,,,,throttled
+99,DKNY,Q938773,,,,throttled
+100,Alexander McQueen,Q13882231,136,-30%,-30%,ok
+101,TK Maxx,Q23823668,42,-15%,-80%,ok
+102,Foot Locker,Q63335,,,,throttled
+103,Max Mara,Q1151774,,,,throttled
+104,J. Barbour and Sons,Q182399,,,,parse_fail
+105,SKIMS,Q110778161,168,-21%,-72%,ok
+106,GU,Q5512642,,,,throttled
+107,Slazenger,Q2855977,2,+0%,+0%,ok
+108,Old Navy,Q2735242,,,,throttled
+109,Brooks Sports,Q670764,0,,,ok
+110,Neiman Marcus,Q743497,76,-80%,-57%,ok
+111,PVH Corp.,Q1132272,12,-17%,-69%,ok
+112,Dickies,Q114913,,,,throttled
+113,Strauss,Q1341990,210,-4%,-30%,ok
+114,ECCO,Q1280255,,,,throttled
+115,Napapijri,Q2782017,2,,,ok
+116,Next plc,Q246655,7,-54%,+50%,ok
+117,Salvatore Ferragamo,Q3946053,,,,throttled
+118,C. & J. Clark International Ltd,Q1095857,,,,parse_fail
+119,Emilio Pucci,Q604667,7,+250%,+17%,ok
+120,JW Anderson,Q29015034,,,,throttled
+121,The Row,Q25351941,,,,throttled
+122,Q849724,Q849724,,,,throttled
+123,Dillard's,Q844805,2,-25%,-67%,ok
+124,"Eddie Bauer Holdings, Inc.",Q842174,,,,throttled
+125,Lanvin,Q866899,28,-26%,-33%,ok
+126,Zappos,Q147505,,,,throttled
+127,streetwear,Q2072372,418,+43%,-13%,ok
+128,Fred Perry,Q4038967,7,-80%,-83%,ok
+129,Farfetch,Q18712957,13,+0%,-53%,ok
+130,Adidas Yeezy,Q22101752,1,-75%,+0%,ok
+131,L.L.Bean,Q6131944,32,+200%,+117%,ok
+132,OYSHO,Q3327046,5,-25%,-25%,ok
+133,Geox,Q588001,,,,throttled
+134,Oniverse,Q1027874,1,-100%,-100%,ok
+135,Piaget,Q658961,,,,throttled
+136,Borsalino,Q593680,3,+700%,+700%,ok
+137,Agatha Ruiz de la Prada,Q2736351,,,,throttled
+138,Deichmann SE,Q664543,0,,,ok
+139,Erreà,Q1361595,,,,parse_fail
+140,Stradivarius,Q3322945,,,,throttled
+141,Desigual,Q83750,5,-57%,+0%,ok
+142,Jimmy Choo Ltd,Q5213855,,,,parse_fail
+143,Missoni,Q1400977,,,,throttled
+144,Trussardi,Q2456630,2,-83%,+0%,ok
+145,Ellesse,Q2263500,1,,,ok
+146,C.P. Company,Q429204,2,-100%,-100%,ok
+147,COS,Q60772401,,,,throttled
+148,Jack & Jones,Q6077665,,,,throttled
+149,Tom Ford,Q105476592,208,-22%,-9%,ok
+150,Vetements,Q29109956,13,-68%,+27%,ok
+151,Giordano,Q4115012,,,,throttled
+152,Merrell,Q1921997,26,+26%,-6%,ok
+153,Nautica,Q6981479,,,,timeout
+154,Havaianas,Q3128675,10,-38%,-52%,ok
+155,Brunello Cucinelli,Q3645582,,,,throttled
+156,Berluti,Q821969,,,,throttled
+157,J.Crew,Q5370765,,,,throttled
+158,Aritzia,Q4791147,,,,throttled
+159,KiK,Q883965,,,,throttled
+160,Kangol,Q3192653,4,-20%,-20%,ok
+161,ASOS,Q211951,,,,throttled
+162,Kiabi,Q3196299,,,,throttled
+163,Tom Tailor,Q571206,0,,,ok
+164,Golden Goose,Q28224724,,,,throttled
+165,Orbea,Q1360940,4,-11%,+167%,ok
+166,Kiton,Q3197595,,,,throttled
+167,Alfred Dunhill,Q1784995,1,-100%,-100%,ok
+168,Juicy Couture,Q1568588,,,,throttled
+169,Cerruti 1881,Q1056200,1,,,ok
+170,Topshop,Q1893576,,,,throttled
+171,Vuori,Q121878733,36,+10%,-63%,ok
+172,Fashion Nova,Q65090803,13,+40%,-46%,ok
+173,Escada SE,Q600986,,,,parse_fail
+174,s.Oliver,Q265056,3,-50%,+100%,ok
+175,Intimissimi,Q305404,,,,throttled
+176,Reserved,Q21809354,,,,throttled
+177,Pantaloons,Q7131643,10,+275%,-17%,ok
+178,Charles Tyrwhitt,Q924963,5,+100%,-25%,ok
+179,MCM Worldwide,Q835487,0,,,ok
+180,Lord & Taylor,Q2749082,,,,throttled
+181,Eckō Unltd.,Q1281935,,,,throttled
+182,Corteiz,Q125784200,,,,throttled
+183,Nina Ricci,Q1439858,,,,throttled
+184,Bally,Q688195,,,,throttled
+185,K-Swiss,Q1422386,,,,throttled
+186,Karl Kani,Q1355658,,,,throttled
+187,ALDO,Q2832297,,,,throttled
+188,G-Star Raw,Q1484081,,,,throttled
+189,Aquascutum,Q278948,,,,throttled
+190,K-way,Q2820820,,,,throttled
+191,Viktor & Rolf,Q2707765,,,,throttled
+192,Celio,Q2672003,,,,throttled
+193,'47,Q25222241,,,,throttled
+194,Rocawear,Q7193265,,,,throttled
+195,Beams,Q4876226,,,,throttled
+196,Fabletics,Q16992933,,,,throttled
+197,Kitsuné,Q917561,,,,throttled
+198,Marithé + François Girbaud,Q1320295,,,,throttled
+199,Etro,Q1371677,,,,throttled
+200,Furla,Q3073195,,,,throttled
+201,Red Wing Shoes,Q934096,,,,throttled
+202,House of Schiaparelli,Q107835110,,,,throttled
+203,Canada Goose Inc.,Q2988422,,,,throttled
+204,Evisu,Q3274777,,,,throttled
+205,AllSaints,Q4728473,,,,throttled
+206,Golf Wang,Q25047966,,,,throttled
+207,OBEY Clothing,Q22910099,,,,throttled
+208,Biba,Q4902942,,,,throttled
+209,True Religion,Q2456205,,,,throttled
+210,"Jordache Enterprises, Inc.",Q6276279,,,,throttled
+211,Dr. Scholl's,Q17019662,,,,throttled
+212,Camper,Q1030922,,,,throttled
+213,Lyle & Scott,Q3269443,,,,throttled
+214,OshKosh B'Gosh,Q1417347,,,,throttled
+215,NKD,Q927272,,,,throttled
+216,Charles & Keith,Q3878818,,,,throttled
+217,Psycho Bunny,Q25052459,,,,throttled
+218,Cacharel,Q576316,,,,throttled
+219,Roots Canada,Q7366633,,,,throttled
+220,Payless ShoeSource,Q7156755,,,,throttled
+221,Fielmann,Q457822,,,,throttled
+222,ABC-Mart,Q11188787,,,,throttled
+223,River Island,Q2670328,,,,throttled
+224,Mexx,Q1837290,,,,throttled
+225,Coleman Company,Q430230,,,,throttled
+226,Enfants Riches Déprimés,Q39058850,,,,throttled
+227,La Senza,Q3212802,,,,throttled
+228,Camp David,Q50540636,,,,throttled
+229,Jockey International,Q534235,,,,throttled
+230,Marc O’Polo,Q1892752,,,,throttled
+231,Yeezy,Q96791543,,,,throttled
+232,Rieker Shoes,Q2152193,,,,throttled
+233,Vakko,Q7909026,,,,throttled
+234,Billionaire Boys Club,Q2719846,,,,throttled
+235,Club Monaco,Q2979949,,,,throttled
+236,Express,Q1384784,,,,throttled
+237,Maui Jim,Q6792377,,,,throttled
+238,Superga,Q3073822,,,,throttled
+239,Gloria Jeans,Q4139985,,,,throttled
+240,Cotton On Group,Q113992257,,,,throttled
+241,Adastria,Q17191383,,,,throttled
+242,PacSun,Q7121857,,,,throttled
+243,Avia,Q4828498,,,,throttled
+244,Pink,Q20716793,,,,throttled
+245,Haglöfs,Q1427623,,,,throttled
+246,CoverGirl,Q1629990,,,,throttled
+247,Scotch & Soda,Q17141914,,,,throttled
+248,Aimé Leon Dore,Q43082416,,,,throttled
+249,Marmot,Q1902277,,,,throttled
+250,Savage X Fenty,Q104846139,,,,throttled
+251,United Arrows,Q10853153,,,,throttled
+252,Safilo,Q950766,,,,throttled
+253,Henri Bendel,Q5715308,,,,throttled
+254,Church's,Q2967663,,,,throttled
+255,LuLaRoe,Q30589369,,,,throttled
+256,Pierre Cardin,Q22921009,,,,throttled
+257,Suitsupply,Q17149142,,,,throttled
+258,Anthropologie,Q4773903,,,,throttled
+259,Marni,Q3650853,,,,throttled
+260,etnies,Q651470,,,,throttled
+261,Uterqüe,Q3328552,,,,throttled
+262,House of Worth,Q5915543,,,,throttled
+263,Osprey,Q7107393,,,,throttled
+264,Modell's,Q3317844,,,,throttled
+265,Theory,Q2039867,,,,throttled
+266,Breuninger,Q911217,,,,throttled
+267,Hackett,Q1136426,,,,throttled
+268,JOOP!,Q1703526,,,,throttled
+269,Elan,Q1634723,,,,throttled
+270,Bombas,Q42332202,,,,throttled
+271,Members Only,Q17080812,,,,throttled
+272,Fiorucci,Q1089081,,,,throttled
+273,Vineyard Vines,Q7932495,,,,throttled
+274,D-A-S-H,Q5203233,,,,throttled
+275,Max Fashion,Q24939079,,,,throttled
+276,Samantha Thavasa,Q7408750,,,,throttled
+277,Delvaux,Q18155981,,,,throttled
+278,John Lobb Bootmaker,Q641722,,,,throttled
+279,Mountain Warehouse,Q6925414,,,,throttled
+280,Jacques Fath,Q1028975,,,,throttled
+281,Baby Phat,Q4838385,,,,throttled
+282,DSQUARED2,Q2551058,,,,throttled
+283,A.P.C.,Q546542,,,,throttled
+284,Adidas Originals,Q4682711,,,,throttled
+285,Herschel Supply Co.,Q23672312,,,,throttled
+286,Jaeger,Q3160437,,,,throttled
+287,Nordstrom Rack,Q21463374,,,,throttled
+288,Reusch,Q551889,,,,throttled
+289,Tory Burch LLC,Q19988222,,,,throttled
+290,Liu·Jo,Q3835099,,,,throttled
+291,Sinsay,Q107410579,,,,throttled
+292,Talbots,Q7679064,,,,throttled
+293,Kathmandu,Q1736294,,,,throttled
+294,Springfield,Q958209,,,,throttled
+295,Koton,Q6063877,,,,throttled
+296,Peter Millar (clothing company),Q55641424,,,,throttled
+297,Çalık Holding,Q272361,,,,throttled
+298,Scarpa,Q3943471,,,,throttled
+299,Rockport Company,Q4048384,,,,throttled
+300,La Martina,Q1798938,,,,throttled
+301,PrettyLittleThing,Q54817659,,,,throttled
+302,MCS,Q3111039,,,,throttled
+303,Stitch Fix,Q18385610,,,,throttled
+304,Playlife,Q172227,,,,throttled
+305,Ami Paris,Q107394262,,,,throttled
+306,Bimba y Lola,Q54869493,,,,throttled
+307,Syrn,Q138318202,,,,throttled
+308,Blundstone Australia Pty Ltd,Q2896348,,,,throttled
+309,Jack Wills,Q6115814,,,,throttled
+310,Caleres,Q4112833,,,,throttled
+311,Zumiez,Q8075252,,,,throttled
+312,Mark's,Q6766373,,,,throttled
+313,Fox-Wizel Ltd.,Q5476569,,,,throttled
+314,Lucky Brand Jeans,Q6697865,,,,throttled
+315,Gerry Weber,Q873447,,,,throttled
+316,Aerie,Q25351619,,,,throttled
+317,DAKS,Q5204244,,,,throttled
+318,Andrew Christian,Q4120731,,,,throttled
+319,Zeeman,Q184399,,,,throttled
+320,Sunglass Hut,Q136311,,,,throttled
+321,LensCrafters,Q6523209,,,,throttled
+322,Lefties,Q12391713,,,,throttled
+323,Avirex,Q3504397,,,,throttled
+324,Harmont & Blaine,Q3783405,,,,throttled
+325,House,Q9294202,26736,+2%,-17%,ok
+326,Burton,Q5000795,261,+4%,-62%,ok
+327,Schott NYC,Q3475516,0,,,ok
+328,Lane Bryant,Q6485350,,,,throttled
+329,Matalan,Q12061509,37,-87%,-90%,ok
+330,George,Q101108013,4112,-11%,-25%,ok
+331,Munich,Q2076935,,,,throttled
+332,Storm Management,Q3974532,4,+33%,-43%,ok
+333,Wicked Weasel,Q2567594,0,,,ok
+334,Sector No Limits,Q7444725,,,,parse_fail
+335,Chevignon,Q787601,0,,,ok
+336,Free People,Q5499945,300,-19%,-8%,ok
+337,Wati B,Q3566715,,,,throttled
+338,British Knights,Q4970227,0,,,ok
+339,Miss Sixty,Q241295,2,-50%,-75%,ok
+340,Replay,Q1654538,490,+36%,+8%,ok
+341,Christian Dior Couture,Q131721678,14,-85%,+143%,ok
+342,J. Press,Q6106802,6,-50%,+100%,ok
+343,Pimkie,Q1758066,0,,,ok
+344,Designer Brands,Q5206207,72,-2%,-44%,ok
+345,Rabanne,Q129676852,,,,throttled
+346,Lindex,Q1786717,,,,throttled
+347,CCC,Q11788344,,,,throttled
+348,R. M. Williams,Q65042966,,,,throttled
+349,Zimmermann,Q48797459,,,,throttled
+350,Parfois,Q7136948,1,,,ok
+351,Pataugas,Q3368657,,,,throttled
+352,Tween Brands,Q7857512,,,,throttled
+353,Melon Fashion Group,Q103847272,,,,throttled
+354,Rochas,Q1578717,2,+200%,+50%,ok
+355,Q3356778,Q3356778,,,,parse_fail
+356,J. Peterman Company,Q60755814,,,,throttled
+357,Zadig & Voltaire,Q3574548,6,,,ok
+358,New Look,Q12063852,1059,-14%,-45%,ok
+359,WE,Q1987861,,,,throttled
+360,Tiger of Sweden,Q4176650,0,,,ok
+361,Reiss,Q7310479,42,+7%,-17%,ok
+362,Ivy Park,Q23893788,4,,,ok
+363,Peter England,Q19573665,1,+600%,-12%,ok
+364,Jil Sander,Q17101930,28,-9%,+11%,ok
+365,Tecnifibre,Q3516993,0,,,ok
+366,Skagen Designs,Q1485347,,,,throttled
+367,PINKO,Q3905226,8,-11%,-53%,ok
+368,Blanc & Eclare,Q18577819,,,,throttled
+369,Takko Fashion,Q1371302,,,,throttled
+370,Shanghai Tang,Q7488518,2,,,ok
+371,Frederick's of Hollywood,Q1373540,,,,throttled
+372,Matières Fécales,Q138543842,9,,,ok
+373,The Limited,Q7747373,1287,+9%,-1%,ok
+374,Snipes,Q42306166,10,+0%,+122%,ok
+375,Kookai,Q1783759,5,-100%,-100%,ok
+376,Ulla Popken,Q2475146,,,,throttled
+377,Blufin,Q3641225,0,,,ok
+378,Marchesa,Q6756978,8,-33%,-33%,ok
+379,Helmut Lang,Q5709676,,,,throttled
+380,Wolford,Q431607,,,,throttled
+381,Kariyushi shirt,Q6371145,,,,throttled
+382,The Edinburgh Woollen Mill,Q16834657,,,,throttled
+383,Bossini,Q4035334,0,,,ok
+384,Buck Mason,Q48770898,6,+200%,+29%,ok
+385,7 for all Mankind,Q270013,4,-60%,-60%,ok
+386,Laura Ashley plc,Q1523089,,,,parse_fail
+387,Bogner,Q881017,4,+150%,+0%,ok
+388,E. Marinella,Q5322052,0,+0%,-50%,ok
+389,Big 5 Sporting Goods,Q4904902,1,-25%,-67%,ok
+390,Ann Taylor,Q4766699,6,-55%,+150%,ok
+391,Palm Angels,Q116783961,2,+0%,-25%,ok
+392,Mulberry,Q3866987,594,-4%,-34%,ok
+393,Bebe Stores,Q4878313,0,-100%,-100%,ok
+394,Blizzard Ski,Q877571,0,,,ok
+395,Rebecca Minkoff,Q50428076,4,+0%,-50%,ok
+396,Castro Model Ltd.,Q1049887,,,,throttled
+397,Jos. A. Bank Clothiers,Q6204078,0,,,ok
+398,Vivobarefoot,Q7937938,,,,throttled
+399,Ermanno Scervino,Q3661184,,,,throttled
+400,Scalpers,Q87193804,17,+58%,-14%,ok
+401,Proenza Schouler,Q1130841,,,,throttled
+402,Sandro Paris,Q3472022,0,,,ok
+403,Moscot,Q6915425,1,,,ok
+404,Hang Ten,Q5647849,3,+0%,-86%,ok
+405,Bonobos,Q4942546,,,,throttled
+406,Schiesser,Q2234831,,,,throttled
+407,Pal Zileri,Q3889076,1,,,ok
+1,Nike,Q483915,,,,throttled
+6,Zara,Q147662,,,,throttled
+7,Hermès,Q843887,,,,throttled
+11,Prada,Q193136,,,,throttled
+21,Primark,Q137023,,,,throttled
+22,"The North Face, Inc.",Q152784,,,,parse_fail
+23,On AG,Q43452713,,,,throttled
+24,Under Armour,Q2031485,,,,throttled
+25,Calvin Klein,Q1068628,222,-59%,-60%,ok
+27,"Fila, Inc.",Q482539,,,,throttled
+30,Burberry,Q390107,,,,throttled
+32,Bulgari,Q752515,,,,throttled
+33,"Patagonia, Inc.",Q1660552,,,,throttled
+34,C&A,Q701338,,,,throttled
+35,Ralph Lauren Corporation,Q1641437,11,+1300%,+155%,ok
+37,Dr. Martens,Q1126126,,,,throttled
+40,Abercrombie & Fitch,Q319344,,,,throttled
+43,Benetton Group,Q817139,,,,throttled
+45,Givenchy,Q759210,,,,throttled
+47,Miu Miu,Q552230,,,,throttled
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,throttled
+54,Birkenstock,Q648458,46,-37%,-63%,ok
+57,Moncler,Q1548951,,,,throttled
+61,Tommy Hilfiger B.V.,Q634881,,,,throttled
+62,Montblanc International GmbH,Q142691,,,,throttled
+63,American Eagle Outfitters,Q2842931,,,,throttled
+64,Vertu,Q1130409,10,-57%,-40%,ok
+65,"Stüssy, Inc.",Q7629175,,,,parse_fail
+69,Macron,Q1439645,374,-27%,-65%,ok
+72,Superdry,Q1684445,18,-83%,-40%,ok
+74,The Timberland Company,Q1539185,0,,,ok
+77,Hoka,Q16908664,,,,throttled
+78,Chloé,Q1075391,122,-22%,-40%,ok
+79,Jaeger-LeCoultre,Q378698,,,,throttled
+80,LC Waikiki,Q3205965,0,,,ok
+81,Forever 21,Q1060537,24,+543%,-93%,ok
+82,Hollister Co.,Q1257477,,,,throttled
+87,HEAD,Q631894,,,,throttled
+90,Puig,Q3410623,,,,throttled
+93,Le Bon Marché,Q1200698,8,-62%,-50%,ok
+94,American Apparel Inc.,Q463378,0,,,ok
+97,New Yorker,Q706421,250,+53%,+31%,ok
+98,100 Thieves,Q24908552,2,,,ok
+99,DKNY,Q938773,,,,throttled
+102,Foot Locker,Q63335,,,,throttled
+103,Max Mara,Q1151774,30,+253%,+235%,ok
+104,J. Barbour and Sons,Q182399,,,,parse_fail
+106,GU,Q5512642,,,,throttled
+108,Old Navy,Q2735242,,,,throttled
+112,Dickies,Q114913,,,,throttled
+114,ECCO,Q1280255,,,,throttled
+117,Salvatore Ferragamo,Q3946053,13,-25%,-10%,ok
+118,C. & J. Clark International Ltd,Q1095857,,,,parse_fail
+120,JW Anderson,Q29015034,29,-26%,+0%,ok
+121,The Row,Q25351941,928,+4%,-48%,ok
+122,Q849724,Q849724,,,,parse_fail
+124,"Eddie Bauer Holdings, Inc.",Q842174,0,,,ok
+126,Zappos,Q147505,18,+400%,-12%,ok
+133,Geox,Q588001,,,,throttled
+135,Piaget,Q658961,21,+4%,+35%,ok
+137,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+139,Erreà,Q1361595,,,,parse_fail
+140,Stradivarius,Q3322945,60,-28%,+95%,ok
+142,Jimmy Choo Ltd,Q5213855,,,,parse_fail
+143,Missoni,Q1400977,42,+55%,+0%,ok
+147,COS,Q60772401,,,,throttled
+148,Jack & Jones,Q6077665,8,+0%,-58%,ok
+151,Giordano,Q4115012,27,+75%,-48%,ok
+153,Nautica,Q6981479,15,-38%,-41%,ok
+155,Brunello Cucinelli,Q3645582,28,-28%,-7%,ok
+156,Berluti,Q821969,7,+100%,+300%,ok
+157,J.Crew,Q5370765,,,,throttled
+158,Aritzia,Q4791147,,,,throttled
+159,KiK,Q883965,,,,throttled
+161,ASOS,Q211951,,,,throttled
+162,Kiabi,Q3196299,,,,throttled
+164,Golden Goose,Q28224724,,,,throttled
+166,Kiton,Q3197595,4,-78%,+100%,ok
+168,Juicy Couture,Q1568588,15,-51%,-81%,ok
+170,Topshop,Q1893576,50,+65%,-76%,ok
+173,Escada SE,Q600986,,,,parse_fail
+175,Intimissimi,Q305404,9,+125%,-40%,ok
+176,Reserved,Q21809354,13657,+7%,+12%,ok
+180,Lord & Taylor,Q2749082,5,-88%,-89%,ok
+181,Eckō Unltd.,Q1281935,,,,parse_fail
+182,Corteiz,Q125784200,2,+0%,+200%,ok
+183,Nina Ricci,Q1439858,8,-43%,-67%,ok
+184,Bally,Q688195,,,,throttled
+185,K-Swiss,Q1422386,,,,throttled
+186,Karl Kani,Q1355658,,,,throttled
+187,ALDO,Q2832297,,,,throttled
+188,G-Star Raw,Q1484081,1,,,ok
+189,Aquascutum,Q278948,2,-50%,-67%,ok
+190,K-way,Q2820820,5,+50%,+200%,ok
+191,Viktor & Rolf,Q2707765,10,+11%,-60%,ok
+192,Celio,Q2672003,,,,throttled
+193,'47,Q25222241,,,,throttled
+194,Rocawear,Q7193265,,,,throttled
+195,Beams,Q4876226,530,+19%,-9%,ok
+196,Fabletics,Q16992933,,,,throttled
+197,Kitsuné,Q917561,,,,throttled
+198,Marithé + François Girbaud,Q1320295,0,,,ok
+199,Etro,Q1371677,,,,throttled
+200,Furla,Q3073195,3,-62%,+200%,ok
+201,Red Wing Shoes,Q934096,2,-33%,+0%,ok
+202,House of Schiaparelli,Q107835110,,,,throttled
+203,Canada Goose Inc.,Q2988422,2,+167%,-11%,ok
+204,Evisu,Q3274777,0,,,ok
+205,AllSaints,Q4728473,14,+0%,-75%,ok
+206,Golf Wang,Q25047966,,,,throttled
+207,OBEY Clothing,Q22910099,,,,throttled
+208,Biba,Q4902942,,,,throttled
+209,True Religion,Q2456205,,,,throttled
+210,"Jordache Enterprises, Inc.",Q6276279,,,,parse_fail
+211,Dr. Scholl's,Q17019662,,,,throttled
+212,Camper,Q1030922,,,,throttled
+213,Lyle & Scott,Q3269443,,,,throttled
+214,OshKosh B'Gosh,Q1417347,,,,throttled
+215,NKD,Q927272,,,,throttled
+216,Charles & Keith,Q3878818,12,-42%,-12%,ok
+217,Psycho Bunny,Q25052459,,,,throttled
+218,Cacharel,Q576316,1,-100%,-100%,ok
+219,Roots Canada,Q7366633,4,+88%,+20%,ok
+220,Payless ShoeSource,Q7156755,1,,,ok
+221,Fielmann,Q457822,,,,throttled
+222,ABC-Mart,Q11188787,0,,,ok
+223,River Island,Q2670328,118,+59%,-13%,ok
+224,Mexx,Q1837290,,,,throttled
+225,Coleman Company,Q430230,1,,,ok
+226,Enfants Riches Déprimés,Q39058850,1,,,ok
+227,La Senza,Q3212802,,,,throttled
+228,Camp David,Q50540636,8,+167%,+60%,ok
+229,Jockey International,Q534235,2,,,ok
+230,Marc O’Polo,Q1892752,,,,parse_fail
+231,Yeezy,Q96791543,38,+110%,+35%,ok
+232,Rieker Shoes,Q2152193,0,,,ok
+233,Vakko,Q7909026,0,,,ok
+234,Billionaire Boys Club,Q2719846,5,,,ok
+235,Club Monaco,Q2979949,6,-48%,+230%,ok
+236,Express,Q1384784,8454,+11%,-17%,ok
+237,Maui Jim,Q6792377,2,-67%,+100%,ok
+238,Superga,Q3073822,4,-50%,+0%,ok
+239,Gloria Jeans,Q4139985,,,,throttled
+240,Cotton On Group,Q113992257,1,,,ok
+241,Adastria,Q17191383,0,,,ok
+242,PacSun,Q7121857,,,,throttled
+243,Avia,Q4828498,,,,throttled
+244,Pink,Q20716793,,,,throttled
+245,Haglöfs,Q1427623,0,,,ok
+246,CoverGirl,Q1629990,,,,throttled
+247,Scotch & Soda,Q17141914,,,,throttled
+248,Aimé Leon Dore,Q43082416,6,+167%,+33%,ok
+249,Marmot,Q1902277,,,,throttled
+250,Savage X Fenty,Q104846139,20,+73%,-27%,ok
+251,United Arrows,Q10853153,3,+0%,+33%,ok
+252,Safilo,Q950766,2,+0%,-86%,ok
+253,Henri Bendel,Q5715308,2,+0%,-50%,ok
+254,Church's,Q2967663,,,,throttled
+255,LuLaRoe,Q30589369,0,-100%,-100%,ok
+256,Pierre Cardin,Q22921009,14,-17%,-55%,ok
+257,Suitsupply,Q17149142,,,,throttled
+258,Anthropologie,Q4773903,,,,throttled
+259,Marni,Q3650853,,,,throttled
+260,etnies,Q651470,,,,throttled
+261,Uterqüe,Q3328552,0,,,ok
+262,House of Worth,Q5915543,0,-100%,-100%,ok
+263,Osprey,Q7107393,30,+28%,+28%,ok
+264,Modell's,Q3317844,0,,,ok
+265,Theory,Q2039867,4653,-10%,-9%,ok
+266,Breuninger,Q911217,,,,throttled
+267,Hackett,Q1136426,28,-51%,+0%,ok
+268,JOOP!,Q1703526,3,,,ok
+269,Elan,Q1634723,,,,throttled
+270,Bombas,Q42332202,,,,throttled
+271,Members Only,Q17080812,,,,throttled
+272,Fiorucci,Q1089081,,,,throttled
+273,Vineyard Vines,Q7932495,6,-50%,+50%,ok
+274,D-A-S-H,Q5203233,,,,throttled
+275,Max Fashion,Q24939079,,,,throttled
+276,Samantha Thavasa,Q7408750,0,,,ok
+277,Delvaux,Q18155981,3,-25%,+50%,ok
+278,John Lobb Bootmaker,Q641722,,,,throttled
+279,Mountain Warehouse,Q6925414,13,+0%,-81%,ok
+280,Jacques Fath,Q1028975,0,,,ok
+281,Baby Phat,Q4838385,2,-78%,-60%,ok
+282,DSQUARED2,Q2551058,12,-56%,-71%,ok
+283,A.P.C.,Q546542,,,,throttled
+284,Adidas Originals,Q4682711,,,,throttled
+285,Herschel Supply Co.,Q23672312,,,,throttled
+286,Jaeger,Q3160437,,,,throttled
+287,Nordstrom Rack,Q21463374,,,,throttled
+288,Reusch,Q551889,,,,throttled
+289,Tory Burch LLC,Q19988222,0,,,ok
+290,Liu·Jo,Q3835099,,,,throttled
+291,Sinsay,Q107410579,,,,throttled
+292,Talbots,Q7679064,,,,throttled
+293,Kathmandu,Q1736294,156,+40%,+33%,ok
+294,Springfield,Q958209,213,-7%,-17%,ok
+295,Koton,Q6063877,0,-80%,-96%,ok
+296,Peter Millar (clothing company),Q55641424,,,,parse_fail
+297,Çalık Holding,Q272361,,,,throttled
+298,Scarpa,Q3943471,6,-62%,-40%,ok
+299,Rockport Company,Q4048384,,,,parse_fail
+300,La Martina,Q1798938,1,,,ok
+301,PrettyLittleThing,Q54817659,13,-25%,-91%,ok
+302,MCS,Q3111039,,,,throttled
+303,Stitch Fix,Q18385610,10,-59%,-46%,ok
+304,Playlife,Q172227,,,,throttled
+305,Ami Paris,Q107394262,,,,throttled
+306,Bimba y Lola,Q54869493,,,,throttled
+307,Syrn,Q138318202,,,,throttled
+308,Blundstone Australia Pty Ltd,Q2896348,,,,throttled
+309,Jack Wills,Q6115814,4,-72%,-44%,ok
+310,Caleres,Q4112833,4,,,ok
+311,Zumiez,Q8075252,,,,throttled
+312,Mark's,Q6766373,,,,throttled
+313,Fox-Wizel Ltd.,Q5476569,,,,throttled
+314,Lucky Brand Jeans,Q6697865,1,,,ok
+315,Gerry Weber,Q873447,,,,throttled
+316,Aerie,Q25351619,,,,throttled
+317,DAKS,Q5204244,,,,throttled
+318,Andrew Christian,Q4120731,1,,,ok
+319,Zeeman,Q184399,0,,,ok
+320,Sunglass Hut,Q136311,,,,throttled
+321,LensCrafters,Q6523209,4,+1100%,+71%,ok
+322,Lefties,Q12391713,,,,throttled
+323,Avirex,Q3504397,1,+0%,-50%,ok
+324,Harmont & Blaine,Q3783405,,,,throttled
+328,Lane Bryant,Q6485350,,,,throttled
+331,Munich,Q2076935,,,,throttled
+334,Sector No Limits,Q7444725,,,,throttled
+337,Wati B,Q3566715,,,,parse_fail
+345,Rabanne,Q129676852,,,,throttled
+346,Lindex,Q1786717,,,,throttled
+347,CCC,Q11788344,,,,throttled
+348,R. M. Williams,Q65042966,6,-40%,-57%,ok
+349,Zimmermann,Q48797459,35,-41%,-33%,ok
+351,Pataugas,Q3368657,,,,throttled
+352,Tween Brands,Q7857512,,,,throttled
+353,Melon Fashion Group,Q103847272,,,,parse_fail
+355,Q3356778,Q3356778,,,,parse_fail
+356,J. Peterman Company,Q60755814,0,,,ok
+359,WE,Q1987861,,,,throttled
+366,Skagen Designs,Q1485347,0,,,ok
+368,Blanc & Eclare,Q18577819,,,,throttled
+369,Takko Fashion,Q1371302,,,,throttled
+371,Frederick's of Hollywood,Q1373540,,,,throttled
+376,Ulla Popken,Q2475146,3,,,ok
+379,Helmut Lang,Q5709676,,,,throttled
+380,Wolford,Q431607,12,+17%,+40%,ok
+381,Kariyushi shirt,Q6371145,0,,,ok
+382,The Edinburgh Woollen Mill,Q16834657,,,,throttled
+386,Laura Ashley plc,Q1523089,,,,parse_fail
+396,Castro Model Ltd.,Q1049887,,,,throttled
+398,Vivobarefoot,Q7937938,,,,throttled
+399,Ermanno Scervino,Q3661184,2,-50%,-80%,ok
+401,Proenza Schouler,Q1130841,,,,throttled
+405,Bonobos,Q4942546,,,,throttled
+406,Schiesser,Q2234831,0,,,ok
+408,Nivia Sports,Q22662572,0,,,ok
+409,Lifestyle Stores,Q6545496,,,,throttled
+410,Apple Bottoms,Q4781133,0,,,ok
+411,Akris,Q420765,,,,throttled
+412,Garage,Q5521860,1826,-13%,-28%,ok
+413,Rag & Bone,Q7282768,18,-27%,-45%,ok
+414,Nudie Jeans,Q2436187,1,,,ok
+415,Boden,Q4936481,76,+38%,-51%,ok
+416,Bruno Magli,Q3645820,1,+0%,-67%,ok
+417,Wellensteyn International GmbH & Co. KG,Q62610375,,,,parse_fail
+418,Fat Face,Q5437186,,,,throttled
+419,G2000,Q5512676,,,,throttled
+420,Q3779868,Q3779868,,,,parse_fail
+421,KappAhl,Q4349016,2,-75%,-50%,ok
+422,Mikimoto,Q11341902,6,-14%,+100%,ok
+423,Sarenza,Q3473599,0,,,ok
+424,Valentino Fashion Group,Q1473396,0,,,ok
+425,Boggi Milano,Q93451035,0,,,ok
+426,Paul & Shark,Q12331072,,,,throttled
+427,K-Plus,Q18386374,7,+0%,-84%,ok
+428,Kari,Q47155680,,,,throttled
+429,Sperry Top-Sider,Q7576421,0,,,ok
+430,Icebreaker,Q539507,,,,throttled
+431,OWNDAYS,Q11293025,,,,throttled
+432,Turnbull & Asser,Q1986392,2,-80%,-88%,ok
+433,Comptoir des Cotonniers,Q2990868,0,,,ok
+434,Bosideng,Q4947278,4,,,ok
+435,Hysteric glamour,Q5962345,0,,,ok
+436,Rapha,Q131445771,5,-56%,-33%,ok
+437,Coogi,Q5166857,0,,,ok
+438,Away,Q48743138,,,,throttled
+439,Courrèges,Q16544736,8,+67%,+150%,ok
+440,Cia. Hering,Q5119055,,,,throttled
+441,Dressmann,Q3357081,,,,throttled
+442,Morellato Group,Q3323911,0,,,ok
+443,Sorelle Fontana,Q3965055,,,,parse_fail
+444,Nygård International,Q7071089,,,,parse_fail
+445,Polygon Bikes,Q19903561,,,,throttled
+446,NAF NAF,Q3334188,0,,,ok
+447,Ed Hardy,Q3047175,8,-20%,-33%,ok
+448,Stefano Ricci,Q52391629,,,,throttled
+449,Quooker,Q47545942,0,,,ok
+450,Globe International,Q2096177,,,,throttled
+451,Sergio Rossi,Q264141,4,+50%,+50%,ok
+452,Gabe's,Q5515554,2,,,ok
+453,Herve Leger,Q4167754,2,,,ok
+454,Hi-Tec Sports,Q1617132,,,,parse_fail
+455,Thomas Pink,Q1137991,1,+0%,+0%,ok
+456,Atticus Clothing,Q4383376,,,,throttled
+457,Aéropostale,Q794565,4,+33%,-20%,ok
+458,Buckle,Q4983306,,,,throttled
+459,Armedangels,Q4793069,,,,throttled
+460,Lids,Q19841609,,,,throttled
+461,Gina Tricot,Q1524904,,,,throttled
+462,Bugatti,Q1002252,108,+56%,-47%,ok
+463,Eden Park,Q3047389,4,+200%,-67%,ok
+464,Ganni,Q104842926,18,-6%,-42%,ok
+465,Khaadi,Q22031750,0,,,ok
+466,Everlane,Q21410966,24,+27%,-50%,ok
+467,Iceberg,Q2603072,360,-43%,+31%,ok
+468,Stefanel,Q2338087,0,,,ok
+469,SSENSE,Q48814393,14,+140%,+0%,ok
+470,Sebago,Q3476844,,,,throttled
+471,Tillys,Q7802889,,,,throttled
+472,Naot,Q6964738,,,,throttled
+473,Victorio & Lucchino,Q3557747,0,,,ok
+474,Bench,Q4886917,,,,throttled
+475,Country Road Group,Q2998907,2,-33%,+100%,ok
+476,Torrid,Q7827120,,,,throttled
+1,Nike,Q483915,,,,throttled
+6,Zara,Q147662,,,,throttled
+7,Hermès,Q843887,188,+21%,-4%,ok
+11,Prada,Q193136,718,+43%,+22%,ok
+21,Primark,Q137023,,,,throttled
+22,"The North Face, Inc.",Q152784,,,,throttled
+23,On AG,Q43452713,21,+300%,+209%,ok
+24,Under Armour,Q2031485,108,-16%,-37%,ok
+27,"Fila, Inc.",Q482539,,,,parse_fail
+30,Burberry,Q390107,284,-22%,-24%,ok
+32,Bulgari,Q752515,,,,throttled
+33,"Patagonia, Inc.",Q1660552,0,+0%,-75%,ok
+34,C&A,Q701338,16745,+3%,-6%,ok
+37,Dr. Martens,Q1126126,39,-16%,-22%,ok
+40,Abercrombie & Fitch,Q319344,,,,throttled
+43,Benetton Group,Q817139,0,,,ok
+45,Givenchy,Q759210,210,+6%,+31%,ok
+47,Miu Miu,Q552230,146,-19%,-36%,ok
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,throttled
+57,Moncler,Q1548951,,,,throttled
+61,Tommy Hilfiger B.V.,Q634881,,,,throttled
+62,Montblanc International GmbH,Q142691,,,,throttled
+63,American Eagle Outfitters,Q2842931,20,+29%,-97%,ok
+65,"Stüssy, Inc.",Q7629175,,,,throttled
+77,Hoka,Q16908664,,,,throttled
+79,Jaeger-LeCoultre,Q378698,15,-8%,-52%,ok
+82,Hollister Co.,Q1257477,1,,,ok
+87,HEAD,Q631894,,,,throttled
+90,Puig,Q3410623,,,,throttled
+99,DKNY,Q938773,,,,throttled
+102,Foot Locker,Q63335,36,+124%,+98%,ok
+104,J. Barbour and Sons,Q182399,,,,throttled
+106,GU,Q5512642,,,,throttled
+108,Old Navy,Q2735242,,,,throttled
+112,Dickies,Q114913,,,,throttled
+114,ECCO,Q1280255,,,,throttled
+118,C. & J. Clark International Ltd,Q1095857,,,,parse_fail
+122,Q849724,Q849724,,,,parse_fail
+133,Geox,Q588001,,,,throttled
+137,Agatha Ruiz de la Prada,Q2736351,,,,throttled
+139,Erreà,Q1361595,,,,throttled
+142,Jimmy Choo Ltd,Q5213855,,,,throttled
+147,COS,Q60772401,,,,throttled
+157,J.Crew,Q5370765,75,-18%,-41%,ok
+158,Aritzia,Q4791147,,,,timeout
+159,KiK,Q883965,,,,throttled
+161,ASOS,Q211951,,,,throttled
+162,Kiabi,Q3196299,0,,,ok
+164,Golden Goose,Q28224724,26,+44%,-13%,ok
+173,Escada SE,Q600986,,,,parse_fail
+181,Eckō Unltd.,Q1281935,,,,parse_fail
+184,Bally,Q688195,40,-62%,-35%,ok
+185,K-Swiss,Q1422386,1,+100%,-60%,ok
+186,Karl Kani,Q1355658,1,,,ok
+187,ALDO,Q2832297,,,,throttled
+192,Celio,Q2672003,,,,throttled
+193,'47,Q25222241,,,,throttled
+194,Rocawear,Q7193265,2,-75%,-62%,ok
+196,Fabletics,Q16992933,14,+170%,+125%,ok
+197,Kitsuné,Q917561,,,,throttled
+199,Etro,Q1371677,,,,throttled
+202,House of Schiaparelli,Q107835110,,,,throttled
+206,Golf Wang,Q25047966,2,,,ok
+207,OBEY Clothing,Q22910099,,,,throttled
+208,Biba,Q4902942,,,,throttled
+209,True Religion,Q2456205,16,-33%,-85%,ok
+210,"Jordache Enterprises, Inc.",Q6276279,,,,parse_fail
+211,Dr. Scholl's,Q17019662,0,,,ok
+212,Camper,Q1030922,146,-29%,-47%,ok
+213,Lyle & Scott,Q3269443,,,,throttled
+214,OshKosh B'Gosh,Q1417347,,,,throttled
+215,NKD,Q927272,,,,throttled
+217,Psycho Bunny,Q25052459,1,,,ok
+221,Fielmann,Q457822,1,,,ok
+224,Mexx,Q1837290,,,,throttled
+227,La Senza,Q3212802,,,,throttled
+230,Marc O’Polo,Q1892752,,,,throttled
+239,Gloria Jeans,Q4139985,2,+0%,-67%,ok
+242,PacSun,Q7121857,12,+123%,-40%,ok
+243,Avia,Q4828498,,,,throttled
+244,Pink,Q20716793,,,,throttled
+246,CoverGirl,Q1629990,14,+9%,+9%,ok
+247,Scotch & Soda,Q17141914,2,,,ok
+249,Marmot,Q1902277,9,+100%,+260%,ok
+254,Church's,Q2967663,,,,throttled
+257,Suitsupply,Q17149142,2,,,ok
+258,Anthropologie,Q4773903,,,,throttled
+259,Marni,Q3650853,37,+5%,-36%,ok
+260,etnies,Q651470,0,,,ok
+266,Breuninger,Q911217,,,,throttled
+269,Elan,Q1634723,,,,throttled
+270,Bombas,Q42332202,16,-9%,-55%,ok
+271,Members Only,Q17080812,,,,throttled
+272,Fiorucci,Q1089081,,,,throttled
+274,D-A-S-H,Q5203233,0,,,ok
+275,Max Fashion,Q24939079,,,,throttled
+278,John Lobb Bootmaker,Q641722,,,,parse_fail
+283,A.P.C.,Q546542,10,+250%,+600%,ok
+284,Adidas Originals,Q4682711,18,-82%,-87%,ok
+285,Herschel Supply Co.,Q23672312,2,-80%,-75%,ok
+286,Jaeger,Q3160437,38,-3%,-15%,ok
+287,Nordstrom Rack,Q21463374,18,-29%,-21%,ok
+288,Reusch,Q551889,4,,,ok
+290,Liu·Jo,Q3835099,1,,,ok
+291,Sinsay,Q107410579,,,,throttled
+292,Talbots,Q7679064,4,-71%,+0%,ok
+296,Peter Millar (clothing company),Q55641424,,,,throttled
+297,Çalık Holding,Q272361,0,,,ok
+299,Rockport Company,Q4048384,,,,parse_fail
+302,MCS,Q3111039,,,,throttled
+304,Playlife,Q172227,,,,throttled
+305,Ami Paris,Q107394262,,,,throttled
+306,Bimba y Lola,Q54869493,1,,,ok
+307,Syrn,Q138318202,,,,throttled
+308,Blundstone Australia Pty Ltd,Q2896348,,,,throttled
+311,Zumiez,Q8075252,,,,throttled
+312,Mark's,Q6766373,8729,+2%,-22%,ok
+313,Fox-Wizel Ltd.,Q5476569,,,,throttled
+315,Gerry Weber,Q873447,1,,,ok
+316,Aerie,Q25351619,59,+4%,-45%,ok
+317,DAKS,Q5204244,,,,throttled
+320,Sunglass Hut,Q136311,8,-68%,-67%,ok
+322,Lefties,Q12391713,,,,throttled
+324,Harmont & Blaine,Q3783405,0,,,ok
+328,Lane Bryant,Q6485350,5,-80%,-80%,ok
+331,Munich,Q2076935,1836,-1%,-29%,ok
+334,Sector No Limits,Q7444725,,,,throttled
+337,Wati B,Q3566715,,,,throttled
+345,Rabanne,Q129676852,28,-50%,-6%,ok
+346,Lindex,Q1786717,3,,,ok
+347,CCC,Q11788344,,,,throttled
+351,Pataugas,Q3368657,,,,throttled
+352,Tween Brands,Q7857512,0,,,ok
+353,Melon Fashion Group,Q103847272,,,,parse_fail
+355,Q3356778,Q3356778,,,,parse_fail
+359,WE,Q1987861,,,,throttled
+368,Blanc & Eclare,Q18577819,,,,throttled
+369,Takko Fashion,Q1371302,0,-100%,-100%,ok
+371,Frederick's of Hollywood,Q1373540,0,,,ok
+379,Helmut Lang,Q5709676,8,+0%,+25%,ok
+382,The Edinburgh Woollen Mill,Q16834657,0,,,ok
+386,Laura Ashley plc,Q1523089,,,,throttled
+396,Castro Model Ltd.,Q1049887,,,,parse_fail
+398,Vivobarefoot,Q7937938,3,-67%,-50%,ok
+401,Proenza Schouler,Q1130841,,,,throttled
+405,Bonobos,Q4942546,8,+33%,-20%,ok
+409,Lifestyle Stores,Q6545496,4,-78%,+100%,ok
+411,Akris,Q420765,3,+50%,+0%,ok
+417,Wellensteyn International GmbH & Co. KG,Q62610375,,,,parse_fail
+418,Fat Face,Q5437186,12,+67%,+150%,ok
+419,G2000,Q5512676,0,,,ok
+420,Q3779868,Q3779868,,,,parse_fail
+426,Paul & Shark,Q12331072,2,,,ok
+428,Kari,Q47155680,,,,throttled
+430,Icebreaker,Q539507,,,,throttled
+431,OWNDAYS,Q11293025,1,+0%,+0%,ok
+438,Away,Q48743138,,,,throttled
+440,Cia. Hering,Q5119055,,,,throttled
+441,Dressmann,Q3357081,,,,parse_fail
+443,Sorelle Fontana,Q3965055,,,,throttled
+444,Nygård International,Q7071089,,,,throttled
+445,Polygon Bikes,Q19903561,,,,throttled
+448,Stefano Ricci,Q52391629,2,-50%,+50%,ok
+450,Globe International,Q2096177,,,,throttled
+454,Hi-Tec Sports,Q1617132,,,,parse_fail
+456,Atticus Clothing,Q4383376,,,,throttled
+458,Buckle,Q4983306,,,,throttled
+459,Armedangels,Q4793069,0,,,ok
+460,Lids,Q19841609,,,,throttled
+461,Gina Tricot,Q1524904,1,,,ok
+470,Sebago,Q3476844,4,+167%,+100%,ok
+471,Tillys,Q7802889,,,,throttled
+472,Naot,Q6964738,,,,throttled
+474,Bench,Q4886917,1820,-8%,-22%,ok
+476,Torrid,Q7827120,55,+93%,-36%,ok
+477,Familiar,Q11332062,9388,+15%,+18%,ok
+478,Lager 157,Q10553200,,,,throttled
+479,Tailored Brands,Q108739951,,,,throttled
+480,Promod,Q3407429,1,-100%,-100%,ok
+481,Jeanswest,Q6172434,1,+0%,-50%,ok
+482,Apollo-Optik,Q618940,,,,parse_fail
+483,BALR.,Q25110413,,,,parse_fail
+484,New York & Company,Q7012977,54,+15%,-57%,ok
+485,Badgley Mischka,Q4840879,4,+600%,+250%,ok
+486,Vilebrequin,Q3558391,,,,throttled
+487,TechStyle Fashion Group,Q6315705,0,,,ok
+488,Urban Behavior,Q7899859,0,,,ok
+489,Gilly Hicks,Q5562449,,,,throttled
+490,Corneliani,Q5171196,,,,throttled
+491,TAKEO KIKUCHI,Q11316059,,,,parse_fail
+492,Metro Shoes,Q16938284,,,,throttled
+493,Baleno,Q4850707,6,+500%,-88%,ok
+494,Eileen Fisher,Q5349364,6,-57%,-40%,ok
+495,sacai,Q43080895,8,-17%,-62%,ok
+496,Matches Fashion,Q6786255,2,,,ok
+497,Charlotte Russe,Q5086126,1,+300%,+300%,ok
+498,Costume National,Q1136537,,,,throttled
+499,ShoeDazzle,Q7499960,0,,,ok
+500,WESC,Q1810141,,,,throttled
+1,Nike,Q483915,,,,throttled
+6,Zara,Q147662,,,,throttled
+21,Primark,Q137023,174,+4%,-32%,ok
+22,"The North Face, Inc.",Q152784,,,,parse_fail
+27,"Fila, Inc.",Q482539,,,,parse_fail
+32,Bulgari,Q752515,,,,throttled
+40,Abercrombie & Fitch,Q319344,94,+219%,+28%,ok
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,throttled
+57,Moncler,Q1548951,40,+0%,-48%,ok
+61,Tommy Hilfiger B.V.,Q634881,,,,parse_fail
+62,Montblanc International GmbH,Q142691,,,,throttled
+65,"Stüssy, Inc.",Q7629175,,,,parse_fail
+77,Hoka,Q16908664,,,,throttled
+87,HEAD,Q631894,,,,throttled
+90,Puig,Q3410623,,,,throttled
+99,DKNY,Q938773,,,,throttled
+104,J. Barbour and Sons,Q182399,,,,parse_fail
+106,GU,Q5512642,,,,throttled
+108,Old Navy,Q2735242,,,,throttled
+112,Dickies,Q114913,28,-55%,-44%,ok
+114,ECCO,Q1280255,,,,throttled
+118,C. & J. Clark International Ltd,Q1095857,,,,parse_fail
+122,Q849724,Q849724,,,,parse_fail
+133,Geox,Q588001,,,,throttled
+137,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+139,Erreà,Q1361595,,,,parse_fail
+142,Jimmy Choo Ltd,Q5213855,,,,throttled
+147,COS,Q60772401,,,,throttled
+158,Aritzia,Q4791147,,,,throttled
+159,KiK,Q883965,,,,throttled
+161,ASOS,Q211951,,,,throttled
+173,Escada SE,Q600986,,,,throttled
+181,Eckō Unltd.,Q1281935,,,,throttled
+187,ALDO,Q2832297,,,,throttled
+192,Celio,Q2672003,7,-89%,-78%,ok
+193,'47,Q25222241,,,,throttled
+197,Kitsuné,Q917561,2,-67%,+0%,ok
+199,Etro,Q1371677,,,,throttled
+202,House of Schiaparelli,Q107835110,,,,throttled
+207,OBEY Clothing,Q22910099,,,,throttled
+208,Biba,Q4902942,,,,throttled
+210,"Jordache Enterprises, Inc.",Q6276279,,,,throttled
+213,Lyle & Scott,Q3269443,1,,,ok
+214,OshKosh B'Gosh,Q1417347,,,,throttled
+215,NKD,Q927272,,,,throttled
+224,Mexx,Q1837290,,,,throttled
+227,La Senza,Q3212802,2,-25%,+50%,ok
+230,Marc O’Polo,Q1892752,,,,parse_fail
+243,Avia,Q4828498,,,,throttled
+244,Pink,Q20716793,,,,throttled
+254,Church's,Q2967663,0,,,ok
+258,Anthropologie,Q4773903,80,+38%,-44%,ok
+266,Breuninger,Q911217,0,,,ok
+269,Elan,Q1634723,,,,throttled
+271,Members Only,Q17080812,143,-24%,-32%,ok
+272,Fiorucci,Q1089081,4,-33%,+0%,ok
+275,Max Fashion,Q24939079,6,+500%,+20%,ok
+278,John Lobb Bootmaker,Q641722,,,,parse_fail
+291,Sinsay,Q107410579,,,,throttled
+296,Peter Millar (clothing company),Q55641424,,,,parse_fail
+299,Rockport Company,Q4048384,,,,parse_fail
+302,MCS,Q3111039,,,,throttled
+304,Playlife,Q172227,,,,parse_fail
+305,Ami Paris,Q107394262,6,-20%,+33%,ok
+307,Syrn,Q138318202,,,,throttled
+308,Blundstone Australia Pty Ltd,Q2896348,,,,parse_fail
+311,Zumiez,Q8075252,,,,throttled
+313,Fox-Wizel Ltd.,Q5476569,,,,parse_fail
+317,DAKS,Q5204244,,,,throttled
+322,Lefties,Q12391713,35,+40%,+10%,ok
+334,Sector No Limits,Q7444725,,,,parse_fail
+337,Wati B,Q3566715,,,,throttled
+347,CCC,Q11788344,,,,throttled
+351,Pataugas,Q3368657,,,,throttled
+353,Melon Fashion Group,Q103847272,,,,throttled
+355,Q3356778,Q3356778,,,,throttled
+359,WE,Q1987861,,,,throttled
+368,Blanc & Eclare,Q18577819,,,,throttled
+386,Laura Ashley plc,Q1523089,,,,parse_fail
+396,Castro Model Ltd.,Q1049887,,,,parse_fail
+401,Proenza Schouler,Q1130841,,,,throttled
+417,Wellensteyn International GmbH & Co. KG,Q62610375,,,,throttled
+420,Q3779868,Q3779868,,,,parse_fail
+428,Kari,Q47155680,,,,throttled
+430,Icebreaker,Q539507,51,-8%,-42%,ok
+438,Away,Q48743138,,,,throttled
+440,Cia. Hering,Q5119055,,,,parse_fail
+441,Dressmann,Q3357081,,,,parse_fail
+443,Sorelle Fontana,Q3965055,,,,throttled
+444,Nygård International,Q7071089,,,,throttled
+445,Polygon Bikes,Q19903561,0,,,ok
+450,Globe International,Q2096177,2,+700%,-71%,ok
+454,Hi-Tec Sports,Q1617132,,,,parse_fail
+456,Atticus Clothing,Q4383376,,,,throttled
+458,Buckle,Q4983306,365,+8%,-15%,ok
+460,Lids,Q19841609,,,,throttled
+471,Tillys,Q7802889,,,,throttled
+472,Naot,Q6964738,,,,throttled
+478,Lager 157,Q10553200,,,,throttled
+479,Tailored Brands,Q108739951,2,-94%,+0%,ok
+482,Apollo-Optik,Q618940,,,,throttled
+483,BALR.,Q25110413,,,,parse_fail
+486,Vilebrequin,Q3558391,2,+100%,-75%,ok
+489,Gilly Hicks,Q5562449,4,+600%,+600%,ok
+490,Corneliani,Q5171196,2,,,ok
+491,TAKEO KIKUCHI,Q11316059,,,,throttled
+492,Metro Shoes,Q16938284,,,,throttled
+498,Costume National,Q1136537,2,,,ok
+500,WESC,Q1810141,,,,throttled
+1,Nike,Q483915,,,,throttled
+6,Zara,Q147662,,,,throttled
+22,"The North Face, Inc.",Q152784,,,,parse_fail
+27,"Fila, Inc.",Q482539,,,,parse_fail
+32,Bulgari,Q752515,,,,throttled
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,throttled
+61,Tommy Hilfiger B.V.,Q634881,,,,parse_fail
+62,Montblanc International GmbH,Q142691,,,,parse_fail
+65,"Stüssy, Inc.",Q7629175,,,,parse_fail
+77,Hoka,Q16908664,,,,throttled
+87,HEAD,Q631894,,,,throttled
+90,Puig,Q3410623,,,,throttled
+99,DKNY,Q938773,,,,throttled
+104,J. Barbour and Sons,Q182399,,,,parse_fail
+106,GU,Q5512642,,,,throttled
+108,Old Navy,Q2735242,106,+82%,+82%,ok
+114,ECCO,Q1280255,,,,throttled
+118,C. & J. Clark International Ltd,Q1095857,,,,parse_fail
+122,Q849724,Q849724,,,,throttled
+133,Geox,Q588001,,,,throttled
+137,Agatha Ruiz de la Prada,Q2736351,,,,throttled
+139,Erreà,Q1361595,,,,parse_fail
+142,Jimmy Choo Ltd,Q5213855,,,,throttled
+147,COS,Q60772401,,,,throttled
+158,Aritzia,Q4791147,114,+61%,-19%,ok
+159,KiK,Q883965,,,,throttled
+161,ASOS,Q211951,,,,throttled
+173,Escada SE,Q600986,,,,parse_fail
+181,Eckō Unltd.,Q1281935,,,,parse_fail
+187,ALDO,Q2832297,,,,throttled
+193,'47,Q25222241,,,,throttled
+199,Etro,Q1371677,,,,throttled
+202,House of Schiaparelli,Q107835110,0,,,ok
+207,OBEY Clothing,Q22910099,0,,,ok
+208,Biba,Q4902942,,,,throttled
+210,"Jordache Enterprises, Inc.",Q6276279,,,,throttled
+214,OshKosh B'Gosh,Q1417347,4,+340%,+2100%,ok
+215,NKD,Q927272,,,,throttled
+224,Mexx,Q1837290,,,,throttled
+230,Marc O’Polo,Q1892752,,,,throttled
+243,Avia,Q4828498,,,,throttled
+244,Pink,Q20716793,,,,throttled
+269,Elan,Q1634723,,,,throttled
+278,John Lobb Bootmaker,Q641722,,,,throttled
+291,Sinsay,Q107410579,,,,throttled
+296,Peter Millar (clothing company),Q55641424,,,,parse_fail
+299,Rockport Company,Q4048384,,,,parse_fail
+302,MCS,Q3111039,,,,throttled
+304,Playlife,Q172227,,,,throttled
+307,Syrn,Q138318202,,,,throttled
+308,Blundstone Australia Pty Ltd,Q2896348,,,,parse_fail
+311,Zumiez,Q8075252,,,,throttled
+313,Fox-Wizel Ltd.,Q5476569,,,,throttled
+317,DAKS,Q5204244,,,,throttled
+334,Sector No Limits,Q7444725,,,,parse_fail
+337,Wati B,Q3566715,,,,throttled
+347,CCC,Q11788344,,,,throttled
+351,Pataugas,Q3368657,,,,throttled
+353,Melon Fashion Group,Q103847272,,,,throttled
+355,Q3356778,Q3356778,,,,throttled
+359,WE,Q1987861,,,,throttled
+368,Blanc & Eclare,Q18577819,0,,,ok
+386,Laura Ashley plc,Q1523089,,,,parse_fail
+396,Castro Model Ltd.,Q1049887,,,,parse_fail
+401,Proenza Schouler,Q1130841,,,,throttled
+417,Wellensteyn International GmbH & Co. KG,Q62610375,,,,throttled
+420,Q3779868,Q3779868,,,,timeout
+428,Kari,Q47155680,,,,throttled
+438,Away,Q48743138,,,,throttled
+440,Cia. Hering,Q5119055,,,,parse_fail
+441,Dressmann,Q3357081,,,,parse_fail
+443,Sorelle Fontana,Q3965055,,,,parse_fail
+444,Nygård International,Q7071089,,,,throttled
+454,Hi-Tec Sports,Q1617132,,,,parse_fail
+456,Atticus Clothing,Q4383376,,,,parse_fail
+460,Lids,Q19841609,,,,throttled
+471,Tillys,Q7802889,,,,throttled
+472,Naot,Q6964738,,,,throttled
+478,Lager 157,Q10553200,,,,throttled
+482,Apollo-Optik,Q618940,,,,throttled
+483,BALR.,Q25110413,,,,parse_fail
+491,TAKEO KIKUCHI,Q11316059,,,,parse_fail
+492,Metro Shoes,Q16938284,0,-100%,-100%,ok
+500,WESC,Q1810141,,,,throttled
+1,Nike,Q483915,,,,throttled
+6,Zara,Q147662,,,,throttled
+22,"The North Face, Inc.",Q152784,,,,throttled
+27,"Fila, Inc.",Q482539,,,,parse_fail
+32,Bulgari,Q752515,,,,throttled
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,parse_fail
+61,Tommy Hilfiger B.V.,Q634881,,,,throttled
+62,Montblanc International GmbH,Q142691,,,,parse_fail
+65,"Stüssy, Inc.",Q7629175,,,,parse_fail
+77,Hoka,Q16908664,,,,throttled
+87,HEAD,Q631894,,,,throttled
+90,Puig,Q3410623,,,,throttled
+99,DKNY,Q938773,,,,throttled
+104,J. Barbour and Sons,Q182399,,,,parse_fail
+106,GU,Q5512642,,,,throttled
+114,ECCO,Q1280255,,,,throttled
+118,C. & J. Clark International Ltd,Q1095857,,,,throttled
+122,Q849724,Q849724,,,,parse_fail
+133,Geox,Q588001,,,,throttled
+137,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+139,Erreà,Q1361595,,,,throttled
+142,Jimmy Choo Ltd,Q5213855,,,,parse_fail
+147,COS,Q60772401,,,,throttled
+159,KiK,Q883965,,,,throttled
+161,ASOS,Q211951,,,,throttled
+173,Escada SE,Q600986,,,,parse_fail
+181,Eckō Unltd.,Q1281935,,,,parse_fail
+187,ALDO,Q2832297,,,,throttled
+193,'47,Q25222241,,,,throttled
+199,Etro,Q1371677,,,,throttled
+208,Biba,Q4902942,,,,throttled
+210,"Jordache Enterprises, Inc.",Q6276279,,,,parse_fail
+215,NKD,Q927272,,,,throttled
+224,Mexx,Q1837290,,,,throttled
+230,Marc O’Polo,Q1892752,,,,parse_fail
+243,Avia,Q4828498,,,,throttled
+244,Pink,Q20716793,,,,throttled
+269,Elan,Q1634723,,,,throttled
+278,John Lobb Bootmaker,Q641722,,,,throttled
+291,Sinsay,Q107410579,0,,,ok
+296,Peter Millar (clothing company),Q55641424,,,,parse_fail
+299,Rockport Company,Q4048384,,,,parse_fail
+302,MCS,Q3111039,,,,throttled
+304,Playlife,Q172227,,,,parse_fail
+307,Syrn,Q138318202,,,,throttled
+308,Blundstone Australia Pty Ltd,Q2896348,,,,parse_fail
+311,Zumiez,Q8075252,6,+75%,-36%,ok
+313,Fox-Wizel Ltd.,Q5476569,,,,parse_fail
+317,DAKS,Q5204244,,,,throttled
+334,Sector No Limits,Q7444725,,,,parse_fail
+337,Wati B,Q3566715,,,,parse_fail
+347,CCC,Q11788344,,,,throttled
+351,Pataugas,Q3368657,,,,throttled
+353,Melon Fashion Group,Q103847272,,,,throttled
+355,Q3356778,Q3356778,,,,throttled
+359,WE,Q1987861,,,,throttled
+386,Laura Ashley plc,Q1523089,,,,throttled
+396,Castro Model Ltd.,Q1049887,,,,parse_fail
+401,Proenza Schouler,Q1130841,18,+80%,+29%,ok
+417,Wellensteyn International GmbH & Co. KG,Q62610375,,,,throttled
+420,Q3779868,Q3779868,,,,parse_fail
+428,Kari,Q47155680,,,,throttled
+438,Away,Q48743138,,,,throttled
+440,Cia. Hering,Q5119055,,,,throttled
+441,Dressmann,Q3357081,,,,parse_fail
+443,Sorelle Fontana,Q3965055,,,,parse_fail
+444,Nygård International,Q7071089,,,,parse_fail
+454,Hi-Tec Sports,Q1617132,,,,throttled
+456,Atticus Clothing,Q4383376,,,,throttled
+460,Lids,Q19841609,,,,throttled
+471,Tillys,Q7802889,0,,,ok
+472,Naot,Q6964738,,,,throttled
+478,Lager 157,Q10553200,,,,parse_fail
+482,Apollo-Optik,Q618940,,,,throttled
+483,BALR.,Q25110413,,,,parse_fail
+491,TAKEO KIKUCHI,Q11316059,,,,throttled
+500,WESC,Q1810141,,,,throttled
+1,Nike,Q483915,,,,throttled
+6,Zara,Q147662,,,,throttled
+22,"The North Face, Inc.",Q152784,,,,throttled
+27,"Fila, Inc.",Q482539,,,,parse_fail
+32,Bulgari,Q752515,78,-35%,-64%,ok
+50,Vans,Q1135366,,,,throttled
+51,Mizuno Corporation,Q1156731,,,,parse_fail
+61,Tommy Hilfiger B.V.,Q634881,,,,parse_fail
+62,Montblanc International GmbH,Q142691,,,,throttled
+65,"Stüssy, Inc.",Q7629175,,,,parse_fail
+77,Hoka,Q16908664,,,,parse_fail
+87,HEAD,Q631894,,,,parse_fail
+90,Puig,Q3410623,,,,parse_fail
+99,DKNY,Q938773,,,,parse_fail
+104,J. Barbour and Sons,Q182399,,,,parse_fail
+106,GU,Q5512642,,,,parse_fail
+114,ECCO,Q1280255,,,,parse_fail
+118,C. & J. Clark International Ltd,Q1095857,,,,parse_fail
+122,Q849724,Q849724,,,,parse_fail
+133,Geox,Q588001,,,,parse_fail
+137,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+139,Erreà,Q1361595,,,,parse_fail
+142,Jimmy Choo Ltd,Q5213855,,,,parse_fail
+147,COS,Q60772401,,,,parse_fail
+159,KiK,Q883965,,,,parse_fail
+161,ASOS,Q211951,,,,parse_fail
+173,Escada SE,Q600986,,,,parse_fail
+181,Eckō Unltd.,Q1281935,,,,parse_fail
+187,ALDO,Q2832297,,,,parse_fail
+193,'47,Q25222241,,,,parse_fail
+199,Etro,Q1371677,,,,parse_fail
+208,Biba,Q4902942,,,,parse_fail
+210,"Jordache Enterprises, Inc.",Q6276279,,,,parse_fail
+215,NKD,Q927272,,,,parse_fail
+224,Mexx,Q1837290,,,,parse_fail
+230,Marc O’Polo,Q1892752,,,,parse_fail
+243,Avia,Q4828498,,,,parse_fail
+244,Pink,Q20716793,,,,parse_fail
+269,Elan,Q1634723,,,,parse_fail
+278,John Lobb Bootmaker,Q641722,,,,parse_fail
+296,Peter Millar (clothing company),Q55641424,,,,parse_fail
+299,Rockport Company,Q4048384,,,,parse_fail
+302,MCS,Q3111039,,,,parse_fail
+304,Playlife,Q172227,,,,parse_fail
+307,Syrn,Q138318202,,,,parse_fail
+308,Blundstone Australia Pty Ltd,Q2896348,,,,parse_fail
+313,Fox-Wizel Ltd.,Q5476569,,,,parse_fail
+317,DAKS,Q5204244,,,,parse_fail
+1,Ladies,Q125191429,1694,+19%,-21%,ok
+2,Wood Wood,Q22032349,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+8,Sessions,Q7456144,3866,+3%,-14%,ok
+9,DAKS,Q5204244,,,,throttled
+12,Jacob,Q3157513,1134,+5%,+7%,ok
+13,GU,Q5512642,,,,throttled
+14,Shukr,Q138486466,0,-100%,-100%,ok
+17,Australian,Q2872152,4462,+7%,-37%,ok
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,throttled
+24,"The North Face, Inc.",Q152784,,,,parse_fail
+28,Polo Ralph Lauren,Q2121887,42,+35%,-2%,ok
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+34,Frame,Q85761879,,,,throttled
+37,Pink,Q20716793,,,,throttled
+41,Swear,Q11072650,,,,throttled
+42,Bonds,Q4941440,2482,+44%,+15%,ok
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+51,Schmid,Q1719431,21,-50%,-81%,ok
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+64,Cotton On,Q5175717,88,+11%,-40%,ok
+66,Sleeper,Q109906064,270,+35%,-17%,ok
+71,Bode,Q107481263,,,,throttled
+72,Seraphine,Q20714032,3,-100%,-100%,ok
+79,Barefoot,Q20987378,,,,throttled
+88,The Hundreds,Q7740985,502,+36%,+1%,ok
+89,NKD,Q927272,,,,throttled
+90,Patta,Q125206509,,,,throttled
+93,Maurices,Q6793571,4,+0%,+33%,ok
+96,ECCO,Q1280255,,,,timeout
+98,Piping Hot,Q7197417,36,+3%,-34%,ok
+102,Alé,Q132531889,,,,throttled
+103,Francesca's,Q72982331,0,,,ok
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+113,Kapital,Q11297188,6,+38%,+57%,ok
+115,ALDO,Q2832297,,,,throttled
+122,Volcano,Q115804691,,,,throttled
+123,Gump's,Q5618229,,,,throttled
+125,Kapital,Q119149859,6,+38%,+57%,ok
+133,KiK,Q883965,,,,throttled
+135,Joules,Q25351738,22,-15%,+77%,ok
+144,Good American,Q108582148,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+151,Big Star,Q9171569,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+163,Emporio Armani,Q3497483,24,-21%,-31%,ok
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+175,American Vintage,Q2422884,,,,throttled
+178,Jigsaw,Q6192383,121,+22%,-4%,ok
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+190,Crocker,Q10461856,,,,throttled
+201,Avia,Q4828498,,,,throttled
+208,Orchestra,Q28042940,,,,throttled
+209,Schuh,Q7432952,,,,throttled
+211,X-Large,Q8041451,12,+0%,-93%,ok
+215,Jay Jays,Q6166759,3,-100%,-100%,ok
+216,James Perse,Q125230974,2,+100%,+0%,ok
+221,Chantelle,Q2956351,,,,throttled
+223,garment factory,Q55748823,63,-38%,-29%,ok
+224,Fuchsia,Q5506939,,,,throttled
+227,Biba,Q4902942,,,,throttled
+231,Sunski,Q28401216,0,,,ok
+235,"Fila, Inc.",Q482539,,,,parse_fail
+236,Just Over the Top,Q104890420,2,,,ok
+240,Oleana,Q11993725,0,,,ok
+242,Just Jeans,Q6316068,,,,throttled
+245,Erreà,Q1361595,,,,throttled
+246,Tommy Hilfiger B.V.,Q634881,,,,parse_fail
+256,Best Company,Q55205917,63,-4%,-26%,ok
+257,Niko and...,Q11236730,,,,throttled
+276,Mizuno Corporation,Q1156731,,,,parse_fail
+286,Q849724,Q849724,,,,parse_fail
+291,Jimmy Choo Ltd,Q5213855,,,,parse_fail
+292,Playlife,Q172227,,,,parse_fail
+295,BALR.,Q25110413,,,,throttled
+297,Montblanc International GmbH,Q142691,,,,parse_fail
+299,Nalini,Q3401000,,,,throttled
+301,Terminal X,Q115310947,,,,throttled
+308,Dressmann,Q3357081,,,,throttled
+319,Women'secret,Q16648226,0,,,ok
+323,Assem,Q130705749,0,-100%,-100%,ok
+330,Sirri,Q2290173,0,,,ok
+331,J. Barbour and Sons,Q182399,,,,throttled
+337,HEAD,Q631894,,,,throttled
+338,Escada SE,Q600986,,,,throttled
+343,Number (N)ine,Q107394070,,,,throttled
+346,Bonia,Q945463,,,,throttled
+347,Cubus,Q3439593,,,,throttled
+353,Damart,Q3012602,,,,throttled
+355,Soffe,Q7553581,0,,,ok
+358,Tailored Brands,Q3305660,2,-88%,+100%,ok
+363,Geox,Q588001,,,,throttled
+365,Kaporal,Q125660181,,,,throttled
+375,"Stüssy, Inc.",Q7629175,,,,throttled
+376,Super Champion,Q7642242,42,-25%,-51%,ok
+380,Elan,Q1634723,,,,throttled
+388,Jessica McClintock,Q6187356,0,,,ok
+390,Moosejaw,Q6908680,0,,,ok
+391,Tezenis,Q28056374,,,,throttled
+392,Gottex,Q2903774,,,,throttled
+393,C. & J. Clark International Ltd,Q1095857,,,,throttled
+396,Chiemsee,Q1072452,4,-100%,-100%,ok
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+401,Kinney Shoes,Q6414100,0,,,ok
+408,2(x)ist,Q307894,,,,parse_fail
+411,Max Mara Fashion Group,Q110225120,,,,throttled
+412,Matix,Q3299151,,,,throttled
+415,Outdoor Research,Q7111938,,,,throttled
+417,The Elder Statesman,Q18636419,,,,throttled
+418,Padini,Q13657207,0,,,ok
+425,Boutique La Vie en rose,Q4950452,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,parse_fail
+435,Viyella,Q55097814,0,,,ok
+436,Anine Bing,Q111283880,6,+140%,+50%,ok
+438,Eckō Unltd.,Q1281935,,,,parse_fail
+439,Moose Knuckles,Q131673087,4,+300%,+100%,ok
+442,John Lobb Bootmaker,Q641722,,,,throttled
+443,Boot Barn,Q109825187,,,,throttled
+444,Cia. Hering,Q5119055,,,,parse_fail
+447,Lager 157,Q10553200,,,,parse_fail
+448,Yeezy Gap,Q96657862,0,,,ok
+452,Joe Fresh,Q6209926,18,-40%,+118%,ok
+455,Sézane,Q86682767,18,-50%,+15%,ok
+458,White House Black Market,Q7994858,,,,throttled
+460,Target Optical,Q19903688,,,,throttled
+461,F. Engel,Q119056161,,,,parse_fail
+465,Lorna Jane,Q28857986,3,+0%,-25%,ok
+466,Dorothy Perkins,Q5298588,6,-57%,-95%,ok
+467,Shoe Carnival,Q7500007,6,+71%,+1100%,ok
+470,Robert Graham,Q18390679,,,,throttled
+473,IC Group,Q5392021,1,,,ok
+476,Falguni Shane Peacock,Q115799492,6,+17%,+40%,ok
+477,Dorko,Q140069588,,,,parse_fail
+478,Sweaty Betty,Q7654224,10,+12%,-31%,ok
+484,PME Legend,Q94776153,,,,throttled
+485,Coldwater Creek,Q5142575,1,-100%,-100%,ok
+487,J Brand,Q16850757,157,+37%,-40%,ok
+488,Rack Room Shoes,Q17109937,1,-100%,-100%,ok
+489,Dolls Kill,Q18636520,,,,timeout
+490,Calvin Klein Collection,Q5024439,8,+150%,-44%,ok
+493,Johnston & Murphy,Q6268615,4,-25%,+0%,ok
+495,C. Wonder,Q16985816,,,,throttled
+496,Ardène,Q2860764,,,,parse_fail
+497,The Attico,Q125995969,5,+120%,+120%,ok
+2,Wood Wood,Q22032349,58,+31%,+10%,ok
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,parse_fail
+24,"The North Face, Inc.",Q152784,,,,throttled
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+34,Frame,Q85761879,10015,+15%,+2%,ok
+37,Pink,Q20716793,,,,throttled
+41,Swear,Q11072650,474,+8%,-26%,ok
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+79,Barefoot,Q20987378,470,+6%,-32%,ok
+89,NKD,Q927272,,,,throttled
+90,Patta,Q125206509,4,-33%,-33%,ok
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+122,Volcano,Q115804691,440,+18%,-16%,ok
+123,Gump's,Q5618229,0,,,ok
+133,KiK,Q883965,,,,throttled
+144,Good American,Q108582148,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+151,Big Star,Q9171569,46,+26%,-9%,ok
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+175,American Vintage,Q2422884,4,+25%,-17%,ok
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+190,Crocker,Q10461856,30,-12%,-44%,ok
+201,Avia,Q4828498,,,,throttled
+208,Orchestra,Q28042940,1072,-15%,-26%,ok
+209,Schuh,Q7432952,,,,throttled
+221,Chantelle,Q2956351,14,-11%,+50%,ok
+224,Fuchsia,Q5506939,130,-4%,-25%,ok
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,parse_fail
+242,Just Jeans,Q6316068,,,,throttled
+245,Erreà,Q1361595,,,,throttled
+246,Tommy Hilfiger B.V.,Q634881,,,,parse_fail
+257,Niko and...,Q11236730,5,+20%,+50%,ok
+276,Mizuno Corporation,Q1156731,,,,parse_fail
+286,Q849724,Q849724,,,,parse_fail
+291,Jimmy Choo Ltd,Q5213855,,,,throttled
+292,Playlife,Q172227,,,,parse_fail
+295,BALR.,Q25110413,,,,parse_fail
+297,Montblanc International GmbH,Q142691,,,,parse_fail
+299,Nalini,Q3401000,,,,throttled
+301,Terminal X,Q115310947,,,,throttled
+308,Dressmann,Q3357081,,,,parse_fail
+331,J. Barbour and Sons,Q182399,,,,parse_fail
+337,HEAD,Q631894,,,,throttled
+338,Escada SE,Q600986,,,,throttled
+343,Number (N)ine,Q107394070,0,,,ok
+346,Bonia,Q945463,,,,throttled
+347,Cubus,Q3439593,0,,,ok
+353,Damart,Q3012602,1,,,ok
+363,Geox,Q588001,,,,throttled
+365,Kaporal,Q125660181,,,,throttled
+375,"Stüssy, Inc.",Q7629175,,,,throttled
+380,Elan,Q1634723,,,,throttled
+391,Tezenis,Q28056374,,,,throttled
+392,Gottex,Q2903774,,,,throttled
+393,C. & J. Clark International Ltd,Q1095857,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,parse_fail
+411,Max Mara Fashion Group,Q110225120,,,,throttled
+412,Matix,Q3299151,,,,throttled
+415,Outdoor Research,Q7111938,,,,throttled
+417,The Elder Statesman,Q18636419,,,,throttled
+425,Boutique La Vie en rose,Q4950452,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,parse_fail
+438,Eckō Unltd.,Q1281935,,,,parse_fail
+442,John Lobb Bootmaker,Q641722,,,,parse_fail
+443,Boot Barn,Q109825187,17,-83%,-91%,ok
+444,Cia. Hering,Q5119055,,,,parse_fail
+447,Lager 157,Q10553200,,,,throttled
+458,White House Black Market,Q7994858,2,,,ok
+460,Target Optical,Q19903688,5,-100%,-100%,ok
+461,F. Engel,Q119056161,,,,parse_fail
+470,Robert Graham,Q18390679,2,,,ok
+477,Dorko,Q140069588,,,,parse_fail
+484,PME Legend,Q94776153,0,,,ok
+489,Dolls Kill,Q18636520,1,-50%,+0%,ok
+495,C. Wonder,Q16985816,8,+10%,+120%,ok
+496,Ardène,Q2860764,,,,parse_fail
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,throttled
+24,"The North Face, Inc.",Q152784,80,-11%,-22%,ok
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+144,Good American,Q108582148,34,+95%,-41%,ok
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+209,Schuh,Q7432952,,,,throttled
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+242,Just Jeans,Q6316068,,,,throttled
+245,Erreà,Q1361595,,,,throttled
+246,Tommy Hilfiger B.V.,Q634881,,,,throttled
+276,Mizuno Corporation,Q1156731,,,,throttled
+286,Q849724,Q849724,10,-18%,-10%,ok
+291,Jimmy Choo Ltd,Q5213855,,,,throttled
+292,Playlife,Q172227,,,,throttled
+295,BALR.,Q25110413,,,,throttled
+297,Montblanc International GmbH,Q142691,14,+23%,+12%,ok
+299,Nalini,Q3401000,4,+200%,+1100%,ok
+301,Terminal X,Q115310947,2,+200%,-62%,ok
+308,Dressmann,Q3357081,,,,throttled
+331,J. Barbour and Sons,Q182399,,,,throttled
+337,HEAD,Q631894,,,,throttled
+338,Escada SE,Q600986,4,-60%,+300%,ok
+346,Bonia,Q945463,,,,throttled
+363,Geox,Q588001,,,,throttled
+365,Kaporal,Q125660181,0,,,ok
+375,"Stüssy, Inc.",Q7629175,5,+67%,+150%,ok
+380,Elan,Q1634723,,,,throttled
+391,Tezenis,Q28056374,1,,,ok
+392,Gottex,Q2903774,0,,,ok
+393,C. & J. Clark International Ltd,Q1095857,0,,,ok
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,throttled
+411,Max Mara Fashion Group,Q110225120,30,+253%,+235%,ok
+412,Matix,Q3299151,0,,,ok
+415,Outdoor Research,Q7111938,,,,throttled
+417,The Elder Statesman,Q18636419,4,+600%,+100%,ok
+425,Boutique La Vie en rose,Q4950452,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,throttled
+430,GHOST-Bikes,Q86327186,,,,throttled
+438,Eckō Unltd.,Q1281935,,,,parse_fail
+442,John Lobb Bootmaker,Q641722,1,+500%,+500%,ok
+444,Cia. Hering,Q5119055,,,,throttled
+447,Lager 157,Q10553200,,,,throttled
+461,F. Engel,Q119056161,,,,throttled
+477,Dorko,Q140069588,,,,parse_fail
+496,Ardène,Q2860764,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,throttled
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+209,Schuh,Q7432952,12,+325%,+31%,ok
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+242,Just Jeans,Q6316068,,,,throttled
+245,Erreà,Q1361595,,,,parse_fail
+246,Tommy Hilfiger B.V.,Q634881,,,,throttled
+276,Mizuno Corporation,Q1156731,20,+86%,+146%,ok
+291,Jimmy Choo Ltd,Q5213855,74,-24%,-21%,ok
+292,Playlife,Q172227,,,,parse_fail
+295,BALR.,Q25110413,,,,throttled
+308,Dressmann,Q3357081,,,,parse_fail
+331,J. Barbour and Sons,Q182399,,,,throttled
+337,HEAD,Q631894,,,,throttled
+346,Bonia,Q945463,,,,throttled
+363,Geox,Q588001,,,,throttled
+380,Elan,Q1634723,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,parse_fail
+415,Outdoor Research,Q7111938,4,+0%,+17%,ok
+425,Boutique La Vie en rose,Q4950452,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,throttled
+438,Eckō Unltd.,Q1281935,,,,throttled
+444,Cia. Hering,Q5119055,,,,throttled
+447,Lager 157,Q10553200,,,,throttled
+461,F. Engel,Q119056161,,,,parse_fail
+477,Dorko,Q140069588,,,,throttled
+496,Ardène,Q2860764,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,throttled
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+242,Just Jeans,Q6316068,,,,throttled
+245,Erreà,Q1361595,,,,parse_fail
+246,Tommy Hilfiger B.V.,Q634881,88,+7%,-61%,ok
+292,Playlife,Q172227,,,,throttled
+295,BALR.,Q25110413,,,,throttled
+308,Dressmann,Q3357081,,,,throttled
+331,J. Barbour and Sons,Q182399,,,,throttled
+337,HEAD,Q631894,,,,throttled
+346,Bonia,Q945463,6,+0%,-18%,ok
+363,Geox,Q588001,,,,throttled
+380,Elan,Q1634723,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,throttled
+425,Boutique La Vie en rose,Q4950452,12,-47%,+167%,ok
+428,Agatha Ruiz de la Prada,Q2736351,,,,throttled
+430,GHOST-Bikes,Q86327186,,,,throttled
+438,Eckō Unltd.,Q1281935,,,,throttled
+444,Cia. Hering,Q5119055,3,-25%,-57%,ok
+447,Lager 157,Q10553200,,,,throttled
+461,F. Engel,Q119056161,,,,parse_fail
+477,Dorko,Q140069588,,,,throttled
+496,Ardène,Q2860764,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,parse_fail
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+242,Just Jeans,Q6316068,12,-50%,-78%,ok
+245,Erreà,Q1361595,,,,parse_fail
+292,Playlife,Q172227,,,,throttled
+295,BALR.,Q25110413,,,,throttled
+308,Dressmann,Q3357081,,,,throttled
+331,J. Barbour and Sons,Q182399,0,,,ok
+337,HEAD,Q631894,,,,throttled
+363,Geox,Q588001,,,,throttled
+380,Elan,Q1634723,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,parse_fail
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,throttled
+438,Eckō Unltd.,Q1281935,,,,parse_fail
+447,Lager 157,Q10553200,,,,parse_fail
+461,F. Engel,Q119056161,,,,parse_fail
+477,Dorko,Q140069588,,,,parse_fail
+496,Ardène,Q2860764,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,throttled
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+245,Erreà,Q1361595,,,,parse_fail
+292,Playlife,Q172227,,,,parse_fail
+295,BALR.,Q25110413,,,,throttled
+308,Dressmann,Q3357081,,,,parse_fail
+337,HEAD,Q631894,,,,throttled
+363,Geox,Q588001,,,,throttled
+380,Elan,Q1634723,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,parse_fail
+438,Eckō Unltd.,Q1281935,,,,throttled
+447,Lager 157,Q10553200,,,,throttled
+461,F. Engel,Q119056161,,,,parse_fail
+477,Dorko,Q140069588,,,,parse_fail
+496,Ardène,Q2860764,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,parse_fail
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+245,Erreà,Q1361595,,,,parse_fail
+292,Playlife,Q172227,,,,throttled
+295,BALR.,Q25110413,,,,throttled
+308,Dressmann,Q3357081,,,,throttled
+337,HEAD,Q631894,,,,throttled
+363,Geox,Q588001,,,,throttled
+380,Elan,Q1634723,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,throttled
+408,2(x)ist,Q307894,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,parse_fail
+438,Eckō Unltd.,Q1281935,,,,parse_fail
+447,Lager 157,Q10553200,,,,throttled
+461,F. Engel,Q119056161,,,,throttled
+477,Dorko,Q140069588,,,,throttled
+496,Ardène,Q2860764,,,,throttled
+3,Fix,Q125705303,,,,throttled
+5,Beer,Q64852777,,,,throttled
+6,'47,Q25222241,,,,throttled
+7,Away,Q48743138,,,,throttled
+9,DAKS,Q5204244,,,,throttled
+13,GU,Q5512642,,,,throttled
+18,Vans,Q1135366,,,,throttled
+19,VILA,Q12340378,,,,throttled
+22,Carlings,Q10443115,,,,parse_fail
+30,Tu,Q115517249,,,,throttled
+32,USC,Q7866331,,,,throttled
+37,Pink,Q20716793,,,,throttled
+43,Nike,Q483915,,,,throttled
+49,MCS,Q3111039,,,,throttled
+53,Zara,Q147662,,,,throttled
+56,Lids,Q19841609,,,,throttled
+58,Mexx,Q1837290,,,,throttled
+59,ASOS,Q211951,,,,throttled
+71,Bode,Q107481263,,,,throttled
+89,NKD,Q927272,,,,throttled
+96,ECCO,Q1280255,,,,throttled
+102,Alé,Q132531889,,,,throttled
+104,CCC,Q11788344,,,,throttled
+110,IKKS,Q3146711,,,,throttled
+111,DKNY,Q938773,,,,throttled
+115,ALDO,Q2832297,,,,throttled
+133,KiK,Q883965,,,,throttled
+150,Hoka,Q16908664,,,,throttled
+158,IRFE,Q15263093,,,,throttled
+168,Kari,Q47155680,,,,throttled
+170,Puig,Q3410623,,,,throttled
+174,Etro,Q1371677,,,,throttled
+183,Volt,Q136502973,,,,throttled
+185,EXR,Q5324709,,,,throttled
+201,Avia,Q4828498,,,,throttled
+227,Biba,Q4902942,,,,throttled
+235,"Fila, Inc.",Q482539,,,,throttled
+245,Erreà,Q1361595,,,,throttled
+292,Playlife,Q172227,,,,parse_fail
+295,BALR.,Q25110413,,,,throttled
+308,Dressmann,Q3357081,,,,parse_fail
+337,HEAD,Q631894,,,,throttled
+363,Geox,Q588001,,,,throttled
+380,Elan,Q1634723,,,,throttled
+397,Syrn,Q138318202,,,,throttled
+399,Sector No Limits,Q7444725,,,,parse_fail
+408,2(x)ist,Q307894,,,,throttled
+428,Agatha Ruiz de la Prada,Q2736351,,,,parse_fail
+430,GHOST-Bikes,Q86327186,,,,parse_fail
+438,Eckō Unltd.,Q1281935,,,,throttled
+447,Lager 157,Q10553200,,,,parse_fail
+461,F. Engel,Q119056161,,,,parse_fail
+477,Dorko,Q140069588,,,,parse_fail
+496,Ardène,Q2860764,,,,parse_fail

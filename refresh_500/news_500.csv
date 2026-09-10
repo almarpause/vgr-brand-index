@@ -1,0 +1,613 @@
+qid,brand,entity,news_mom,news_yoy,status
+Q483915,Nike,Footwear company,+200%,+550%,ok
+Q178516,Gucci,Fashion brand,+700%,+1850%,ok
+Q191485,Louis Vuitton,Fashion company,+250%,+450%,ok
+Q26070,Uniqlo,Fashion brand,+250%,>5000 (breakout),ok
+Q188326,H&M,Fashion brand,+110%,+2600%,ok
+Q147662,Zara,Fashion brand,+90%,+600%,ok
+Q843887,Hermès,Fashion brand,+350%,>5000 (breakout),ok
+Q491627,Hugo Boss,Fashion company,+450%,>5000 (breakout),ok
+Q107377209,Shein,Clothing retail company,+110%,+3900%,ok
+Q332477,Victoria's Secret,Lingerie company,+250%,>5000 (breakout),ok
+Q193136,Prada,Fashion brand,+500%,>5000 (breakout),ok
+Q696376,Versace,Fashion company,+1150%,>5000 (breakout),ok
+Q611115,Swarovski,Fashion brand,+1550%,>5000 (breakout),ok
+Q742988,New Balance,Footwear company,+350%,+3500%,ok
+Q127962,Levi Strauss & Co.,Clothing company,+250%,>5000 (breakout),ok
+Q309031,Lacoste,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q420953,Air Jordan,Product line,+130%,+1100%,ok
+Q635484,Giorgio Armani,Fashion brand,+500%,>5000 (breakout),ok
+Q214480,Dolce & Gabbana,Fashion brand,+200%,>5000 (breakout),ok
+Q6702957,Lululemon Athletica,Apparel company,+400%,+800%,ok
+Q137023,Primark,Retail company,+120%,>5000 (breakout),ok
+Q152784,"The North Face, Inc.",Clothing company,+700%,>5000 (breakout),ok
+Q43452713,On AG,Sportswear company,+1050%,>5000 (breakout),ok
+Q2031485,Under Armour,Fashion brand,+600%,+1250%,ok
+Q1068628,Calvin Klein,Fashion brand,+600%,>5000 (breakout),ok
+Q1066858,Tiffany & Co.,Jewelry stores company,>5000 (breakout),>5000 (breakout),ok
+Q482539,"Fila, Inc.",Sportswear company,+500%,>5000 (breakout),ok
+Q2282172,Yves Saint Laurent,Fashion house,+400%,>5000 (breakout),ok
+Q688082,Bata Limited,Footwear retail company,+600%,>5000 (breakout),ok
+Q390107,Burberry,Fashion brand,+650%,>5000 (breakout),ok
+Q5113774,Chrome Hearts,Luxury goods company,>5000 (breakout),>5000 (breakout),ok
+Q752515,Bulgari,Jewellery company,+3300%,>5000 (breakout),ok
+Q1660552,"Patagonia, Inc.",Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q701338,C&A,Company,+600%,>5000 (breakout),ok
+Q1641437,Ralph Lauren Corporation,Fashion company,+400%,>5000 (breakout),ok
+Q2945643,Skechers,Footwear manufacturing company,+400%,>5000 (breakout),ok
+Q1126126,Dr. Martens,Footwear company,>5000 (breakout),>5000 (breakout),ok
+Q1659229,Supreme,Brand,>5000 (breakout),>5000 (breakout),ok
+Q926575,Fendi,Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q319344,Abercrombie & Fitch,Retail company,+1450%,+1450%,ok
+Q1686544,Loro Piana,Luxury goods company,>5000 (breakout),>5000 (breakout),ok
+Q735873,Kappa,Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q817139,Benetton Group,Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q1726925,Maison Margiela,Fashion brand,+1050%,>5000 (breakout),ok
+Q759210,Givenchy,Fashion company,+3200%,>5000 (breakout),ok
+Q950042,Stone Island,Company,+1350%,>5000 (breakout),ok
+Q552230,Miu Miu,Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q966905,Loewe,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q136570,Zalando,Online shopping company,+70%,+950%,ok
+Q1135366,Vans,Apparel company,+250%,no-data,partial
+Q1156731,Mizuno Corporation,Sports equipment company,+1650%,>5000 (breakout),ok
+Q1115170,Comme des Garçons,Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q788231,Massimo Dutti,Clothing retail company,+2600%,>5000 (breakout),ok
+Q648458,Birkenstock,Manufacturing company,+300%,>5000 (breakout),ok
+Q2470307,Guess,Clothing company,+500%,>5000 (breakout),ok
+Q894874,Bottega Veneta,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q1548951,Moncler,Company,+1800%,>5000 (breakout),ok
+Q827258,Bershka,Topic (brand),+100%,>5000 (breakout),ok
+Q136503,Mango,Company,+130%,>5000 (breakout),ok
+Q158285,Diesel,Fashion house,+950%,>5000 (breakout),ok
+Q634881,Tommy Hilfiger B.V.,Clothing brand,+950%,>5000 (breakout),ok
+Q142691,Montblanc International GmbH,Company,>5000 (breakout),>5000 (breakout),ok
+Q2842931,American Eagle Outfitters,Clothing company,0%,0%,ok
+Q1130409,Vertu,Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q7629175,"Stüssy, Inc.",Company,>5000 (breakout),>5000 (breakout),ok
+Q649646,Valentino,Design company,+1600%,>5000 (breakout),ok
+Q948531,Celine,Fashion house,+3100%,>5000 (breakout),ok
+Q174310,Nordstrom,Store chain,+120%,+1650%,ok
+Q1439645,Macron,Brand,+100%,>5000 (breakout),ok
+Q532310,Hummel International,Sportswear company,>5000 (breakout),>5000 (breakout),ok
+Q25387414,Brandy Melville,Company,>5000 (breakout),>5000 (breakout),ok
+Q1684445,Superdry & Co,Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q123700068,Alo Yoga,Clothing company,+900%,>5000 (breakout),ok
+Q1539185,The Timberland Company,Company,>5000 (breakout),>5000 (breakout),ok
+Q2003244,Thor Steinar,Topic (brand),0%,0%,ok
+Q691029,Pull&Bear,Topic (brand),+250%,>5000 (breakout),ok
+Q16908664,Hoka,Company,>5000 (breakout),>5000 (breakout),ok
+Q1075391,Chloé,Clothing brand,+2700%,>5000 (breakout),ok
+Q378698,Jaeger-LeCoultre,Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q3205965,LC Waikiki,Company,+650%,>5000 (breakout),ok
+Q1060537,Forever 21,Clothing brand,>5000 (breakout),>5000 (breakout),ok
+Q1257477,Hollister Co.,Topic (brand),+80%,>5000 (breakout),ok
+Q1445358,Wrangler,Clothing chain,>5000 (breakout),>5000 (breakout),ok
+Q53472173,Off-White,Company,>5000 (breakout),>5000 (breakout),ok
+Q56246099,Gymshark,Company,0%,0%,ok
+Q1355904,Zegna,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q631894,HEAD,Sports equipment company,>5000 (breakout),>5000 (breakout),ok
+Q806085,Banana Republic,Clothing brand,+1000%,>5000 (breakout),ok
+Q11815580,Pepco,Company,+1550%,>5000 (breakout),ok
+Q3410623,Puig,Company,>5000 (breakout),>5000 (breakout),ok
+Q1385309,Balmain,Company,>5000 (breakout),>5000 (breakout),ok
+Q6108019,JD Sports,Store chain,+150%,+3600%,ok
+Q1200698,Le Bon Marché,Department store,>5000 (breakout),>5000 (breakout),ok
+Q463378,American Apparel Inc.,Company,0%,0%,ok
+Q659863,Moschino,Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q1422481,Fjällräven,Clothing chain,0%,0%,ok
+Q706421,New Yorker,Clothing company,+200%,>5000 (breakout),ok
+Q24908552,100 Thieves,Company,+20%,>5000 (breakout),ok
+Q938773,DKNY,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q13882231,Alexander McQueen,Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q23823668,TK Maxx,Store chain,+1150%,>5000 (breakout),ok
+Q63335,Foot Locker,Company,0%,0%,ok
+Q1151774,Max Mara,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q182399,J. Barbour and Sons,Outerwear company,>5000 (breakout),>5000 (breakout),ok
+Q110778161,SKIMS,Clothing company,+450%,>5000 (breakout),ok
+Q5512642,GU,Retail company,+500%,>5000 (breakout),ok
+Q2855977,Slazenger,Sports equipment company,0%,0%,ok
+Q2735242,Old Navy,Clothing retail company,+120%,>5000 (breakout),ok
+Q670764,Brooks Sports,Sports equipment company,>5000 (breakout),>5000 (breakout),ok
+Q743497,Neiman Marcus,Department store chain,>5000 (breakout),>5000 (breakout),ok
+Q1132272,PVH Corp.,Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q114913,Dickies,Apparel company,>5000 (breakout),>5000 (breakout),ok
+Q1341990,Strauss,Workwear company,>5000 (breakout),>5000 (breakout),ok
+Q1280255,ECCO,Company,>5000 (breakout),>5000 (breakout),ok
+Q2782017,Napapijri,Fashion company,0%,0%,ok
+Q246655,Next plc,Clothing company,+850%,>5000 (breakout),ok
+Q3946053,Salvatore Ferragamo,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q1095857,C. & J. Clark International Ltd,Footwear retail company,>5000 (breakout),>5000 (breakout),ok
+Q604667,Emilio Pucci,Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q29015034,JW Anderson,Fashion label,>5000 (breakout),>5000 (breakout),ok
+Q25351941,The Row,Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q849724,Brioni,Menswear company,>5000 (breakout),>5000 (breakout),ok
+Q844805,Dillard's,Department store chain,+750%,>5000 (breakout),ok
+Q842174,"Eddie Bauer Holdings, Inc.",Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q866899,Lanvin,Company,>5000 (breakout),>5000 (breakout),ok
+Q147505,Zappos,Online retail company,>5000 (breakout),>5000 (breakout),ok
+Q2072372,streetwear,Topic,+350%,>5000 (breakout),ok
+Q4038967,Fred Perry,Fashion accessory company,0%,0%,ok
+Q18712957,Farfetch,Company,+1100%,>5000 (breakout),ok
+Q22101752,Adidas Yeezy,Shoes,>5000 (breakout),+750%,ok
+Q6131944,L.L.Bean,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q3327046,OYSHO,Chain,+450%,>5000 (breakout),ok
+Q588001,Geox,Shoe manufacturing company,+500%,>5000 (breakout),ok
+Q1027874,Oniverse,Retail company,+250%,no-data,ok
+Q658961,Piaget,Manufacturing company,0%,0%,ok
+Q593680,Borsalino,Fashion company,0%,0%,ok
+Q2736351,Agatha Ruiz de la Prada,Spanish fashion designer,0%,0%,ok
+Q664543,Deichmann SE,Company,+2400%,>5000 (breakout),ok
+Q1361595,Errea,Sports equipment company,0%,0%,ok
+Q3322945,Stradivarius,Clothing retail company,+250%,>5000 (breakout),ok
+Q83750,Desigual,Fashion company,0%,0%,ok
+Q5213855,Jimmy Choo Ltd,Fashion house,0%,0%,ok
+Q1400977,Missoni,Fashion company,0%,no-data,ok
+Q2456630,Trussardi,Company,>5000 (breakout),>5000 (breakout),ok
+Q2263500,Ellesse,Company,0%,0%,ok
+Q429204,C.P. Company,Company,0%,0%,ok
+Q60772401,COS,Topic,+1050%,>5000 (breakout),ok
+Q6077665,Jack & Jones,Topic (wordmark),+550%,>5000 (breakout),ok
+Q105476592,Tom Ford,Fashion brand,+950%,>5000 (breakout),ok
+Q29109956,Vetements,Clothing brand,0%,no-data,ok
+Q4115012,Giordano,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q1921997,Merrell,Company,0%,0%,ok
+Q6981479,Nautica,Apparel,>5000 (breakout),>5000 (breakout),ok
+Q3128675,Havaianas,Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q3645582,Brunello Cucinelli,Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q821969,Berluti,Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q5370765,J.Crew,Retail company,0%,>5000 (breakout),ok
+Q4791147,Aritzia,Clothing retail company,+800%,>5000 (breakout),ok
+Q883965,KiK,Discount store chain,>5000 (breakout),>5000 (breakout),ok
+Q3192653,Kangol,Clothing company,0%,0%,ok
+Q211951,ASOS,Retail company,+110%,+3400%,ok
+Q3196299,Kiabi,Topic (wordmark),+450%,no-data,ok
+Q571206,Tom Tailor,Company,0%,no-data,ok
+Q28224724,Golden Goose,Fashion company,>5000 (breakout),no-data,ok
+Q1360940,Orbea,Corporation,>5000 (breakout),no-data,ok
+Q3197595,Kiton,Fashion company,0%,no-data,ok
+Q1784995,Alfred Dunhill,Company,>5000 (breakout),no-data,ok
+Q1568588,Juicy Couture,Clothing chain,0%,no-data,ok
+Q1056200,Cerruti 1881,Fashion brand,0%,no-data,ok
+Q1893576,Topshop,Retail company,0%,no-data,ok
+Q121878733,Vuori,Clothing company,>5000 (breakout),no-data,ok
+Q65090803,Fashion Nova,Retail company,+350%,no-data,ok
+Q600986,Escada SE,Company,0%,no-data,ok
+Q265056,s.Oliver,Company,>5000 (breakout),no-data,ok
+Q305404,Intimissimi,Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q21809354,Reserved,Topic (wordmark),+550%,>5000 (breakout),ok
+Q7131643,Pantaloons,Topic (wordmark),+130%,no-data,ok
+Q924963,Charles Tyrwhitt,Company,>5000 (breakout),no-data,ok
+Q835487,MCM Worldwide,Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q2749082,Lord & Taylor,Company,0%,no-data,ok
+Q1281935,Ecko Unltd.,Topic (wordmark),0%,no-data,ok
+Q125784200,Corteiz,Topic (brand),>5000 (breakout),no-data,ok
+Q1439858,Nina Ricci,Fashion brand,no-data,no-data,ok
+Q688195,Bally,Fashion house,no-data,no-data,ok
+Q1422386,K-Swiss,Topic (wordmark),>5000 (breakout),no-data,ok
+Q1355658,Karl Kani,Topic (wordmark),0%,0%,ok
+Q2832297,ALDO,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q1484081,G-Star Raw,Company,>5000 (breakout),>5000 (breakout),ok
+Q278948,Aquascutum,Clothing company,0%,0%,ok
+Q2820820,K-way,Textile industry company,0%,0%,ok
+Q2707765,Viktor & Rolf,Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q2672003,Celio,Clothing retail company,>5000 (breakout),>5000 (breakout),ok
+Q25222241,'47,Brand,>5000 (breakout),>5000 (breakout),ok
+Q7193265,Rocawear,Topic (wordmark),0%,0%,ok
+Q4876226,Beams,Clothing company,0%,0%,ok
+Q16992933,Fabletics,Sportswear company,0%,0%,ok
+Q917561,Kitsuné,Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q1320295,Marithé + François Girbaud,Fashion company,0%,0%,ok
+Q1371677,Etro,Accessories retail company,>5000 (breakout),>5000 (breakout),ok
+Q3073195,Furla,Company,0%,0%,ok
+Q934096,Red Wing Shoes,Design company,>5000 (breakout),>5000 (breakout),ok
+Q107835110,House of Schiaparelli,Fashion company,-100%,>5000 (breakout),ok
+Q2988422,Canada Goose Inc.,Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q3274777,Evisu,Clothing company,0%,0%,ok
+Q4728473,AllSaints,Fashion,>5000 (breakout),>5000 (breakout),ok
+Q25047966,Golf Wang,Company,0%,0%,ok
+Q22910099,OBEY Clothing,Clothing company,0%,0%,ok
+Q4902942,Biba,Fashion company,0%,0%,ok
+Q2456205,True Religion,Clothing company,0%,0%,ok
+Q6276279,"Jordache Enterprises, Inc.",Clothing company,0%,0%,ok
+Q17019662,Dr. Scholl's,Topic,>5000 (breakout),>5000 (breakout),ok
+Q1030922,Camper,Shoe manufacturing company,0%,0%,ok
+Q3269443,Lyle & Scott,Topic,>5000 (breakout),>5000 (breakout),ok
+Q1417347,OshKosh B'Gosh,Company,>5000 (breakout),>5000 (breakout),ok
+Q927272,NKD,Discount store chain,>5000 (breakout),>5000 (breakout),ok
+Q3878818,Charles & Keith,Company,>5000 (breakout),>5000 (breakout),ok
+Q25052459,Psycho Bunny,Topic,>5000 (breakout),>5000 (breakout),ok
+Q576316,Cacharel,Topic,>5000 (breakout),>5000 (breakout),ok
+Q7366633,Roots Canada,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q7156755,Payless ShoeSource,Shoes company,>5000 (breakout),>5000 (breakout),ok
+Q457822,Fielmann,Eyewear company,>5000 (breakout),>5000 (breakout),ok
+Q11188787,ABC-Mart,Retail company,+1150%,>5000 (breakout),ok
+Q2670328,River Island,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q1837290,Mexx,Topic,0%,0%,ok
+Q430230,Coleman Company,Manufacturing company,>5000 (breakout),>5000 (breakout),ok
+Q39058850,Enfants Riches Déprimés,Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q3212802,La Senza,Retail company,0%,0%,ok
+Q50540636,Camp David,Fashion,0%,0%,ok
+Q534235,Jockey International,Retail company,0%,0%,ok
+Q1892752,Marc O'Polo,Topic,0%,0%,ok
+Q96791543,Yeezy,Company,>5000 (breakout),>5000 (breakout),ok
+Q2152193,Rieker Shoes,Footwear retail,0%,0%,ok
+Q7909026,Vakko,Company,>5000 (breakout),>5000 (breakout),ok
+Q2719846,Billionaire Boys Club,Clothing retailer,0%,0%,ok
+Q2979949,Club Monaco,Clothing retail company,0%,0%,ok
+Q1384784,Express,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q6792377,Maui Jim,Manufacturing company,0%,0%,ok
+Q3073822,Superga,Topic,>5000 (breakout),>5000 (breakout),ok
+Q4139985,Gloria Jeans,Clothing retail company,>5000 (breakout),>5000 (breakout),ok
+Q113992257,Cotton On Group,Topic,+850%,>5000 (breakout),ok
+Q17191383,Adastria,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q7121857,PacSun,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q4828498,Avia,Activewear company,>5000 (breakout),>5000 (breakout),ok
+Q20716793,Pink,Victoria's Secret,>5000 (breakout),>5000 (breakout),ok
+Q1427623,Haglöfs,Clothing company,0%,0%,ok
+Q1629990,CoverGirl,Topic,>5000 (breakout),>5000 (breakout),ok
+Q17141914,Scotch & Soda,Design company,0%,0%,ok
+Q43082416,Aimé Leon Dore,Topic,>5000 (breakout),>5000 (breakout),ok
+Q1902277,Marmot,Topic,>5000 (breakout),>5000 (breakout),ok
+Q104846139,Savage X Fenty,Company,0%,0%,ok
+Q10853153,United Arrows,Retail-store company,>5000 (breakout),>5000 (breakout),ok
+Q950766,Safilo,Company,0%,0%,ok
+Q5715308,Henri Bendel,Department store company,0%,0%,ok
+Q2967663,Church's,Company,0%,0%,ok
+Q30589369,LuLaRoe,Fashion company,0%,0%,ok
+Q22921009,Pierre Cardin,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q17149142,Suitsupply,Suit company,>5000 (breakout),>5000 (breakout),ok
+Q4773903,Anthropologie,Retail company,>5000 (breakout),>5000 (breakout),ok
+Q3650853,Marni,Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q651470,etnies,Footwear company,0%,0%,ok
+Q3328552,Uterqüe,Topic,0%,0%,ok
+Q5915543,House of Worth,Fashion company,0%,0%,ok
+Q7107393,Osprey,Manufacturing company,>5000 (breakout),>5000 (breakout),ok
+Q3317844,Modell's Sporting Goods,Online retail company,0%,0%,ok
+Q2039867,Theory,Clothes company,0%,0%,ok
+Q911217,Breuninger,Company,>5000 (breakout),>5000 (breakout),ok
+Q1136426,Hackett London,Clothing company,0%,0%,ok
+Q1703526,JOOP!,Cosmetics company,0%,0%,ok
+Q1634723,Elan,Elan Skis - Topic,0%,0%,ok
+Q42332202,Bombas,Bombas - Topic,0%,0%,ok
+Q17080812,Members Only,Members Only - Fashion brand,0%,0%,ok
+Q1089081,Fiorucci,Fiorucci - Topic (wordmark),0%,0%,ok
+Q7932495,Vineyard Vines,Vineyard Vines - Company,>5000 (breakout),>5000 (breakout),ok
+Q5203233,D-A-S-H,,no-data,no-data,no-data
+Q24939079,Max Fashion,Max Fashion - Topic (wordmark),+300%,>5000 (breakout),ok
+Q7408750,Samantha Thavasa,Samantha Thavasa - Topic,0%,0%,ok
+Q18155981,Delvaux,Delvaux - Luxury goods company,0%,0%,ok
+Q641722,John Lobb Bootmaker,John Lobb Bootmaker - Footwear company,0%,0%,ok
+Q6925414,Mountain Warehouse,Mountain Warehouse - Retail,>5000 (breakout),>5000 (breakout),ok
+Q1028975,Jacques Fath,Jacques Fath - French fashion designer,0%,0%,ok
+Q4838385,Baby Phat,Baby Phat - Fashion brand,0%,0%,ok
+Q2551058,DSQUARED2,Dsquared2 - Company,>5000 (breakout),>5000 (breakout),ok
+Q546542,A.P.C.,A.P.C. - Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q4682711,Adidas Originals,Adidas Originals - Product line,"+1,800%",>5000 (breakout),ok
+Q23672312,Herschel Supply Co.,Herschel Supply Co. - Company,>5000 (breakout),>5000 (breakout),ok
+Q3160437,Jaeger,Jaeger - Fashion company,0%,0%,ok
+Q21463374,Nordstrom Rack,Nordstrom Rack - Department store chain,+750%,>5000 (breakout),ok
+Q551889,Reusch,Reusch International - Sports equipment company,0%,0%,ok
+Q19988222,Tory Burch LLC,Tory Burch - Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q3835099,Liu·Jo,Liu Jo - Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q107410579,Sinsay,Sinsay - Topic (wordmark),+800%,>5000 (breakout),ok
+Q7679064,Talbots,Talbots - Women's clothing store company,>5000 (breakout),>5000 (breakout),ok
+Q1736294,Kathmandu,KMD Brands (Kathmandu) - Retail company,>5000 (breakout),>5000 (breakout),ok
+Q958209,Springfield,Springfield - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q6063877,Koton,Koton - Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q55641424,Peter Millar (clothing company),Peter Millar - Clothing company,0%,0%,ok
+Q272361,Çalık Holding,Çalık Holding - Energy company,0%,0%,ok
+Q3943471,Scarpa,Scarpa - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q4048384,Rockport Company,Rockport - Company,>5000 (breakout),>5000 (breakout),ok
+Q1798938,La Martina,La Martina - Clothing company,0%,0%,ok
+Q54817659,PrettyLittleThing,PrettyLittleThing - Fashion company,+700%,>5000 (breakout),ok
+Q3111039,MCS,MCS - Fashion brand,0%,0%,ok
+Q18385610,Stitch Fix,Stitch Fix - Fashion company,0%,>5000 (breakout),ok
+Q172227,Playlife,Playlife - Fashion company,0%,0%,ok
+Q107394262,Ami Paris,AMI Paris - Fashion company,0%,0%,ok
+Q54869493,Bimba y Lola,Bimba y Lola - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q138318202,Syrn,,no-data,no-data,no-data
+Q2896348,Blundstone Australia Pty Ltd,Blundstone - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q6115814,Jack Wills,Jack Wills - Clothing company,0%,0%,ok
+Q4112833,Caleres,Caleres - Footwear company,0%,0%,ok
+Q8075252,Zumiez,Zumiez - Clothing accessories stores company,>5000 (breakout),>5000 (breakout),ok
+Q6766373,Mark's,Mark's - Clothing retail company,>5000 (breakout),>5000 (breakout),ok
+Q5476569,Fox-Wizel Ltd.,,no-data,no-data,no-data
+Q6697865,Lucky Brand Jeans,Lucky Brand - Company,0%,0%,ok
+Q873447,Gerry Weber,Gerry Weber - Company,0%,0%,ok
+Q25351619,Aerie,Aerie - Clothing retailer,>5000 (breakout),>5000 (breakout),ok
+Q5204244,DAKS,DAKS - Company,0%,0%,ok
+Q4120731,Andrew Christian,Andrew Christian - Company,0%,0%,ok
+Q184399,Zeeman,Zeeman - Store,>5000 (breakout),>5000 (breakout),ok
+Q136311,Sunglass Hut,Sunglass Hut - Company,>5000 (breakout),>5000 (breakout),ok
+Q6523209,LensCrafters,LensCrafters - Retail,>5000 (breakout),>5000 (breakout),ok
+Q12391713,Lefties,Lefties - Company,>5000 (breakout),>5000 (breakout),ok
+Q3504397,Avirex,Avirex - Clothing company,0%,0%,ok
+Q3783405,Harmont & Blaine,Harmont & Blaine - Topic (wordmark),0%,0%,ok
+Q9294202,House,,no-data,no-data,no-data
+Q5000795,Burton,Burton - Retailer,0%,0%,ok
+Q3475516,Schott NYC,Schott NYC - Clothing company,0%,0%,ok
+Q6485350,Lane Bryant,Lane Bryant - Specialty retail company,0%,0%,ok
+Q12061509,Matalan,Matalan - Clothing retail company,>5000 (breakout),>5000 (breakout),ok
+Q101108013,George,,no-data,no-data,no-data
+Q2076935,Munich,Munich - Topic (footwear),>5000 (breakout),>5000 (breakout),ok
+Q3974532,Storm Management,Storm Management - Modeling agency company,>5000 (breakout),>5000 (breakout),ok
+Q2567594,Wicked Weasel,Wicked Weasel - Topic (wordmark),0%,0%,ok
+Q7444725,Sector No Limits,Sector No Limits - Company,0%,0%,ok
+Q787601,Chevignon,Chevignon - Topic (bird logo),0%,0%,ok
+Q5499945,Free People,Free People - Retail company,>5000 (breakout),>5000 (breakout),ok
+Q3566715,Wati B,Wati B - Music company,0%,0%,ok
+Q4970227,British Knights,British Knights - Topic (BK logo),0%,0%,ok
+Q241295,Miss Sixty,Miss Sixty - Topic (wordmark),0%,0%,ok
+Q1654538,Replay,Replay - Topic (wordmark),-70%,>5000 (breakout),ok
+Q131721678,Christian Dior Couture,Dior - Fashion company,+150%,>5000 (breakout),ok
+Q6106802,J. Press,J. Press - Company,0%,0%,ok
+Q1758066,Pimkie,Pimkie - Topic (P logo),0%,0%,ok
+Q5206207,Designer Brands,Designer Brands - Shoe stores chain,>5000 (breakout),>5000 (breakout),ok
+Q129676852,Rabanne,Rabanne - Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q1786717,Lindex,Lindex - Chain,>5000 (breakout),>5000 (breakout),ok
+Q11788344,CCC,CCC - Topic (shoes&bags logo),+2900%,>5000 (breakout),ok
+Q65042966,R. M. Williams,R. M. Williams - Manufacturing company,0%,0%,ok
+Q48797459,Zimmermann,Zimmermann - Fashion label,>5000 (breakout),>5000 (breakout),ok
+Q7136948,Parfois,Parfois - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q3368657,Pataugas,Pataugas - Topic (wordmark),0%,0%,ok
+Q7857512,Tween Brands,,no-data,no-data,no-data
+Q103847272,Melon Fashion Group,,no-data,no-data,no-data
+Q1578717,Rochas,Rochas - Fashion company,0%,0%,ok
+Q3356778,J.Lindeberg,J.Lindeberg - Clothing company,0%,0%,ok
+Q60755814,J. Peterman Company,J. Peterman - Topic (wordmark),0%,0%,ok
+Q3574548,Zadig & Voltaire,Zadig & Voltaire - Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q12063852,New Look,New Look - Retail chain company,>5000 (breakout),>5000 (breakout),ok
+Q1987861,WE,WE - Clothing retail company,>5000 (breakout),>5000 (breakout),ok
+Q4176650,Tiger of Sweden,Tiger of Sweden - Clothing company,0%,0%,ok
+Q7310479,Reiss,Reiss - Fashion company,0%,0%,ok
+Q23893788,Ivy Park,Ivy Park - Topic (wordmark),0%,0%,ok
+Q19573665,Peter England,Peter England - Topic (wordmark),0%,0%,ok
+Q17101930,Jil Sander,Jil Sander - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q3516993,Tecnifibre,Tecnifibre - Sports equipment company,0%,0%,ok
+Q1485347,Skagen Designs,Skagen Denmark - Company,>5000 (breakout),>5000 (breakout),ok
+Q3905226,PINKO,Pinko - Fashion,>5000 (breakout),>5000 (breakout),ok
+Q18577819,Blanc & Eclare,Blanc & Eclare - Topic (wordmark),0%,0%,ok
+Q1371302,Takko Fashion,Takko - Chain,>5000 (breakout),>5000 (breakout),ok
+Q7488518,Shanghai Tang,Shanghai Tang - Company,0%,0%,ok
+Q1373540,Frederick's of Hollywood,Frederick's of Hollywood - Company,0%,0%,ok
+Q138543842,Matières Fécales,,,,no-data
+Q7747373,The Limited,The Limited - Clothing company,0%,0%,ok
+Q42306166,Snipes,Snipes - Company,+350%,>5000 (breakout),ok
+Q1783759,Kookai,Kookai - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q2475146,Ulla Popken,Ulla Popken - Clothing company,>5000 (breakout),>5000 (breakout),ok
+Q3641225,Blufin,Blufin - Fashion company,0%,0%,ok
+Q6756978,Marchesa,Marchesa - Brand,0%,0%,ok
+Q5709676,Helmut Lang,Helmut Lang - Fashion brand,0%,0%,ok
+Q431607,Wolford,Wolford - Underwear company,0%,0%,ok
+Q6371145,Kariyushi shirt,Kariyushi shirt - Topic (garment),0%,0%,ok
+Q16834657,The Edinburgh Woollen Mill,Edinburgh Woollen Mill - Clothing retail company,0%,0%,ok
+Q4035334,Bossini,Bossini - Company,0%,0%,ok
+Q48770898,Buck Mason,Buck Mason - Clothing retail company,>5000 (breakout),>5000 (breakout),ok
+Q270013,7 for all Mankind,7 for All Mankind - Jeans company,0%,0%,ok
+Q1523089,Laura Ashley plc,Laura Ashley Holdings - Fashion company,0%,0%,ok
+Q881017,Bogner,BOGNER - Company,0%,0%,ok
+Q5322052,E. Marinella,E. Marinella - Company,>5000 (breakout),>5000 (breakout),ok
+Q4904902,Big 5 Sporting Goods,Big 5 Sporting Goods - Sporting goods company,>5000 (breakout),>5000 (breakout),ok
+Q4766699,Ann Taylor,Ann Taylor - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q116783961,Palm Angels,Palm Angels - Topic (wordmark),0%,0%,ok
+Q3866987,Mulberry,Mulberry Group plc - Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q4878313,Bebe Stores,Bebe Stores - Retail company,0%,0%,ok
+Q877571,Blizzard Ski,Blizzard Sport - Company,0%,0%,ok
+Q50428076,Rebecca Minkoff,Rebecca Minkoff - Clothing brand,0%,0%,ok
+Q1049887,Castro Model Ltd.,,,,no-data
+Q6204078,Jos. A. Bank Clothiers,Jos. A. Bank Clothiers - Retail company,0%,0%,ok
+Q7937938,Vivobarefoot,Vivobarefoot - Company,-30%,>5000 (breakout),ok
+Q3661184,Ermanno Scervino,Ermanno Scervino - Design company,0%,0%,ok
+Q87193804,Scalpers,Scalpers - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q1130841,Proenza Schouler,Proenza Schouler - Fashion brand,>5000 (breakout),>5000 (breakout),ok
+Q3472022,Sandro Paris,Sandro - Clothing brand,>5000 (breakout),>5000 (breakout),ok
+Q6915425,Moscot,Moscot - Company,0%,0%,ok
+Q5647849,Hang Ten,Hangten - Topic (wordmark),0%,0%,ok
+Q4942546,Bonobos,Bonobos - Store chain,>5000 (breakout),>5000 (breakout),ok
+Q2234831,Schiesser,Schiesser - Company,0%,0%,ok
+Q3889076,Pal Zileri,Pal Zileri - Topic (wordmark),0%,0%,ok
+Q22662572,Nivia Sports,Nivia Sports - Sports equipment chain,0%,0%,ok
+Q6545496,Lifestyle Stores,Lifestyle - Store chain,>5000 (breakout),>5000 (breakout),ok
+Q4781133,Apple Bottoms,Apple Bottoms - Topic (brand),0%,0%,ok
+Q420765,Akris,Akris - Fashion design company,0%,0%,ok
+Q5521860,Garage,Garage - Clothing retailer,>5000 (breakout),>5000 (breakout),ok
+Q7282768,Rag & Bone,Rag & Bone - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q2436187,Nudie Jeans,Nudie Jeans - Clothing chain,0%,0%,ok
+Q4936481,Boden,Boden - Clothing industry chain,>5000 (breakout),>5000 (breakout),ok
+Q3645820,Bruno Magli,Bruno Magli - Design company,0%,0%,ok
+Q62610375,Wellensteyn International GmbH & Co. KG,Wellensteyn - Topic (brand),>5000 (breakout),>5000 (breakout),ok
+Q5437186,Fat Face,Fat Face - Company,0%,0%,ok
+Q5512676,G2000,G2000 - Topic (wordmark),0%,0%,ok
+Q3779868,Guru,,,,no-data
+Q4349016,KappAhl,Kappahl - Company,>5000 (breakout),>5000 (breakout),ok
+Q11341902,Mikimoto,K. Mikimoto & Co. - Company,0%,0%,ok
+Q3473599,Sarenza,Sarenza - Company,>5000 (breakout),>5000 (breakout),ok
+Q1473396,Valentino Fashion Group,Valentino Fashion Group - Fashion company,0%,0%,ok
+Q93451035,Boggi Milano,Boggi - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q12331072,Paul & Shark,Paul & Shark - Clothing chain (company),0%,0%,ok
+Q18386374,K-Plus,,,,no-data
+Q47155680,Kari,Kari - Topic (wordmark),0%,0%,ok
+Q7576421,Sperry Top-Sider,Sperry - Footwear company,0%,0%,ok
+Q539507,Icebreaker,Icebreaker - Clothing chain (company),>5000 (breakout),>5000 (breakout),ok
+Q11293025,OWNDAYS,"Owndays Co., Ltd. - Company",>5000 (breakout),>5000 (breakout),ok
+Q1986392,Turnbull & Asser,Turnbull & Asser - Clothing chain (company),0%,0%,ok
+Q2990868,Comptoir des Cotonniers,Comptoir des Cotonniers - Company,0%,0%,ok
+Q4947278,Bosideng,Bosideng - Clothing chain (company),0%,0%,ok
+Q5962345,Hysteric glamour,Hysteric Glamour - Design company,0%,0%,ok
+Q131445771,Rapha,Rapha - Company,0%,0%,ok
+Q5166857,Coogi,Coogi - Topic (wordmark),0%,0%,ok
+Q48743138,Away,Away - Company (luggage),>5000 (breakout),>5000 (breakout),ok
+Q16544736,Courreges,Courreges - Design company,0%,0%,ok
+Q5119055,Cia. Hering,Cia. Hering - Company,>5000 (breakout),>5000 (breakout),ok
+Q3357081,Dressmann,Dressmann - Clothing chain (company),0%,0%,ok
+Q3323911,Morellato Group,Morellato - Jewelry company,0%,0%,ok
+Q3965055,Sorelle Fontana,Sorelle Fontana - Fashion design,0%,0%,ok
+Q7071089,Nygard International,Nygard International - Clothing chain (company),0%,0%,ok
+Q19903561,Polygon Bikes,Polygon Bikes - Company,0%,0%,ok
+Q3334188,NAF NAF,Naf Naf - Company,0%,0%,ok
+Q3047175,Ed Hardy,Ed Hardy - Topic,>5000 (breakout),>5000 (breakout),ok
+Q52391629,Stefano Ricci,Stefano Ricci - Company,0%,0%,ok
+Q47545942,Quooker,Quooker - Topic,>5000 (breakout),>5000 (breakout),ok
+Q2096177,Globe International,Globe Shoes - Company,0%,0%,ok
+Q264141,Sergio Rossi,Sergio Rossi - Company,0%,0%,ok
+Q5515554,Gabe's,Gabe's - Store chain (company),0%,0%,ok
+Q4167754,Herve Leger,Herve Leger - Design company,0%,0%,ok
+Q1617132,Hi-Tec Sports,Hi-Tec - Sportswear chain (company),0%,0%,ok
+Q1137991,Thomas Pink,Thomas Pink - Company,0%,0%,ok
+Q4383376,Atticus Clothing,Atticus - Company,0%,0%,ok
+Q794565,Aeropostale,Aeropostale - Clothing company,0%,0%,ok
+Q4983306,Buckle,Buckle - Store chain (company),>5000 (breakout),>5000 (breakout),ok
+Q4793069,Armedangels,Armedangels - Company,0%,0%,ok
+Q19841609,Lids,Lids - Retail (company),>5000 (breakout),>5000 (breakout),ok
+Q1524904,Gina Tricot,Gina Tricot - Company,>5000 (breakout),>5000 (breakout),ok
+Q1002252,Bugatti,,,,no-data
+Q3047389,Eden Park,Eden Park - Company,+70%,>5000 (breakout),ok
+Q104842926,Ganni,Ganni - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q22031750,Khaadi,Khaadi - Company,0%,0%,ok
+Q21410966,Everlane,Everlane - Store chain (company),>5000 (breakout),>5000 (breakout),ok
+Q2603072,Iceberg,,,,no-data
+Q2338087,Stefanel,Stefanel - Company,0%,0%,ok
+Q48814393,SSENSE,SSENSE - Design company,>5000 (breakout),>5000 (breakout),ok
+Q3476844,Sebago,Sebago - Company,0%,0%,ok
+Q7802889,Tillys,Tillys - Store chain (company),>5000 (breakout),>5000 (breakout),ok
+Q6964738,Naot,Teva Naot Ltd. - Company,0%,0%,ok
+Q3557747,Victorio & Lucchino,Victorio & Lucchino - Company,0%,0%,ok
+Q4886917,Bench,Bench Clothing - Company,0%,0%,ok
+Q2998907,Country Road Group,Country Road - Store chain (company),>5000 (breakout),>5000 (breakout),ok
+Q7827120,Torrid,Torrid - Design company,0%,0%,ok
+Q11332062,Familiar,,,,no-data
+Q10553200,Lager 157,Lager 157 Ab - Company,>5000 (breakout),>5000 (breakout),ok
+Q108739951,Tailored Brands,Tailored Brands - Store chain (company),>5000 (breakout),>5000 (breakout),ok
+Q3407429,Promod,Promod - Store chain (company),0%,0%,ok
+Q6172434,Jeanswest,Jeanswest - Store chain (company),0%,0%,ok
+Q618940,Apollo-Optik,Apollo-Optik - Company,>5000 (breakout),>5000 (breakout),ok
+Q25110413,BALR.,BALR. - Topic (wordmark),0%,0%,ok
+Q7012977,New York & Company,New York & Company - Store chain (company),0%,0%,ok
+Q4840879,Badgley Mischka,Badgley Mischka - Design company,0%,0%,ok
+Q3558391,Vilebrequin,Vilebrequin - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q6315705,TechStyle Fashion Group,TechStyle Fashion Group - Online shopping company,0%,0%,ok
+Q7899859,Urban Behavior,,,,no-data
+Q5562449,Gilly Hicks,Gilly Hicks - Topic (wordmark),0%,0%,ok
+Q5171196,Corneliani,Corneliani - Company,0%,0%,ok
+Q11316059,TAKEO KIKUCHI,TAKEO KIKUCHI - Topic,0%,0%,ok
+Q16938284,Metro Shoes,Metro Shoes - Topic (wordmark),0%,0%,ok
+Q4850707,Baleno,Baleno - Clothing retailer,0%,0%,ok
+Q5349364,Eileen Fisher,Eileen Fisher Inc - Outlet store company,0%,0%,ok
+Q43080895,sacai,Sacai - Topic (wordmark),0%,0%,ok
+Q6786255,Matches Fashion,Matchesfashion Limited - Online store company,0%,0%,ok
+Q5086126,Charlotte Russe,Charlotte Russe - Clothing retail chain,0%,0%,ok
+Q1136537,Costume National,Costume National - Company,0%,0%,ok
+Q7499960,ShoeDazzle,ShoeDazzle - Company,0%,0%,ok
+Q1810141,WESC,WeSC - Clothing company,0%,0%,ok
+Q125191429,Ladies,no-data,no-data,no-data,no-data
+Q22032349,Wood Wood,Wood Wood - Topic,0%,0%,ok
+Q125705303,Fix,FIX - Topic,0%,0%,ok
+Q64852777,Beer,BEER - Topic,0%,0%,ok
+Q7456144,Sessions,Sessions - Topic,0%,0%,ok
+Q3157513,Jacob,no-data,no-data,no-data,no-data
+Q138486466,Shukr,SHUKR - Topic,0%,0%,ok
+Q2872152,Australian,Australian - Topic,0%,0%,ok
+Q12340378,VILA,VILA - Topic,0%,0%,ok
+Q10443115,Carlings,Carlings AS - Company,0%,0%,ok
+Q2121887,Polo Ralph Lauren,Ralph Lauren Corporation - Fashion company,+400%,>5000% (breakout),ok
+Q115517249,Tu,no-data,no-data,no-data,no-data
+Q7866331,USC,USC - Topic,0%,0%,ok
+Q85761879,Frame,FRAME - Topic,>5000% (breakout),>5000% (breakout),ok
+Q11072650,Swear,Swear - Topic,0%,0%,ok
+Q4941440,Bonds,Bonds - Clothing chain,>5000% (breakout),>5000% (breakout),ok
+Q1719431,Schmid,no-data,no-data,no-data,no-data
+Q5175717,Cotton On,Cotton On - Company,>5000% (breakout),>5000% (breakout),ok
+Q109906064,Sleeper,no-data,no-data,no-data,no-data
+Q107481263,Bode,Bode - Topic,>5000% (breakout),>5000% (breakout),ok
+Q20714032,Seraphine,Seraphine - Design chain,0%,0%,ok
+Q20987378,Barefoot,no-data,no-data,no-data,no-data
+Q7740985,The Hundreds,The Hundreds - Topic,>5000% (breakout),>5000% (breakout),ok
+Q125206509,Patta,Patta - Topic,0%,0%,ok
+Q6793571,Maurices,Maurices - Store chain,0%,0%,ok
+Q7197417,Piping Hot,Piping Hot Australia - Topic,0%,0%,ok
+Q132531889,Alé,no-data,no-data,no-data,no-data
+Q72982331,Francesca's,Francesca's - Company,0%,0%,ok
+Q3146711,IKKS,IKKS - Company,0%,0%,ok
+Q11297188,Kapital,no-data,no-data,no-data,no-data
+Q115804691,Volcano,Volcano - Topic,0%,0%,ok
+Q5618229,Gump's,Gump's San Francisco - Department store,0%,0%,ok
+Q119149859,Kapital,no-data,no-data,no-data,no-data
+Q25351738,Joules,Joules - Clothing chain,0%,0%,ok
+Q108582148,Good American,Good American - Company,0%,0%,ok
+Q9171569,Big Star,Big Star - Company,0%,0%,ok
+Q15263093,IRFE,IRFE - Design chain,0%,0%,ok
+Q3497483,Emporio Armani,Emporio Armani - Fashion brand,0%,0%,ok
+Q2422884,American Vintage,American Vintage - Company,0%,0%,ok
+Q6192383,Jigsaw,Jigsaw - Topic,0%,0%,ok
+Q136502973,Volt,VOLT - Topic,>5000% (breakout),>5000% (breakout),ok
+Q5324709,EXR,EXR - Topic,0%,0%,ok
+Q10461856,Crocker,no-data,no-data,no-data,no-data
+Q28042940,Orchestra,Orchestra Prémaman - Company,>5000% (breakout),>5000% (breakout),ok
+Q7432952,Schuh,Schuh - Store chain,>5000% (breakout),>5000% (breakout),ok
+Q8041451,X-Large,XLARGE - Topic,0%,0%,ok
+Q6166759,Jay Jays,Jay Jays - Company,0%,0%,ok
+Q125230974,James Perse,James Perse - Topic,>5000% (breakout),>5000% (breakout),ok
+Q2956351,Chantelle,Chantelle - Topic,0%,0%,ok
+Q55748823,garment factory,no-data,no-data,no-data,no-data
+Q5506939,Fuchsia,no-data,no-data,no-data,no-data
+Q28401216,Sunski,Sunski - Clothing chain,0%,0%,ok
+Q104890420,Just Over the Top,Just Over the Top - Company,0%,0%,ok
+Q11993725,Oleana,Oleana - Topic,0%,0%,ok
+Q6316068,Just Jeans,Just Jeans Pty. Ltd. - Company,0%,0%,ok
+Q55205917,Best Company,Best Company - Topic,0%,0%,ok
+Q11236730,Niko and...,Niko and... - Topic,0%,0%,ok
+Q3401000,Nalini,Nalini - Topic,0%,0%,ok
+Q115310947,Terminal X,Terminal X - Topic,>5000% (breakout),>5000% (breakout),ok
+Q16648226,Women'secret,Women'secret - Topic,>5000% (breakout),>5000% (breakout),ok
+Q130705749,Assem,no-data,no-data,no-data,no-data
+Q2290173,Sirri,SIRRI - Topic,0%,0%,ok
+Q107394070,Number (N)ine,Number (N)ine - Topic,0%,0%,ok
+Q945463,Bonia,Bonia - Store chain,0%,0%,ok
+Q3439593,Cubus,Cubus - Company,>5000% (breakout),>5000% (breakout),ok
+Q3012602,Damart,Damart - Company,0%,0%,ok
+Q7553581,Soffe,Soffe - Store chain,0%,0%,ok
+Q3305660,Tailored Brands,Tailored Brands - Store chain,>5000% (breakout),>5000% (breakout),ok
+Q125660181,Kaporal,Kaporal - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q7642242,Super Champion,Super Champion - Topic,0%,0%,ok
+Q6187356,Jessica McClintock,"Jessica McClintock, Inc. - Company",0%,0%,ok
+Q6908680,Moosejaw,Moosejaw - Online retail company,0%,0%,ok
+Q28056374,Tezenis,Tezenis - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q2903774,Gottex,Gottex - Company,no-data,0%,ok
+Q1072452,Chiemsee,Chiemsee - Topic,no-data,0%,ok
+Q6414100,Kinney Shoes,Kinney Shoes - Retail company,no-data,0%,ok
+Q307894,2(x)ist,2(x)ist - Fashion company,no-data,no-data,no-data
+Q110225120,Max Mara Fashion Group,Max Mara - Fashion company,>5000 (breakout),no-data,ok
+Q3299151,Matix,Matix - Company,no-data,no-data,ok
+Q7111938,Outdoor Research,Outdoor Research - Jacket company,0%,no-data,ok
+Q18636419,The Elder Statesman,The Elder Statesman - Brand,0%,0%,ok
+Q13657207,Padini,Padini - Apparel company,>5000 (breakout),>5000 (breakout),ok
+Q4950452,Boutique La Vie en rose,La Vie en Rose - Lingerie retail company,>5000 (breakout),no-data,ok
+Q86327186,GHOST-Bikes,Ghost Bikes - Topic (wordmark),0%,0%,ok
+Q55097814,Viyella,Viyella - Topic,no-data,no-data,no-data
+Q111283880,Anine Bing,Anine Bing - Corporation,0%,0%,ok
+Q131673087,Moose Knuckles,Moose Knuckles - Topic (wordmark),>5000 (breakout),>5000 (breakout),ok
+Q109825187,Boot Barn,Boot Barn - Retail company,>5000 (breakout),>5000 (breakout),ok
+Q96657862,Yeezy Gap,Yeezy Gap - Topic,0%,0%,ok
+Q6209926,Joe Fresh,Joe Fresh - Topic,0%,0%,ok
+Q86682767,Sézane,Sézane - Topic (wordmark),+2400%,>5000 (breakout),ok
+Q7994858,White House Black Market,White House Black Market - Clothing retail company,0%,0%,ok
+Q19903688,Target Optical,Target Optical - Retail company,>5000 (breakout),>5000 (breakout),ok
+Q119056161,F. Engel,F. Engel K/S - Company,no-data,no-data,no-data
+Q28857986,Lorna Jane,Lorna Jane - Retail-store company,no-data,no-data,no-data
+Q5298588,Dorothy Perkins,Dorothy Perkins - Fashion company,0%,0%,ok
+Q7500007,Shoe Carnival,Shoe Carnival - Retail company,>5000 (breakout),>5000 (breakout),ok
+Q18390679,Robert Graham,Robert Graham - Fashion company,no-data,no-data,no-data
+Q5392021,IC Group,IC Group - Company,0%,0%,ok
+Q115799492,Falguni Shane Peacock,Falguni Shane Peacock - Fashion design,0%,0%,ok
+Q140069588,Dorko,Dorko - Topic,0%,no-data,ok
+Q7654224,Sweaty Betty,Sweaty Betty - Retail company,0%,0%,ok
+Q94776153,PME Legend,PME Legend - Topic,no-data,no-data,no-data
+Q5142575,Coldwater Creek,Coldwater Creek - Clothing company,0%,no-data,ok
+Q16850757,J Brand,J Brand - Fashion company,0%,0%,ok
+Q17109937,Rack Room Shoes,Rack Room Shoes - Footwear retail company,-30%,>5000 (breakout),ok
+Q18636520,Dolls Kill,Dolls Kill - Online retail company,0%,0%,ok
+Q5024439,Calvin Klein Collection,Calvin Klein Collection - Topic,0%,0%,ok
+Q6268615,Johnston & Murphy,Johnston & Murphy - Footwear company,no-data,no-data,no-data
+Q16985816,C. Wonder,C. Wonder - Retail company,0%,0%,ok
+Q2860764,Ardène,Ardene - Fashion company,>5000 (breakout),>5000 (breakout),ok
+Q125995969,The Attico,The Attico - Topic (wordmark),no-data,no-data,no-data

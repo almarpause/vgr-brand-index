@@ -1,0 +1,39 @@
+{
+  "reference": "basket",
+  "basket": [
+    "Nike",
+    "Adidas",
+    "Zara",
+    "H&M",
+    "Hermès",
+    "Louis Vuitton",
+    "Gucci",
+    "Uniqlo"
+  ],
+  "segments": {
+    "sportswear": [
+      "Nike",
+      "Adidas"
+    ],
+    "fast_fashion": [
+      "Zara",
+      "H&M"
+    ],
+    "luxury": [
+      "Hermès",
+      "Louis Vuitton",
+      "Gucci"
+    ],
+    "global_casual": [
+      "Uniqlo"
+    ]
+  },
+  "base_date": "2026-09",
+  "base_window": "today 12-m (trailing 12 months as of the Sept 2026 collection)",
+  "underlying_anchor": "Adidas (/g/1ym_1qtkc)",
+  "method": "geometric mean of basket members' Adidas-anchored levels",
+  "basket_ref_adidas_level": 43.7496,
+  "rescale_factor": 22.85736,
+  "note": "Google Search level basket = trends_level_adidas100 / basket_ref_adidas_level * 1000. Basket average = 1000 by construction. FROZEN: future seasons must re-derive the basket over this same base window and normalise to this stored reference. Rescaling is a positive linear transform, so VGR scores/ranks/tiers are unchanged.",
+  "index_base": 1000
+}

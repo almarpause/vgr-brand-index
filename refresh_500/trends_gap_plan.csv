@@ -1,0 +1,115 @@
+qid,brand,token,category,pv_median,cur_level
+Q378698,Jaeger-LeCoultre,/m/01szcp,crushed,14021,0.05
+Q29015034,JW Anderson,/g/11g6t09w2j,crushed,13398,0.11
+Q24908552,100 Thieves,/g/11byzccgfp,crushed,11933,0.05
+Q5512642,GU,/m/045c7b,suspect,11056,1566.78
+Q1355904,Zegna,/m/05217d,crushed,11007,0.05
+Q6131944,L.L.Bean,L.L.Bean,crushed,10982,0.38
+Q631894,HEAD,HEAD,suspect,10224,141.79
+Q182399,J. Barbour and Sons,/m/09q3xp,crushed,9685,0.02
+Q1422481,Fjällräven,Fjällräven,crushed,8443,0.16
+Q105476592,Tom Ford,/m/017gy6,crushed,7929,0.16
+Q5213855,Jimmy Choo Ltd,/m/0czj0s,crushed,6672,0.09
+Q4728473,AllSaints,/m/05p427g,crushed,5463,0.14
+Q11815580,Pepco,/m/0250hn,crushed,5337,0.3
+Q7156755,Payless ShoeSource,/m/06sm6h,crushed,4978,0.01
+Q6077665,Jack & Jones,Jack & Jones,crushed,4949,0.07
+Q4876226,Beams,/m/0fm2wq,crushed,4870,0.02
+Q1360940,Orbea,/m/080jbw,crushed,4848,0.02
+Q1893576,Topshop,/g/1201dvcv5,crushed,4582,0.23
+Q1784995,Alfred Dunhill,/m/0dck4b,crushed,4536,0.02
+Q7366633,Roots Canada,/m/03n1zl,crushed,4441,0.3
+Q7932495,Vineyard Vines,/m/0g0lmv,crushed,3990,0.13
+Q7121857,PacSun,/m/057rj3,crushed,3831,0.49
+Q1030922,Camper,Camper,suspect,3472,16.7
+Q1439858,Nina Ricci,/m/0105_wgd,crushed,3440,0.07
+Q20716793,Pink,/m/01fklc,suspect,3251,133.12
+Q3073822,Superga,Superga,crushed,3108,0.07
+Q5499945,Free People,Free People,suspect,2905,9.38
+Q4781133,Apple Bottoms,Apple Bottoms,crushed,2849,0.16
+Q2988422,Canada Goose Inc.,/m/0cjz6h,crushed,2808,0.09
+Q7747373,The Limited,/m/012wlyfr,suspect,2706,36.14
+Q7282768,Rag & Bone,Rag & Bone,crushed,2564,0.07
+Q18385610,Stitch Fix,/m/010ql3n8,crushed,2494,0.02
+Q11293025,OWNDAYS,/g/121bwbrl,crushed,2452,0.05
+Q5000795,Burton,/m/0781kl,crushed,2433,0.4
+Q116783961,Palm Angels,Palm Angels,crushed,2242,0.16
+Q101108013,George,George,suspect,2238,71.15
+Q4936481,Boden,Boden,suspect,2158,5.27
+Q881017,Bogner,Bogner,crushed,2051,0.33
+Q86682767,Sézane,/g/11fqqfcwrk,crushed,1949,0.05
+Q48743138,Away,Away,suspect,1852,69.65
+Q2551058,DSQUARED2,/g/11vp4ql7c,crushed,1727,0.23
+Q2076935,Munich,/m/0175rc,suspect,1622,55.72
+Q18636520,Dolls Kill,Dolls Kill,crushed,1489,0.07
+Q1634723,Elan,/m/04dkyl,suspect,1403,6.92
+Q4983306,Buckle,Buckle,suspect,1337,6.04
+Q3905226,PINKO,/g/121v7x87,crushed,1317,0.02
+Q85761879,Frame,Frame,suspect,1271,59.11
+Q115517249,Tu,/m/0k362,suspect,1269,11.19
+Q9294202,House,/m/04p5cr,suspect,1256,4.08
+Q72982331,Francesca's,Francesca's,crushed,1247,0.02
+Q4941440,Bonds,/m/0cgkbv,crushed,1246,0.49
+Q3473599,Sarenza,/m/0sgg5p_,crushed,1245,0.05
+Q16850757,J Brand,J,suspect,1177,93.94
+Q2096177,Globe International,Globe,suspect,1108,13.86
+Q1786717,Lindex,/m/0262jz,crushed,1091,0.19
+Q8041451,X-Large,/m/0cg1tx,crushed,1030,0.05
+Q4950452,Boutique La Vie en rose,/m/0h95zw7,crushed,1008,0.19
+Q7432952,Schuh,,missing,1003,
+Q2860764,Ardène,/m/0g9t35t,crushed,1001,0.05
+Q22032349,Wood Wood,Wood Wood,suspect,930,94.92
+Q17109937,Rack Room Shoes,/m/03m0b4j,crushed,916,0.12
+Q125660181,Kaporal,,missing,904,
+Q55097814,Viyella,,missing,903,
+Q110225120,Max Mara Fashion Group,/m/0dx64d,crushed,875,0.32
+Q28857986,Lorna Jane,,missing,873,
+Q18390679,Robert Graham,,missing,859,
+Q7740985,The Hundreds,,missing,856,
+Q86327186,GHOST-Bikes,,missing,828,
+Q1072452,Chiemsee,/m/03x2_m,crushed,803,0.31
+Q7111938,Outdoor Research,,missing,797,
+Q107481263,Bode,,missing,753,
+Q16648226,Women'secret,/g/12lqjr7mq,crushed,698,0.32
+Q794565,Aéropostale,,missing,686,
+Q2903774,Gottex,,missing,503,
+Q3157513,Jacob,,missing,501,
+Q19903688,Target Optical,Target Optical,crushed,467,0.21
+Q55205917,Best Company,,missing,465,
+Q125995969,The Attico,,missing,465,
+Q5024439,Calvin Klein Collection,,missing,437,
+Q307894,2(x)ist,,missing,429,
+Q7553581,Soffe,,missing,390,
+Q109906064,Sleeper,,missing,386,
+Q5392021,IC Group,,missing,381,
+Q1719431,Schmid,,missing,372,
+Q16985816,C. Wonder,,missing,333,
+Q115804691,Volcano,,missing,216,
+Q28056374,Tezenis,,missing,209,
+Q7456144,Sessions,,missing,187,
+Q138486466,Shukr,/m/0f7z4,suspect,177,47.15
+Q4349016,KappAhl,/g/11b77jln37,crushed,141,0.02
+Q96791543,Yeezy,/g/11dxd2ct_b,crushed,137,0.49
+Q20987378,Barefoot,,missing,128,
+Q5324709,EXR,,missing,93,
+Q3299151,Matix,,missing,88,
+Q7642242,Super Champion,,missing,81,
+Q2872152,Australian,Australian,suspect,74,44.99
+Q5506939,Fuchsia,,missing,53,
+Q125191429,Ladies,/m/02zsn,suspect,0,105.08
+Q125705303,Fix,Fix,suspect,0,85.95
+Q64852777,Beer,/m/01599,suspect,0,79.63
+Q12340378,VILA,VILA,suspect,0,26.99
+Q10443115,Carlings,,missing,0,
+Q5175717,Cotton On,Cotton On,suspect,0,6.58
+Q132531889,Alé,/m/0m09,suspect,0,3.98
+Q47155680,Kari,/m/012h24,suspect,0,116.71
+Q55748823,garment factory,,missing,0,
+Q6316068,Just Jeans,,missing,0,
+Q3401000,Nalini,,missing,0,
+Q130705749,Assem,,missing,0,
+Q2290173,Sirri,,missing,0,
+Q3439593,Cubus,,missing,0,
+Q111283880,Anine Bing,,missing,0,
+Q131673087,Moose Knuckles,,missing,0,
+Q119056161,F. Engel,/m/0cp8j,crushed,0,0.21

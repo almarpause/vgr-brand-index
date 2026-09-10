@@ -1,0 +1,3 @@
+# Minimal deps for the CI publish job (dashboard.py only needs pandas).
+# The full collection pipeline (playwright, pytrends, etc.) runs locally, not in CI.
+pandas>=2.2
