@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T13:23:56+00:00",
+  "generated_at": "2026-09-10T15:00:01+00:00",
   "month": "September 2026",
   "n_brands": 500,
   "scale": "8-brand basket = 1000",
@@ -22,9 +22,9 @@
     "basket_average": 1000
   },
   "tiers": {
-    "A": 8,
-    "B": 54,
-    "C": 438
+    "A": 9,
+    "B": 55,
+    "C": 436
   },
   "top20": [
     {
@@ -50,6 +50,10 @@
     {
       "brand": "Louis Vuitton",
       "interest_index": 841.2
+    },
+    {
+      "brand": "De Beers",
+      "interest_index": 824.8
     },
     {
       "brand": "Uniqlo",
@@ -102,59 +106,55 @@
     {
       "brand": "Giorgio Armani",
       "interest_index": 590.1
-    },
-    {
-      "brand": "Ralph Lauren",
-      "interest_index": 585.4
     }
   ],
   "movers": {
     "risers": [
       {
         "brand": "Biba",
-        "rank_change": 193
+        "rank_change": 185
       },
       {
         "brand": "Good American",
-        "rank_change": 131
+        "rank_change": 122
       },
       {
         "brand": "NAF NAF",
-        "rank_change": 126
+        "rank_change": 118
       },
       {
         "brand": "Ganni",
-        "rank_change": 116
+        "rank_change": 111
       },
       {
         "brand": "Anthropologie",
-        "rank_change": 109
+        "rank_change": 102
       },
       {
         "brand": "Eddie Bauer",
-        "rank_change": 88
+        "rank_change": 81
       },
       {
         "brand": "Fielmann",
-        "rank_change": 84
+        "rank_change": 76
       }
     ],
     "fallers": [
       {
         "brand": "Sebago",
-        "rank_change": -314
+        "rank_change": -319
       },
       {
         "brand": "Promod",
-        "rank_change": -152
+        "rank_change": -159
       },
       {
         "brand": "Aéropostale",
-        "rank_change": -95
+        "rank_change": -103
       },
       {
         "brand": "Khaadi",
-        "rank_change": -94
+        "rank_change": -95
       }
     ]
   },
@@ -257,6 +257,22 @@
     },
     {
       "rank": 7,
+      "brand": "De Beers",
+      "qid": "Q471891",
+      "tier": "A",
+      "interest_index": 824.8,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 48599,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q471891"
+    },
+    {
+      "rank": 8,
       "brand": "Uniqlo",
       "qid": "Q26070",
       "tier": "A",
@@ -272,7 +288,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q26070"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "brand": "Supreme",
       "qid": "Q1659229",
       "tier": "A",
@@ -288,7 +304,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1659229"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "brand": "Gucci",
       "qid": "Q178516",
       "tier": "B",
@@ -304,7 +320,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q178516"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "brand": "New Balance",
       "qid": "Q742988",
       "tier": "B",
@@ -320,7 +336,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q742988"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "brand": "Hermès",
       "qid": "Q843887",
       "tier": "B",
@@ -336,7 +352,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q843887"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "brand": "Victoria’s Secret",
       "qid": "Q332477",
       "tier": "B",
@@ -352,7 +368,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q332477"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "brand": "Prada",
       "qid": "Q193136",
       "tier": "B",
@@ -368,7 +384,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q193136"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "brand": "Chrome Hearts",
       "qid": "Q5113774",
       "tier": "B",
@@ -384,7 +400,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5113774"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "brand": "Zalando",
       "qid": "Q136570",
       "tier": "B",
@@ -400,7 +416,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q136570"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "brand": "Levi's",
       "qid": "Q127962",
       "tier": "B",
@@ -416,7 +432,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q127962"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "brand": "Yves Saint Laurent",
       "qid": "Q2282172",
       "tier": "B",
@@ -432,7 +448,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2282172"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "brand": "Primark",
       "qid": "Q137023",
       "tier": "B",
@@ -448,7 +464,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q137023"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "brand": "Giorgio Armani",
       "qid": "Q635484",
       "tier": "B",
@@ -464,7 +480,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q635484"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "brand": "Ralph Lauren",
       "qid": "Q1641437",
       "tier": "B",
@@ -480,7 +496,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1641437"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "brand": "Loro Piana",
       "qid": "Q1686544",
       "tier": "B",
@@ -496,7 +512,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1686544"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "brand": "The North Face",
       "qid": "Q152784",
       "tier": "B",
@@ -512,7 +528,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q152784"
     },
     {
-      "rank": 23,
+      "rank": 24,
       "brand": "Mango",
       "qid": "Q136503",
       "tier": "B",
@@ -528,7 +544,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q136503"
     },
     {
-      "rank": 24,
+      "rank": 25,
       "brand": "Calvin Klein",
       "qid": "Q1068628",
       "tier": "B",
@@ -544,7 +560,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1068628"
     },
     {
-      "rank": 25,
+      "rank": 26,
       "brand": "Polo Ralph Lauren",
       "qid": "Q2121887",
       "tier": "B",
@@ -560,7 +576,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2121887"
     },
     {
-      "rank": 26,
+      "rank": 27,
       "brand": "Under Armour",
       "qid": "Q2031485",
       "tier": "B",
@@ -576,7 +592,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2031485"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "brand": "Versace",
       "qid": "Q696376",
       "tier": "B",
@@ -592,7 +608,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q696376"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "brand": "Lacoste",
       "qid": "Q309031",
       "tier": "B",
@@ -608,7 +624,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q309031"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "brand": "Skechers",
       "qid": "Q2945643",
       "tier": "B",
@@ -624,7 +640,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2945643"
     },
     {
-      "rank": 30,
+      "rank": 31,
+      "brand": "Jacquemus",
+      "qid": "Q21030814",
+      "tier": "B",
+      "interest_index": 535.0,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 21716,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q21030814"
+    },
+    {
+      "rank": 32,
       "brand": "Vans",
       "qid": "Q1135366",
       "tier": "B",
@@ -640,7 +672,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1135366"
     },
     {
-      "rank": 31,
+      "rank": 33,
       "brand": "Air Jordan",
       "qid": "Q420953",
       "tier": "B",
@@ -656,7 +688,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q420953"
     },
     {
-      "rank": 32,
+      "rank": 34,
       "brand": "Hugo Boss",
       "qid": "Q491627",
       "tier": "B",
@@ -672,7 +704,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q491627"
     },
     {
-      "rank": 33,
+      "rank": 35,
       "brand": "Swarovski",
       "qid": "Q611115",
       "tier": "B",
@@ -688,7 +720,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q611115"
     },
     {
-      "rank": 34,
+      "rank": 36,
       "brand": "Bershka",
       "qid": "Q827258",
       "tier": "B",
@@ -704,7 +736,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q827258"
     },
     {
-      "rank": 35,
+      "rank": 37,
       "brand": "Burberry",
       "qid": "Q390107",
       "tier": "B",
@@ -720,7 +752,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q390107"
     },
     {
-      "rank": 36,
+      "rank": 38,
       "brand": "Nordstrom",
       "qid": "Q174310",
       "tier": "B",
@@ -736,7 +768,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q174310"
     },
     {
-      "rank": 37,
+      "rank": 39,
       "brand": "Brandy Melville",
       "qid": "Q25387414",
       "tier": "B",
@@ -752,7 +784,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25387414"
     },
     {
-      "rank": 38,
+      "rank": 40,
       "brand": "Dolce & Gabbana",
       "qid": "Q214480",
       "tier": "B",
@@ -768,7 +800,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q214480"
     },
     {
-      "rank": 39,
+      "rank": 41,
       "brand": "American Eagle Outfitters",
       "qid": "Q2842931",
       "tier": "B",
@@ -784,7 +816,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2842931"
     },
     {
-      "rank": 40,
+      "rank": 42,
       "brand": "JD Sports",
       "qid": "Q6108019",
       "tier": "B",
@@ -800,7 +832,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6108019"
     },
     {
-      "rank": 41,
+      "rank": 43,
       "brand": "Miu Miu",
       "qid": "Q552230",
       "tier": "B",
@@ -816,7 +848,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q552230"
     },
     {
-      "rank": 42,
+      "rank": 44,
       "brand": "Lululemon",
       "qid": "Q6702957",
       "tier": "B",
@@ -832,7 +864,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6702957"
     },
     {
-      "rank": 43,
+      "rank": 45,
       "brand": "Guess",
       "qid": "Q2470307",
       "tier": "B",
@@ -848,7 +880,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2470307"
     },
     {
-      "rank": 44,
+      "rank": 46,
       "brand": "Macron",
       "qid": "Q1439645",
       "tier": "B",
@@ -864,7 +896,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1439645"
     },
     {
-      "rank": 45,
+      "rank": 47,
       "brand": "Kappa",
       "qid": "Q735873",
       "tier": "B",
@@ -880,7 +912,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q735873"
     },
     {
-      "rank": 46,
+      "rank": 48,
       "brand": "Thor Steinar",
       "qid": "Q2003244",
       "tier": "B",
@@ -896,7 +928,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2003244"
     },
     {
-      "rank": 47,
+      "rank": 49,
       "brand": "American Apparel",
       "qid": "Q463378",
       "tier": "B",
@@ -912,7 +944,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q463378"
     },
     {
-      "rank": 48,
+      "rank": 50,
       "brand": "Abercrombie & Fitch",
       "qid": "Q319344",
       "tier": "B",
@@ -928,7 +960,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q319344"
     },
     {
-      "rank": 49,
+      "rank": 51,
       "brand": "Banana Republic",
       "qid": "Q806085",
       "tier": "B",
@@ -944,7 +976,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q806085"
     },
     {
-      "rank": 50,
+      "rank": 52,
       "brand": "Puig",
       "qid": "Q3410623",
       "tier": "B",
@@ -960,7 +992,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3410623"
     },
     {
-      "rank": 51,
+      "rank": 53,
       "brand": "Bulgari",
       "qid": "Q752515",
       "tier": "B",
@@ -976,7 +1008,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q752515"
     },
     {
-      "rank": 52,
+      "rank": 54,
       "brand": "Le Bon Marché",
       "qid": "Q1200698",
       "tier": "B",
@@ -992,7 +1024,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1200698"
     },
     {
-      "rank": 53,
+      "rank": 55,
       "brand": "Foot Locker",
       "qid": "Q63335",
       "tier": "B",
@@ -1008,7 +1040,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q63335"
     },
     {
-      "rank": 54,
+      "rank": 56,
       "brand": "Old Navy",
       "qid": "Q2735242",
       "tier": "B",
@@ -1024,7 +1056,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2735242"
     },
     {
-      "rank": 55,
+      "rank": 57,
       "brand": "C&A",
       "qid": "Q701338",
       "tier": "B",
@@ -1040,7 +1072,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q701338"
     },
     {
-      "rank": 56,
+      "rank": 58,
       "brand": "ASOS",
       "qid": "Q211951",
       "tier": "B",
@@ -1056,7 +1088,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q211951"
     },
     {
-      "rank": 57,
+      "rank": 59,
       "brand": "HEAD",
       "qid": "Q631894",
       "tier": "B",
@@ -1072,7 +1104,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q631894"
     },
     {
-      "rank": 58,
+      "rank": 60,
       "brand": "Valentino",
       "qid": "Q649646",
       "tier": "B",
@@ -1088,7 +1120,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q649646"
     },
     {
-      "rank": 59,
+      "rank": 61,
       "brand": "Neiman Marcus",
       "qid": "Q743497",
       "tier": "B",
@@ -1104,7 +1136,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q743497"
     },
     {
-      "rank": 60,
+      "rank": 62,
       "brand": "Mizuno",
       "qid": "Q1156731",
       "tier": "B",
@@ -1120,7 +1152,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1156731"
     },
     {
-      "rank": 61,
+      "rank": 63,
       "brand": "Dr. Martens",
       "qid": "Q1126126",
       "tier": "B",
@@ -1136,7 +1168,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1126126"
     },
     {
-      "rank": 62,
+      "rank": 64,
       "brand": "Slazenger",
       "qid": "Q2855977",
       "tier": "B",
@@ -1152,7 +1184,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2855977"
     },
     {
-      "rank": 63,
+      "rank": 65,
       "brand": "GU",
       "qid": "Q5512642",
       "tier": "C",
@@ -1168,7 +1200,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5512642"
     },
     {
-      "rank": 64,
+      "rank": 66,
       "brand": "Fendi",
       "qid": "Q926575",
       "tier": "C",
@@ -1184,7 +1216,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q926575"
     },
     {
-      "rank": 65,
+      "rank": 67,
       "brand": "Dillard's",
       "qid": "Q844805",
       "tier": "C",
@@ -1200,7 +1232,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q844805"
     },
     {
-      "rank": 66,
+      "rank": 68,
       "brand": "PVH Corp.",
       "qid": "Q1132272",
       "tier": "C",
@@ -1216,7 +1248,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1132272"
     },
     {
-      "rank": 67,
+      "rank": 69,
       "brand": "Tiffany & Co.",
       "qid": "Q1066858",
       "tier": "C",
@@ -1232,7 +1264,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1066858"
     },
     {
-      "rank": 68,
+      "rank": 70,
       "brand": "Emilio Pucci",
       "qid": "Q604667",
       "tier": "C",
@@ -1248,7 +1280,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q604667"
     },
     {
-      "rank": 69,
+      "rank": 71,
       "brand": "Givenchy",
       "qid": "Q759210",
       "tier": "C",
@@ -1264,7 +1296,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q759210"
     },
     {
-      "rank": 70,
+      "rank": 72,
       "brand": "Fila",
       "qid": "Q482539",
       "tier": "C",
@@ -1280,7 +1312,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q482539"
     },
     {
-      "rank": 71,
+      "rank": 73,
       "brand": "Celine",
       "qid": "Q948531",
       "tier": "C",
@@ -1296,7 +1328,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q948531"
     },
     {
-      "rank": 72,
+      "rank": 74,
       "brand": "Napapijri",
       "qid": "Q2782017",
       "tier": "C",
@@ -1312,7 +1344,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2782017"
     },
     {
-      "rank": 73,
+      "rank": 75,
       "brand": "Next",
       "qid": "Q246655",
       "tier": "C",
@@ -1328,7 +1360,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q246655"
     },
     {
-      "rank": 74,
+      "rank": 76,
       "brand": "Bottega Veneta",
       "qid": "Q894874",
       "tier": "C",
@@ -1344,7 +1376,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q894874"
     },
     {
-      "rank": 75,
+      "rank": 77,
       "brand": "Diesel",
       "qid": "Q158285",
       "tier": "C",
@@ -1360,7 +1392,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q158285"
     },
     {
-      "rank": 76,
+      "rank": 78,
       "brand": "On",
       "qid": "Q43452713",
       "tier": "C",
@@ -1376,7 +1408,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q43452713"
     },
     {
-      "rank": 77,
+      "rank": 79,
       "brand": "Tommy Hilfiger B.V.",
       "qid": "Q634881",
       "tier": "C",
@@ -1392,7 +1424,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q634881"
     },
     {
-      "rank": 78,
+      "rank": 80,
       "brand": "streetwear",
       "qid": "Q2072372",
       "tier": "C",
@@ -1408,7 +1440,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2072372"
     },
     {
-      "rank": 79,
+      "rank": 81,
       "brand": "Moncler",
       "qid": "Q1548951",
       "tier": "C",
@@ -1424,7 +1456,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1548951"
     },
     {
-      "rank": 80,
+      "rank": 82,
       "brand": "Stone Island",
       "qid": "Q950042",
       "tier": "C",
@@ -1440,7 +1472,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q950042"
     },
     {
-      "rank": 81,
+      "rank": 83,
       "brand": "Agatha Ruiz de la Prada",
       "qid": "Q2736351",
       "tier": "C",
@@ -1456,7 +1488,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2736351"
     },
     {
-      "rank": 82,
+      "rank": 84,
       "brand": "Alo Yoga",
       "qid": "Q123700068",
       "tier": "C",
@@ -1472,7 +1504,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q123700068"
     },
     {
-      "rank": 83,
+      "rank": 85,
       "brand": "Loewe",
       "qid": "Q966905",
       "tier": "C",
@@ -1488,7 +1520,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q966905"
     },
     {
-      "rank": 84,
+      "rank": 86,
       "brand": "Birkenstock",
       "qid": "Q648458",
       "tier": "C",
@@ -1504,7 +1536,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q648458"
     },
     {
-      "rank": 85,
+      "rank": 87,
       "brand": "Brioni",
       "qid": "Q849724",
       "tier": "C",
@@ -1520,7 +1552,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q849724"
     },
     {
-      "rank": 86,
+      "rank": 88,
       "brand": "Ellesse",
       "qid": "Q2263500",
       "tier": "C",
@@ -1536,7 +1568,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2263500"
     },
     {
-      "rank": 87,
+      "rank": 89,
       "brand": "Patagonia",
       "qid": "Q1660552",
       "tier": "C",
@@ -1552,7 +1584,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1660552"
     },
     {
-      "rank": 88,
+      "rank": 90,
       "brand": "Piaget",
       "qid": "Q658961",
       "tier": "C",
@@ -1568,7 +1600,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q658961"
     },
     {
-      "rank": 89,
+      "rank": 91,
       "brand": "ALDO",
       "qid": "Q2832297",
       "tier": "C",
@@ -1584,7 +1616,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2832297"
     },
     {
-      "rank": 90,
+      "rank": 92,
+      "brand": "Brunello Cucinelli",
+      "qid": "Q3645582",
+      "tier": "C",
+      "interest_index": 329.7,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 7202,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q3645582"
+    },
+    {
+      "rank": 93,
       "brand": "Stradivarius",
       "qid": "Q3322945",
       "tier": "C",
@@ -1600,7 +1648,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3322945"
     },
     {
-      "rank": 91,
+      "rank": 94,
       "brand": "OYSHO",
       "qid": "Q3327046",
       "tier": "C",
@@ -1616,7 +1664,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3327046"
     },
     {
-      "rank": 92,
+      "rank": 95,
       "brand": "Missoni",
       "qid": "Q1400977",
       "tier": "C",
@@ -1632,7 +1680,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1400977"
     },
     {
-      "rank": 93,
+      "rank": 96,
       "brand": "Borsalino",
       "qid": "Q593680",
       "tier": "C",
@@ -1648,7 +1696,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q593680"
     },
     {
-      "rank": 94,
+      "rank": 97,
       "brand": "Pull&Bear",
       "qid": "Q691029",
       "tier": "C",
@@ -1664,7 +1712,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q691029"
     },
     {
-      "rank": 95,
+      "rank": 98,
       "brand": "New Yorker",
       "qid": "Q706421",
       "tier": "C",
@@ -1680,7 +1728,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q706421"
     },
     {
-      "rank": 96,
+      "rank": 99,
       "brand": "Erreà",
       "qid": "Q1361595",
       "tier": "C",
@@ -1696,7 +1744,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1361595"
     },
     {
-      "rank": 97,
+      "rank": 100,
       "brand": "Strauss",
       "qid": "Q1341990",
       "tier": "C",
@@ -1712,7 +1760,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1341990"
     },
     {
-      "rank": 98,
+      "rank": 101,
       "brand": "Chloé",
       "qid": "Q1075391",
       "tier": "C",
@@ -1728,7 +1776,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1075391"
     },
     {
-      "rank": 99,
+      "rank": 102,
       "brand": "Massimo Dutti",
       "qid": "Q788231",
       "tier": "C",
@@ -1744,7 +1792,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q788231"
     },
     {
-      "rank": 100,
+      "rank": 103,
       "brand": "Kangol",
       "qid": "Q3192653",
       "tier": "C",
@@ -1760,7 +1808,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3192653"
     },
     {
-      "rank": 101,
+      "rank": 104,
       "brand": "Trussardi",
       "qid": "Q2456630",
       "tier": "C",
@@ -1776,7 +1824,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2456630"
     },
     {
-      "rank": 102,
+      "rank": 105,
+      "brand": "COS",
+      "qid": "Q60772401",
+      "tier": "C",
+      "interest_index": 321.5,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 8057,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q60772401"
+    },
+    {
+      "rank": 106,
       "brand": "Off-White",
       "qid": "Q53472173",
       "tier": "C",
@@ -1792,7 +1856,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q53472173"
     },
     {
-      "rank": 103,
+      "rank": 107,
       "brand": "Giordano",
       "qid": "Q4115012",
       "tier": "C",
@@ -1808,7 +1872,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4115012"
     },
     {
-      "rank": 104,
+      "rank": 108,
       "brand": "Maison Margiela",
       "qid": "Q1726925",
       "tier": "C",
@@ -1824,7 +1888,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1726925"
     },
     {
-      "rank": 105,
+      "rank": 109,
       "brand": "Bata",
       "qid": "Q688082",
       "tier": "C",
@@ -1840,7 +1904,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q688082"
     },
     {
-      "rank": 106,
+      "rank": 110,
       "brand": "Benetton",
       "qid": "Q817139",
       "tier": "C",
@@ -1856,7 +1920,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q817139"
     },
     {
-      "rank": 107,
+      "rank": 111,
       "brand": "Timberland",
       "qid": "Q1539185",
       "tier": "C",
@@ -1872,7 +1936,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1539185"
     },
     {
-      "rank": 108,
+      "rank": 112,
       "brand": "Cerruti 1881",
       "qid": "Q1056200",
       "tier": "C",
@@ -1888,7 +1952,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1056200"
     },
     {
-      "rank": 109,
+      "rank": 113,
       "brand": "Hollister Co.",
       "qid": "Q1257477",
       "tier": "C",
@@ -1904,7 +1968,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1257477"
     },
     {
-      "rank": 110,
+      "rank": 114,
       "brand": "Kiabi",
       "qid": "Q3196299",
       "tier": "C",
@@ -1920,7 +1984,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3196299"
     },
     {
-      "rank": 111,
+      "rank": 115,
       "brand": "Pantaloons",
       "qid": "Q7131643",
       "tier": "C",
@@ -1936,7 +2000,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7131643"
     },
     {
-      "rank": 112,
+      "rank": 116,
       "brand": "LC Waikiki",
       "qid": "Q3205965",
       "tier": "C",
@@ -1952,7 +2016,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3205965"
     },
     {
-      "rank": 113,
+      "rank": 117,
       "brand": "Charles Tyrwhitt",
       "qid": "Q924963",
       "tier": "C",
@@ -1968,7 +2032,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q924963"
     },
     {
-      "rank": 114,
+      "rank": 118,
       "brand": "KiK",
       "qid": "Q883965",
       "tier": "C",
@@ -1984,7 +2048,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q883965"
     },
     {
-      "rank": 115,
+      "rank": 119,
       "brand": "Superdry",
       "qid": "Q1684445",
       "tier": "C",
@@ -2000,7 +2064,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1684445"
     },
     {
-      "rank": 116,
+      "rank": 120,
+      "brand": "Fashion Nova",
+      "qid": "Q65090803",
+      "tier": "C",
+      "interest_index": 303.9,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 7337,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q65090803"
+    },
+    {
+      "rank": 121,
       "brand": "MCM Worldwide",
       "qid": "Q835487",
       "tier": "C",
@@ -2016,7 +2096,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q835487"
     },
     {
-      "rank": 117,
+      "rank": 122,
       "brand": "Lord & Taylor",
       "qid": "Q2749082",
       "tier": "C",
@@ -2032,7 +2112,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2749082"
     },
     {
-      "rank": 118,
+      "rank": 123,
       "brand": "C.P. Company",
       "qid": "Q429204",
       "tier": "C",
@@ -2048,7 +2128,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q429204"
     },
     {
-      "rank": 119,
+      "rank": 124,
       "brand": "Stüssy",
       "qid": "Q7629175",
       "tier": "C",
@@ -2064,7 +2144,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7629175"
     },
     {
-      "rank": 120,
+      "rank": 125,
       "brand": "Berluti",
       "qid": "Q821969",
       "tier": "C",
@@ -2080,7 +2160,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q821969"
     },
     {
-      "rank": 121,
+      "rank": 126,
       "brand": "Escada",
       "qid": "Q600986",
       "tier": "C",
@@ -2096,7 +2176,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q600986"
     },
     {
-      "rank": 122,
+      "rank": 127,
       "brand": "SKIMS",
       "qid": "Q110778161",
       "tier": "C",
@@ -2112,7 +2192,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q110778161"
     },
     {
-      "rank": 123,
+      "rank": 128,
       "brand": "Eckō Unltd.",
       "qid": "Q1281935",
       "tier": "C",
@@ -2128,7 +2208,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1281935"
     },
     {
-      "rank": 124,
+      "rank": 129,
       "brand": "Forever 21",
       "qid": "Q1060537",
       "tier": "C",
@@ -2144,7 +2224,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1060537"
     },
     {
-      "rank": 125,
+      "rank": 130,
       "brand": "TK Maxx",
       "qid": "Q23823668",
       "tier": "C",
@@ -2160,7 +2240,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q23823668"
     },
     {
-      "rank": 126,
+      "rank": 131,
       "brand": "Deichmann",
       "qid": "Q664543",
       "tier": "C",
@@ -2176,7 +2256,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q664543"
     },
     {
-      "rank": 127,
+      "rank": 132,
       "brand": "Havaianas",
       "qid": "Q3128675",
       "tier": "C",
@@ -2192,7 +2272,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3128675"
     },
     {
-      "rank": 128,
+      "rank": 133,
       "brand": "Aquascutum",
       "qid": "Q278948",
       "tier": "C",
@@ -2208,7 +2288,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q278948"
     },
     {
-      "rank": 129,
+      "rank": 134,
       "brand": "Vetements",
       "qid": "Q29109956",
       "tier": "C",
@@ -2224,7 +2304,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q29109956"
     },
     {
-      "rank": 130,
+      "rank": 135,
+      "brand": "Bally",
+      "qid": "Q688195",
+      "tier": "C",
+      "interest_index": 287.4,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 5124,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q688195"
+    },
+    {
+      "rank": 136,
       "brand": "Karl Kani",
       "qid": "Q1355658",
       "tier": "C",
@@ -2240,7 +2336,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1355658"
     },
     {
-      "rank": 131,
+      "rank": 137,
       "brand": "Aritzia",
       "qid": "Q4791147",
       "tier": "C",
@@ -2256,7 +2352,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4791147"
     },
     {
-      "rank": 132,
+      "rank": 138,
       "brand": "K-way",
       "qid": "Q2820820",
       "tier": "C",
@@ -2272,7 +2368,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2820820"
     },
     {
-      "rank": 133,
+      "rank": 139,
       "brand": "K-Swiss",
       "qid": "Q1422386",
       "tier": "C",
@@ -2288,7 +2384,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1422386"
     },
     {
-      "rank": 134,
+      "rank": 140,
       "brand": "Wrangler",
       "qid": "Q1445358",
       "tier": "C",
@@ -2304,7 +2400,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1445358"
     },
     {
-      "rank": 135,
+      "rank": 141,
       "brand": "Kiton",
       "qid": "Q3197595",
       "tier": "C",
@@ -2320,7 +2416,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3197595"
     },
     {
-      "rank": 136,
+      "rank": 142,
       "brand": "Golf Wang",
       "qid": "Q25047966",
       "tier": "C",
@@ -2336,7 +2432,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25047966"
     },
     {
-      "rank": 137,
+      "rank": 143,
       "brand": "Comme des Garçons",
       "qid": "Q1115170",
       "tier": "C",
@@ -2352,7 +2448,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1115170"
     },
     {
-      "rank": 138,
+      "rank": 144,
       "brand": "Clarks",
       "qid": "Q1095857",
       "tier": "C",
@@ -2368,7 +2464,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1095857"
     },
     {
-      "rank": 139,
+      "rank": 145,
       "brand": "Rocawear",
       "qid": "Q7193265",
       "tier": "C",
@@ -2384,7 +2480,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7193265"
     },
     {
-      "rank": 140,
+      "rank": 146,
       "brand": "Intimissimi",
       "qid": "Q305404",
       "tier": "C",
@@ -2400,7 +2496,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q305404"
     },
     {
-      "rank": 141,
+      "rank": 147,
       "brand": "Brooks Sports",
       "qid": "Q670764",
       "tier": "C",
@@ -2416,7 +2512,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q670764"
     },
     {
-      "rank": 142,
+      "rank": 148,
       "brand": "OshKosh B'Gosh",
       "qid": "Q1417347",
       "tier": "C",
@@ -2432,7 +2528,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1417347"
     },
     {
-      "rank": 143,
+      "rank": 149,
       "brand": "Balmain",
       "qid": "Q1385309",
       "tier": "C",
@@ -2448,7 +2544,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1385309"
     },
     {
-      "rank": 144,
+      "rank": 150,
       "brand": "True Religion",
       "qid": "Q2456205",
       "tier": "C",
@@ -2464,7 +2560,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2456205"
     },
     {
-      "rank": 145,
+      "rank": 151,
+      "brand": "Charles & Keith",
+      "qid": "Q3878818",
+      "tier": "C",
+      "interest_index": 271.0,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 4813,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q3878818"
+    },
+    {
+      "rank": 152,
       "brand": "Kitsuné",
       "qid": "Q917561",
       "tier": "C",
@@ -2480,7 +2592,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q917561"
     },
     {
-      "rank": 146,
+      "rank": 153,
       "brand": "Anthropologie",
       "qid": "Q4773903",
       "tier": "C",
@@ -2496,7 +2608,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4773903"
     },
     {
-      "rank": 147,
+      "rank": 154,
       "brand": "Evisu",
       "qid": "Q3274777",
       "tier": "C",
@@ -2512,7 +2624,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3274777"
     },
     {
-      "rank": 148,
+      "rank": 155,
       "brand": "Montblanc",
       "qid": "Q142691",
       "tier": "C",
@@ -2528,7 +2640,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q142691"
     },
     {
-      "rank": 149,
+      "rank": 156,
       "brand": "Hoka",
       "qid": "Q16908664",
       "tier": "C",
@@ -2544,7 +2656,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q16908664"
     },
     {
-      "rank": 150,
+      "rank": 157,
       "brand": "OBEY Clothing",
       "qid": "Q22910099",
       "tier": "C",
@@ -2560,7 +2672,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q22910099"
     },
     {
-      "rank": 151,
+      "rank": 158,
       "brand": "Tom Tailor",
       "qid": "Q571206",
       "tier": "C",
@@ -2576,7 +2688,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q571206"
     },
     {
-      "rank": 152,
+      "rank": 159,
       "brand": "Viktor & Rolf",
       "qid": "Q2707765",
       "tier": "C",
@@ -2592,7 +2704,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2707765"
     },
     {
-      "rank": 153,
+      "rank": 160,
       "brand": "Lanvin",
       "qid": "Q866899",
       "tier": "C",
@@ -2608,7 +2720,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q866899"
     },
     {
-      "rank": 154,
+      "rank": 161,
       "brand": "Hummel",
       "qid": "Q532310",
       "tier": "C",
@@ -2624,7 +2736,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q532310"
     },
     {
-      "rank": 155,
+      "rank": 162,
       "brand": "Vertu",
       "qid": "Q1130409",
       "tier": "C",
@@ -2640,7 +2752,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1130409"
     },
     {
-      "rank": 156,
+      "rank": 163,
       "brand": "Patta",
       "qid": "Q125206509",
       "tier": "C",
@@ -2656,7 +2768,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q125206509"
     },
     {
-      "rank": 157,
+      "rank": 164,
       "brand": "Farfetch",
       "qid": "Q18712957",
       "tier": "C",
@@ -2672,7 +2784,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q18712957"
     },
     {
-      "rank": 158,
+      "rank": 165,
       "brand": "Lyle & Scott",
       "qid": "Q3269443",
       "tier": "C",
@@ -2688,7 +2800,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3269443"
     },
     {
-      "rank": 159,
+      "rank": 166,
       "brand": "Dr. Scholl's",
       "qid": "Q17019662",
       "tier": "C",
@@ -2704,7 +2816,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q17019662"
     },
     {
-      "rank": 160,
+      "rank": 167,
       "brand": "Dickies",
       "qid": "Q114913",
       "tier": "C",
@@ -2720,7 +2832,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q114913"
     },
     {
-      "rank": 161,
+      "rank": 168,
       "brand": "Nordstrom Rack",
       "qid": "Q21463374",
       "tier": "C",
@@ -2736,7 +2848,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q21463374"
     },
     {
-      "rank": 162,
+      "rank": 169,
       "brand": "La Senza",
       "qid": "Q3212802",
       "tier": "C",
@@ -2752,7 +2864,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3212802"
     },
     {
-      "rank": 163,
+      "rank": 170,
       "brand": "Salvatore Ferragamo",
       "qid": "Q3946053",
       "tier": "C",
@@ -2768,7 +2880,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3946053"
     },
     {
-      "rank": 164,
+      "rank": 171,
       "brand": "Desigual",
       "qid": "Q83750",
       "tier": "C",
@@ -2784,7 +2896,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q83750"
     },
     {
-      "rank": 165,
+      "rank": 172,
       "brand": "Etro",
       "qid": "Q1371677",
       "tier": "C",
@@ -2800,7 +2912,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1371677"
     },
     {
-      "rank": 166,
+      "rank": 173,
       "brand": "Camper",
       "qid": "Q1030922",
       "tier": "C",
@@ -2816,7 +2928,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1030922"
     },
     {
-      "rank": 167,
+      "rank": 174,
       "brand": "Fjällräven",
       "qid": "Q1422481",
       "tier": "C",
@@ -2832,7 +2944,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1422481"
     },
     {
-      "rank": 168,
+      "rank": 175,
       "brand": "J.Crew",
       "qid": "Q5370765",
       "tier": "C",
@@ -2848,7 +2960,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5370765"
     },
     {
-      "rank": 169,
+      "rank": 176,
       "brand": "Alexander McQueen",
       "qid": "Q13882231",
       "tier": "C",
@@ -2864,7 +2976,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q13882231"
     },
     {
-      "rank": 170,
+      "rank": 177,
       "brand": "Moschino",
       "qid": "Q659863",
       "tier": "C",
@@ -2880,7 +2992,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q659863"
     },
     {
-      "rank": 171,
+      "rank": 178,
       "brand": "Billionaire Boys Club",
       "qid": "Q2719846",
       "tier": "C",
@@ -2896,7 +3008,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2719846"
     },
     {
-      "rank": 172,
+      "rank": 179,
       "brand": "Max Mara",
       "qid": "Q1151774",
       "tier": "C",
@@ -2912,7 +3024,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1151774"
     },
     {
-      "rank": 173,
+      "rank": 180,
       "brand": "Furla",
       "qid": "Q3073195",
       "tier": "C",
@@ -2928,7 +3040,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3073195"
     },
     {
-      "rank": 174,
+      "rank": 181,
       "brand": "DKNY",
       "qid": "Q938773",
       "tier": "C",
@@ -2944,7 +3056,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q938773"
     },
     {
-      "rank": 175,
+      "rank": 182,
       "brand": "United Arrows",
       "qid": "Q10853153",
       "tier": "C",
@@ -2960,7 +3072,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q10853153"
     },
     {
-      "rank": 176,
+      "rank": 183,
       "brand": "Golden Goose",
       "qid": "Q28224724",
       "tier": "C",
@@ -2976,7 +3088,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q28224724"
     },
     {
-      "rank": 177,
+      "rank": 184,
       "brand": "Mulberry",
       "qid": "Q3866987",
       "tier": "C",
@@ -2992,7 +3104,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3866987"
     },
     {
-      "rank": 178,
+      "rank": 185,
       "brand": "Club Monaco",
       "qid": "Q2979949",
       "tier": "C",
@@ -3008,7 +3120,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2979949"
     },
     {
-      "rank": 179,
+      "rank": 186,
       "brand": "Fred Perry",
       "qid": "Q4038967",
       "tier": "C",
@@ -3024,7 +3136,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4038967"
     },
     {
-      "rank": 180,
+      "rank": 187,
       "brand": "Eddie Bauer",
       "qid": "Q842174",
       "tier": "C",
@@ -3040,7 +3152,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q842174"
     },
     {
-      "rank": 181,
+      "rank": 188,
       "brand": "Aimé Leon Dore",
       "qid": "Q43082416",
       "tier": "C",
@@ -3056,7 +3168,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q43082416"
     },
     {
-      "rank": 182,
+      "rank": 189,
       "brand": "Savage X Fenty",
       "qid": "Q104846139",
       "tier": "C",
@@ -3072,7 +3184,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q104846139"
     },
     {
-      "rank": 183,
+      "rank": 190,
+      "brand": "Scotch & Soda",
+      "qid": "Q17141914",
+      "tier": "C",
+      "interest_index": 238.2,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 3639,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q17141914"
+    },
+    {
+      "rank": 191,
       "brand": "Safilo",
       "qid": "Q950766",
       "tier": "C",
@@ -3088,7 +3216,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q950766"
     },
     {
-      "rank": 184,
+      "rank": 192,
       "brand": "Henri Bendel",
       "qid": "Q5715308",
       "tier": "C",
@@ -3104,7 +3232,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5715308"
     },
     {
-      "rank": 185,
+      "rank": 193,
       "brand": "Oniverse",
       "qid": "Q1027874",
       "tier": "C",
@@ -3120,7 +3248,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1027874"
     },
     {
-      "rank": 186,
+      "rank": 194,
       "brand": "Baleno",
       "qid": "Q4850707",
       "tier": "C",
@@ -3136,7 +3264,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4850707"
     },
     {
-      "rank": 187,
+      "rank": 195,
       "brand": "Zegna",
       "qid": "Q1355904",
       "tier": "C",
@@ -3152,7 +3280,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1355904"
     },
     {
-      "rank": 188,
+      "rank": 196,
       "brand": "Fielmann",
       "qid": "Q457822",
       "tier": "C",
@@ -3168,7 +3296,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q457822"
     },
     {
-      "rank": 189,
+      "rank": 197,
       "brand": "Juicy Couture",
       "qid": "Q1568588",
       "tier": "C",
@@ -3184,7 +3312,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1568588"
     },
     {
-      "rank": 190,
+      "rank": 198,
       "brand": "Bugatti",
       "qid": "Q1002252",
       "tier": "C",
@@ -3200,7 +3328,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1002252"
     },
     {
-      "rank": 191,
+      "rank": 199,
       "brand": "Cacharel",
       "qid": "Q576316",
       "tier": "C",
@@ -3216,7 +3344,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q576316"
     },
     {
-      "rank": 192,
+      "rank": 200,
       "brand": "Vuori",
       "qid": "Q121878733",
       "tier": "C",
@@ -3232,7 +3360,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q121878733"
     },
     {
-      "rank": 193,
+      "rank": 201,
       "brand": "Geox",
       "qid": "Q588001",
       "tier": "C",
@@ -3248,7 +3376,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q588001"
     },
     {
-      "rank": 194,
+      "rank": 202,
       "brand": "Fiorucci",
       "qid": "Q1089081",
       "tier": "C",
@@ -3264,7 +3392,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1089081"
     },
     {
-      "rank": 195,
+      "rank": 203,
       "brand": "Bombas",
       "qid": "Q42332202",
       "tier": "C",
@@ -3280,7 +3408,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q42332202"
     },
     {
-      "rank": 196,
+      "rank": 204,
       "brand": "G-Star Raw",
       "qid": "Q1484081",
       "tier": "C",
@@ -3296,7 +3424,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1484081"
     },
     {
-      "rank": 197,
+      "rank": 205,
       "brand": "ECCO",
       "qid": "Q1280255",
       "tier": "C",
@@ -3312,7 +3440,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1280255"
     },
     {
-      "rank": 198,
+      "rank": 206,
       "brand": "Merrell",
       "qid": "Q1921997",
       "tier": "C",
@@ -3328,7 +3456,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1921997"
     },
     {
-      "rank": 199,
+      "rank": 207,
       "brand": "s.Oliver",
       "qid": "Q265056",
       "tier": "C",
@@ -3344,7 +3472,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q265056"
     },
     {
-      "rank": 200,
+      "rank": 208,
       "brand": "Pink",
       "qid": "Q20716793",
       "tier": "C",
@@ -3360,7 +3488,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q20716793"
     },
     {
-      "rank": 201,
+      "rank": 209,
       "brand": "D-A-S-H",
       "qid": "Q5203233",
       "tier": "C",
@@ -3376,7 +3504,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5203233"
     },
     {
-      "rank": 202,
+      "rank": 210,
       "brand": "Haglöfs",
       "qid": "Q1427623",
       "tier": "C",
@@ -3392,7 +3520,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1427623"
     },
     {
-      "rank": 203,
+      "rank": 211,
       "brand": "Celio",
       "qid": "Q2672003",
       "tier": "C",
@@ -3408,7 +3536,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2672003"
     },
     {
-      "rank": 204,
+      "rank": 212,
       "brand": "etnies",
       "qid": "Q651470",
       "tier": "C",
@@ -3424,7 +3552,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q651470"
     },
     {
-      "rank": 205,
+      "rank": 213,
       "brand": "Hackett",
       "qid": "Q1136426",
       "tier": "C",
@@ -3440,7 +3568,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1136426"
     },
     {
-      "rank": 206,
+      "rank": 214,
       "brand": "Jaeger-LeCoultre",
       "qid": "Q378698",
       "tier": "C",
@@ -3456,7 +3584,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q378698"
     },
     {
-      "rank": 207,
+      "rank": 215,
       "brand": "Mountain Warehouse",
       "qid": "Q6925414",
       "tier": "C",
@@ -3472,7 +3600,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6925414"
     },
     {
-      "rank": 208,
+      "rank": 216,
       "brand": "Zappos",
       "qid": "Q147505",
       "tier": "C",
@@ -3488,7 +3616,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q147505"
     },
     {
-      "rank": 209,
+      "rank": 217,
       "brand": "Church's",
       "qid": "Q2967663",
       "tier": "C",
@@ -3504,7 +3632,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2967663"
     },
     {
-      "rank": 210,
+      "rank": 218,
       "brand": "J. Barbour and Sons",
       "qid": "Q182399",
       "tier": "C",
@@ -3520,7 +3648,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q182399"
     },
     {
-      "rank": 211,
+      "rank": 219,
       "brand": "Ami Paris",
       "qid": "Q107394262",
       "tier": "C",
@@ -3536,7 +3664,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q107394262"
     },
     {
-      "rank": 212,
+      "rank": 220,
       "brand": "House of Worth",
       "qid": "Q5915543",
       "tier": "C",
@@ -3552,7 +3680,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5915543"
     },
     {
-      "rank": 213,
+      "rank": 221,
       "brand": "Modell's",
       "qid": "Q3317844",
       "tier": "C",
@@ -3568,7 +3696,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3317844"
     },
     {
-      "rank": 214,
+      "rank": 222,
       "brand": "Uterqüe",
       "qid": "Q3328552",
       "tier": "C",
@@ -3584,7 +3712,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3328552"
     },
     {
-      "rank": 215,
+      "rank": 223,
       "brand": "Syrn",
       "qid": "Q138318202",
       "tier": "C",
@@ -3600,7 +3728,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q138318202"
     },
     {
-      "rank": 216,
+      "rank": 224,
       "brand": "John Lobb Bootmaker",
       "qid": "Q641722",
       "tier": "C",
@@ -3616,7 +3744,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q641722"
     },
     {
-      "rank": 217,
+      "rank": 225,
       "brand": "Nautica",
       "qid": "Q6981479",
       "tier": "C",
@@ -3632,7 +3760,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6981479"
     },
     {
-      "rank": 218,
+      "rank": 226,
       "brand": "Fabletics",
       "qid": "Q16992933",
       "tier": "C",
@@ -3648,7 +3776,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q16992933"
     },
     {
-      "rank": 219,
+      "rank": 227,
       "brand": "River Island",
       "qid": "Q2670328",
       "tier": "C",
@@ -3664,7 +3792,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2670328"
     },
     {
-      "rank": 220,
+      "rank": 228,
       "brand": "Herschel",
       "qid": "Q23672312",
       "tier": "C",
@@ -3680,7 +3808,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q23672312"
     },
     {
-      "rank": 221,
+      "rank": 229,
       "brand": "Gymshark",
       "qid": "Q56246099",
       "tier": "C",
@@ -3696,7 +3824,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q56246099"
     },
     {
-      "rank": 222,
+      "rank": 230,
       "brand": "NKD",
       "qid": "Q927272",
       "tier": "C",
@@ -3712,7 +3840,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q927272"
     },
     {
-      "rank": 223,
+      "rank": 231,
       "brand": "Jacques Fath",
       "qid": "Q1028975",
       "tier": "C",
@@ -3728,7 +3856,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1028975"
     },
     {
-      "rank": 224,
+      "rank": 232,
       "brand": "Biba",
       "qid": "Q4902942",
       "tier": "C",
@@ -3744,7 +3872,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4902942"
     },
     {
-      "rank": 225,
+      "rank": 233,
+      "brand": "Polène",
+      "qid": "Q122055705",
+      "tier": "C",
+      "interest_index": 208.8,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": null,
+      "wikipedia_pageviews": 3300,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q122055705"
+    },
+    {
+      "rank": 234,
       "brand": "Caleres",
       "qid": "Q4112833",
       "tier": "C",
@@ -3760,7 +3904,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4112833"
     },
     {
-      "rank": 226,
+      "rank": 235,
       "brand": "Topshop",
       "qid": "Q1893576",
       "tier": "C",
@@ -3776,7 +3920,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1893576"
     },
     {
-      "rank": 227,
+      "rank": 236,
       "brand": "Coleman",
       "qid": "Q430230",
       "tier": "C",
@@ -3792,7 +3936,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q430230"
     },
     {
-      "rank": 228,
+      "rank": 237,
       "brand": "Avia",
       "qid": "Q4828498",
       "tier": "C",
@@ -3808,7 +3952,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4828498"
     },
     {
-      "rank": 229,
+      "rank": 238,
       "brand": "Marni",
       "qid": "Q3650853",
       "tier": "C",
@@ -3824,7 +3968,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3650853"
     },
     {
-      "rank": 230,
+      "rank": 239,
       "brand": "100 Thieves",
       "qid": "Q24908552",
       "tier": "C",
@@ -3840,7 +3984,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q24908552"
     },
     {
-      "rank": 231,
+      "rank": 240,
       "brand": "Good American",
       "qid": "Q108582148",
       "tier": "C",
@@ -3856,7 +4000,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q108582148"
     },
     {
-      "rank": 232,
+      "rank": 241,
       "brand": "L.L.Bean",
       "qid": "Q6131944",
       "tier": "C",
@@ -3872,7 +4016,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6131944"
     },
     {
-      "rank": 233,
+      "rank": 242,
       "brand": "Designer Brands",
       "qid": "Q5206207",
       "tier": "C",
@@ -3888,7 +4032,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5206207"
     },
     {
-      "rank": 234,
+      "rank": 243,
       "brand": "Mexx",
       "qid": "Q1837290",
       "tier": "C",
@@ -3904,7 +4048,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1837290"
     },
     {
-      "rank": 235,
+      "rank": 244,
       "brand": "Lucky Brand Jeans",
       "qid": "Q6697865",
       "tier": "C",
@@ -3920,7 +4064,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6697865"
     },
     {
-      "rank": 236,
+      "rank": 245,
       "brand": "Reusch",
       "qid": "Q551889",
       "tier": "C",
@@ -3936,7 +4080,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q551889"
     },
     {
-      "rank": 237,
+      "rank": 246,
       "brand": "Marmot",
       "qid": "Q1902277",
       "tier": "C",
@@ -3952,7 +4096,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1902277"
     },
     {
-      "rank": 238,
+      "rank": 247,
       "brand": "Bimba y Lola",
       "qid": "Q54869493",
       "tier": "C",
@@ -3968,7 +4112,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q54869493"
     },
     {
-      "rank": 239,
+      "rank": 248,
       "brand": "Scarpa",
       "qid": "Q3943471",
       "tier": "C",
@@ -3984,7 +4128,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3943471"
     },
     {
-      "rank": 240,
+      "rank": 249,
       "brand": "Gerry Weber",
       "qid": "Q873447",
       "tier": "C",
@@ -4000,7 +4144,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q873447"
     },
     {
-      "rank": 241,
+      "rank": 250,
       "brand": "Wicked Weasel",
       "qid": "Q2567594",
       "tier": "C",
@@ -4016,7 +4160,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2567594"
     },
     {
-      "rank": 242,
+      "rank": 251,
       "brand": "Elan",
       "qid": "Q1634723",
       "tier": "C",
@@ -4032,23 +4176,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1634723"
     },
     {
-      "rank": 243,
-      "brand": "Avirex",
-      "qid": "Q3504397",
-      "tier": "C",
-      "interest_index": 199.4,
-      "vgr_mom_pct": -0.6,
-      "aug_rank": 237,
-      "trends_level": null,
-      "search_mom_pct": -20.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 2307,
-      "wiki_mom_pct": -27.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q3504397"
-    },
-    {
-      "rank": 244,
+      "rank": 252,
       "brand": "Schott NYC",
       "qid": "Q3475516",
       "tier": "C",
@@ -4064,7 +4192,23 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3475516"
     },
     {
-      "rank": 245,
+      "rank": 253,
+      "brand": "Avirex",
+      "qid": "Q3504397",
+      "tier": "C",
+      "interest_index": 199.4,
+      "vgr_mom_pct": -0.6,
+      "aug_rank": 237,
+      "trends_level": null,
+      "search_mom_pct": -20.0,
+      "news_level": null,
+      "news_mom_pct": 0.0,
+      "wikipedia_pageviews": 2307,
+      "wiki_mom_pct": -27.0,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q3504397"
+    },
+    {
+      "rank": 254,
       "brand": "British Knights",
       "qid": "Q4970227",
       "tier": "C",
@@ -4080,7 +4224,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4970227"
     },
     {
-      "rank": 246,
+      "rank": 255,
       "brand": "Alfred Dunhill",
       "qid": "Q1784995",
       "tier": "C",
@@ -4096,7 +4240,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1784995"
     },
     {
-      "rank": 247,
+      "rank": 256,
       "brand": "R. M. Williams",
       "qid": "Q65042966",
       "tier": "C",
@@ -4112,7 +4256,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q65042966"
     },
     {
-      "rank": 248,
+      "rank": 257,
       "brand": "Free People",
       "qid": "Q5499945",
       "tier": "C",
@@ -4128,7 +4272,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5499945"
     },
     {
-      "rank": 249,
+      "rank": 258,
       "brand": "Playlife",
       "qid": "Q172227",
       "tier": "C",
@@ -4144,7 +4288,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q172227"
     },
     {
-      "rank": 250,
+      "rank": 259,
       "brand": "Pimkie",
       "qid": "Q1758066",
       "tier": "C",
@@ -4160,7 +4304,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1758066"
     },
     {
-      "rank": 251,
+      "rank": 260,
       "brand": "J. Press",
       "qid": "Q6106802",
       "tier": "C",
@@ -4176,7 +4320,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6106802"
     },
     {
-      "rank": 252,
+      "rank": 261,
       "brand": "Sector No Limits",
       "qid": "Q7444725",
       "tier": "C",
@@ -4192,7 +4336,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7444725"
     },
     {
-      "rank": 253,
+      "rank": 262,
       "brand": "JW Anderson",
       "qid": "Q29015034",
       "tier": "C",
@@ -4208,7 +4352,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q29015034"
     },
     {
-      "rank": 254,
+      "rank": 263,
       "brand": "Chevignon",
       "qid": "Q787601",
       "tier": "C",
@@ -4224,7 +4368,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q787601"
     },
     {
-      "rank": 255,
+      "rank": 264,
       "brand": "Springfield",
       "qid": "Q958209",
       "tier": "C",
@@ -4240,7 +4384,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q958209"
     },
     {
-      "rank": 256,
+      "rank": 265,
       "brand": "Jaeger",
       "qid": "Q3160437",
       "tier": "C",
@@ -4256,7 +4400,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3160437"
     },
     {
-      "rank": 257,
+      "rank": 266,
       "brand": "MCS",
       "qid": "Q3111039",
       "tier": "C",
@@ -4272,7 +4416,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3111039"
     },
     {
-      "rank": 258,
+      "rank": 267,
       "brand": "'47",
       "qid": "Q25222241",
       "tier": "C",
@@ -4288,7 +4432,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25222241"
     },
     {
-      "rank": 259,
+      "rank": 268,
       "brand": "Jimmy Choo",
       "qid": "Q5213855",
       "tier": "C",
@@ -4304,7 +4448,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5213855"
     },
     {
-      "rank": 260,
+      "rank": 269,
       "brand": "Express",
       "qid": "Q1384784",
       "tier": "C",
@@ -4320,7 +4464,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1384784"
     },
     {
-      "rank": 261,
+      "rank": 270,
       "brand": "Pepco",
       "qid": "Q11815580",
       "tier": "C",
@@ -4336,7 +4480,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11815580"
     },
     {
-      "rank": 262,
+      "rank": 271,
       "brand": "Ivy Park",
       "qid": "Q23893788",
       "tier": "C",
@@ -4352,23 +4496,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q23893788"
     },
     {
-      "rank": 263,
-      "brand": "Storm Management",
-      "qid": "Q3974532",
-      "tier": "C",
-      "interest_index": 191.2,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 261,
-      "trends_level": null,
-      "search_mom_pct": 1250.0,
-      "news_level": null,
-      "news_mom_pct": 5000.0,
-      "wikipedia_pageviews": 1580,
-      "wiki_mom_pct": 25.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q3974532"
-    },
-    {
-      "rank": 264,
+      "rank": 272,
       "brand": "CCC",
       "qid": "Q11788344",
       "tier": "C",
@@ -4384,7 +4512,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11788344"
     },
     {
-      "rank": 265,
+      "rank": 273,
       "brand": "Corteiz",
       "qid": "Q125784200",
       "tier": "C",
@@ -4400,7 +4528,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q125784200"
     },
     {
-      "rank": 266,
+      "rank": 274,
       "brand": "Liu·Jo",
       "qid": "Q3835099",
       "tier": "C",
@@ -4416,7 +4544,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3835099"
     },
     {
-      "rank": 267,
+      "rank": 275,
       "brand": "Jack & Jones",
       "qid": "Q6077665",
       "tier": "C",
@@ -4432,7 +4560,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6077665"
     },
     {
-      "rank": 268,
+      "rank": 276,
       "brand": "Miss Sixty",
       "qid": "Q241295",
       "tier": "C",
@@ -4448,7 +4576,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q241295"
     },
     {
-      "rank": 269,
+      "rank": 277,
       "brand": "Tom Ford",
       "qid": "Q105476592",
       "tier": "C",
@@ -4464,7 +4592,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q105476592"
     },
     {
-      "rank": 270,
+      "rank": 278,
       "brand": "Talbots",
       "qid": "Q7679064",
       "tier": "C",
@@ -4480,7 +4608,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7679064"
     },
     {
-      "rank": 271,
+      "rank": 279,
       "brand": "Frederick's of Hollywood",
       "qid": "Q1373540",
       "tier": "C",
@@ -4496,7 +4624,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1373540"
     },
     {
-      "rank": 272,
+      "rank": 280,
       "brand": "Helmut Lang",
       "qid": "Q5709676",
       "tier": "C",
@@ -4512,7 +4640,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5709676"
     },
     {
-      "rank": 273,
+      "rank": 281,
       "brand": "Reiss",
       "qid": "Q7310479",
       "tier": "C",
@@ -4528,7 +4656,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7310479"
     },
     {
-      "rank": 274,
+      "rank": 282,
       "brand": "Marchesa",
       "qid": "Q6756978",
       "tier": "C",
@@ -4544,7 +4672,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6756978"
     },
     {
-      "rank": 275,
+      "rank": 283,
       "brand": "Shanghai Tang",
       "qid": "Q7488518",
       "tier": "C",
@@ -4560,7 +4688,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7488518"
     },
     {
-      "rank": 276,
+      "rank": 284,
       "brand": "Zeeman",
       "qid": "Q184399",
       "tier": "C",
@@ -4576,7 +4704,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q184399"
     },
     {
-      "rank": 277,
+      "rank": 285,
       "brand": "Zumiez",
       "qid": "Q8075252",
       "tier": "C",
@@ -4592,7 +4720,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q8075252"
     },
     {
-      "rank": 278,
+      "rank": 286,
       "brand": "Matières Fécales",
       "qid": "Q138543842",
       "tier": "C",
@@ -4608,7 +4736,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q138543842"
     },
     {
-      "rank": 279,
+      "rank": 287,
       "brand": "Kookai",
       "qid": "Q1783759",
       "tier": "C",
@@ -4624,7 +4752,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1783759"
     },
     {
-      "rank": 280,
+      "rank": 288,
       "brand": "CoverGirl",
       "qid": "Q1629990",
       "tier": "C",
@@ -4640,7 +4768,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1629990"
     },
     {
-      "rank": 281,
+      "rank": 289,
       "brand": "Matalan",
       "qid": "Q12061509",
       "tier": "C",
@@ -4656,7 +4784,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q12061509"
     },
     {
-      "rank": 282,
+      "rank": 290,
       "brand": "Buck Mason",
       "qid": "Q48770898",
       "tier": "C",
@@ -4672,7 +4800,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q48770898"
     },
     {
-      "rank": 283,
+      "rank": 291,
       "brand": "Ulla Popken",
       "qid": "Q2475146",
       "tier": "C",
@@ -4688,7 +4816,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2475146"
     },
     {
-      "rank": 284,
+      "rank": 292,
       "brand": "Schuh",
       "qid": "Q7432952",
       "tier": "C",
@@ -4704,7 +4832,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7432952"
     },
     {
-      "rank": 285,
+      "rank": 293,
       "brand": "The Limited",
       "qid": "Q7747373",
       "tier": "C",
@@ -4720,7 +4848,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7747373"
     },
     {
-      "rank": 286,
+      "rank": 294,
       "brand": "Rebecca Minkoff",
       "qid": "Q50428076",
       "tier": "C",
@@ -4736,7 +4864,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q50428076"
     },
     {
-      "rank": 287,
+      "rank": 295,
       "brand": "Red Wing Shoes",
       "qid": "Q934096",
       "tier": "C",
@@ -4752,7 +4880,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q934096"
     },
     {
-      "rank": 288,
+      "rank": 296,
       "brand": "Rochas",
       "qid": "Q1578717",
       "tier": "C",
@@ -4768,7 +4896,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1578717"
     },
     {
-      "rank": 289,
+      "rank": 297,
       "brand": "Mikimoto",
       "qid": "Q11341902",
       "tier": "C",
@@ -4784,7 +4912,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11341902"
     },
     {
-      "rank": 290,
+      "rank": 298,
       "brand": "Bossini",
       "qid": "Q4035334",
       "tier": "C",
@@ -4800,7 +4928,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4035334"
     },
     {
-      "rank": 291,
+      "rank": 299,
       "brand": "Blanc & Eclare",
       "qid": "Q18577819",
       "tier": "C",
@@ -4816,7 +4944,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q18577819"
     },
     {
-      "rank": 292,
+      "rank": 300,
       "brand": "Snipes",
       "qid": "Q42306166",
       "tier": "C",
@@ -4832,7 +4960,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q42306166"
     },
     {
-      "rank": 293,
+      "rank": 301,
       "brand": "Munich",
       "qid": "Q2076935",
       "tier": "C",
@@ -4848,7 +4976,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2076935"
     },
     {
-      "rank": 294,
+      "rank": 302,
       "brand": "Ann Taylor",
       "qid": "Q4766699",
       "tier": "C",
@@ -4864,7 +4992,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4766699"
     },
     {
-      "rank": 295,
+      "rank": 303,
       "brand": "E. Marinella",
       "qid": "Q5322052",
       "tier": "C",
@@ -4880,7 +5008,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5322052"
     },
     {
-      "rank": 296,
+      "rank": 304,
       "brand": "Cotton On",
       "qid": "Q113992257",
       "tier": "C",
@@ -4896,7 +5024,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q113992257"
     },
     {
-      "rank": 297,
+      "rank": 305,
       "brand": "Schiesser",
       "qid": "Q2234831",
       "tier": "C",
@@ -4912,7 +5040,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2234831"
     },
     {
-      "rank": 298,
+      "rank": 306,
       "brand": "Proenza Schouler",
       "qid": "Q1130841",
       "tier": "C",
@@ -4928,7 +5056,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1130841"
     },
     {
-      "rank": 299,
+      "rank": 307,
       "brand": "George",
       "qid": "Q101108013",
       "tier": "C",
@@ -4944,7 +5072,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q101108013"
     },
     {
-      "rank": 300,
+      "rank": 308,
       "brand": "Wolford",
       "qid": "Q431607",
       "tier": "C",
@@ -4960,7 +5088,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q431607"
     },
     {
-      "rank": 301,
+      "rank": 309,
       "brand": "Blufin",
       "qid": "Q3641225",
       "tier": "C",
@@ -4976,7 +5104,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3641225"
     },
     {
-      "rank": 302,
+      "rank": 310,
       "brand": "Nina Ricci",
       "qid": "Q1439858",
       "tier": "C",
@@ -4992,7 +5120,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1439858"
     },
     {
-      "rank": 303,
+      "rank": 311,
       "brand": "Coogi",
       "qid": "Q5166857",
       "tier": "C",
@@ -5008,7 +5136,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5166857"
     },
     {
-      "rank": 304,
+      "rank": 312,
       "brand": "Big 5 Sporting Goods",
       "qid": "Q4904902",
       "tier": "C",
@@ -5024,7 +5152,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4904902"
     },
     {
-      "rank": 305,
+      "rank": 313,
       "brand": "Moscot",
       "qid": "Q6915425",
       "tier": "C",
@@ -5040,7 +5168,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6915425"
     },
     {
-      "rank": 306,
+      "rank": 314,
       "brand": "Aéropostale",
       "qid": "Q794565",
       "tier": "C",
@@ -5056,7 +5184,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q794565"
     },
     {
-      "rank": 307,
+      "rank": 315,
       "brand": "PrettyLittleThing",
       "qid": "Q54817659",
       "tier": "C",
@@ -5072,7 +5200,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q54817659"
     },
     {
-      "rank": 308,
+      "rank": 316,
       "brand": "Boden",
       "qid": "Q4936481",
       "tier": "C",
@@ -5088,7 +5216,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4936481"
     },
     {
-      "rank": 309,
+      "rank": 317,
       "brand": "NAF NAF",
       "qid": "Q3334188",
       "tier": "C",
@@ -5104,7 +5232,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3334188"
     },
     {
-      "rank": 310,
+      "rank": 318,
       "brand": "Torrid",
       "qid": "Q7827120",
       "tier": "C",
@@ -5120,7 +5248,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7827120"
     },
     {
-      "rank": 311,
+      "rank": 319,
       "brand": "Courrèges",
       "qid": "Q16544736",
       "tier": "C",
@@ -5136,7 +5264,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q16544736"
     },
     {
-      "rank": 312,
+      "rank": 320,
       "brand": "The Row",
       "qid": "Q25351941",
       "tier": "C",
@@ -5152,7 +5280,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25351941"
     },
     {
-      "rank": 313,
+      "rank": 321,
       "brand": "Bruno Magli",
       "qid": "Q3645820",
       "tier": "C",
@@ -5168,7 +5296,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3645820"
     },
     {
-      "rank": 314,
+      "rank": 322,
       "brand": "Scalpers",
       "qid": "Q87193804",
       "tier": "C",
@@ -5184,7 +5312,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q87193804"
     },
     {
-      "rank": 315,
+      "rank": 323,
       "brand": "Icebreaker",
       "qid": "Q539507",
       "tier": "C",
@@ -5200,7 +5328,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q539507"
     },
     {
-      "rank": 316,
+      "rank": 324,
       "brand": "Fat Face",
       "qid": "Q5437186",
       "tier": "C",
@@ -5216,7 +5344,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5437186"
     },
     {
-      "rank": 317,
+      "rank": 325,
       "brand": "Akris",
       "qid": "Q420765",
       "tier": "C",
@@ -5232,23 +5360,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q420765"
     },
     {
-      "rank": 318,
-      "brand": "Blizzard Ski",
-      "qid": "Q877571",
-      "tier": "C",
-      "interest_index": 171.3,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 315,
-      "trends_level": null,
-      "search_mom_pct": 250.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 1180,
-      "wiki_mom_pct": -6.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q877571"
-    },
-    {
-      "rank": 319,
+      "rank": 326,
       "brand": "Tiger of Sweden",
       "qid": "Q4176650",
       "tier": "C",
@@ -5264,7 +5376,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4176650"
     },
     {
-      "rank": 320,
+      "rank": 327,
       "brand": "Stefano Ricci",
       "qid": "Q52391629",
       "tier": "C",
@@ -5280,7 +5392,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q52391629"
     },
     {
-      "rank": 321,
+      "rank": 328,
       "brand": "DAKS",
       "qid": "Q5204244",
       "tier": "C",
@@ -5296,7 +5408,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5204244"
     },
     {
-      "rank": 322,
+      "rank": 329,
       "brand": "G2000",
       "qid": "Q5512676",
       "tier": "C",
@@ -5312,7 +5424,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5512676"
     },
     {
-      "rank": 323,
+      "rank": 330,
       "brand": "Promod",
       "qid": "Q3407429",
       "tier": "C",
@@ -5328,7 +5440,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3407429"
     },
     {
-      "rank": 324,
+      "rank": 331,
       "brand": "Superga",
       "qid": "Q3073822",
       "tier": "C",
@@ -5344,7 +5456,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3073822"
     },
     {
-      "rank": 325,
+      "rank": 332,
       "brand": "Breuninger",
       "qid": "Q911217",
       "tier": "C",
@@ -5360,7 +5472,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q911217"
     },
     {
-      "rank": 326,
+      "rank": 333,
       "brand": "Replay",
       "qid": "Q1654538",
       "tier": "C",
@@ -5376,7 +5488,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1654538"
     },
     {
-      "rank": 327,
+      "rank": 334,
       "brand": "Aerie",
       "qid": "Q25351619",
       "tier": "C",
@@ -5392,7 +5504,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25351619"
     },
     {
-      "rank": 328,
+      "rank": 335,
       "brand": "Cia. Hering",
       "qid": "Q5119055",
       "tier": "C",
@@ -5408,7 +5520,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5119055"
     },
     {
-      "rank": 329,
+      "rank": 336,
       "brand": "Morellato",
       "qid": "Q3323911",
       "tier": "C",
@@ -5424,7 +5536,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3323911"
     },
     {
-      "rank": 330,
+      "rank": 337,
       "brand": "PacSun",
       "qid": "Q7121857",
       "tier": "C",
@@ -5440,7 +5552,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7121857"
     },
     {
-      "rank": 331,
+      "rank": 338,
       "brand": "Vakko",
       "qid": "Q7909026",
       "tier": "C",
@@ -5456,7 +5568,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7909026"
     },
     {
-      "rank": 332,
+      "rank": 339,
       "brand": "Nudie Jeans",
       "qid": "Q2436187",
       "tier": "C",
@@ -5472,7 +5584,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2436187"
     },
     {
-      "rank": 333,
+      "rank": 340,
       "brand": "Globe",
       "qid": "Q2096177",
       "tier": "C",
@@ -5488,7 +5600,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2096177"
     },
     {
-      "rank": 334,
+      "rank": 341,
       "brand": "Turnbull & Asser",
       "qid": "Q1986392",
       "tier": "C",
@@ -5504,7 +5616,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1986392"
     },
     {
-      "rank": 335,
+      "rank": 342,
       "brand": "Thomas Pink",
       "qid": "Q1137991",
       "tier": "C",
@@ -5520,23 +5632,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1137991"
     },
     {
-      "rank": 336,
-      "brand": "Orbea",
-      "qid": "Q1360940",
-      "tier": "C",
-      "interest_index": 164.2,
-      "vgr_mom_pct": 5.3,
-      "aug_rank": 348,
-      "trends_level": 3.31,
-      "search_mom_pct": -20.0,
-      "news_level": 3.94,
-      "news_mom_pct": 5000.0,
-      "wikipedia_pageviews": 4848,
-      "wiki_mom_pct": 46.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q1360940"
-    },
-    {
-      "rank": 337,
+      "rank": 343,
       "brand": "Ed Hardy",
       "qid": "Q3047175",
       "tier": "C",
@@ -5552,23 +5648,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3047175"
     },
     {
-      "rank": 338,
-      "brand": "Rapha",
-      "qid": "Q131445771",
-      "tier": "C",
-      "interest_index": 163.1,
-      "vgr_mom_pct": 19.8,
-      "aug_rank": 405,
-      "trends_level": 26.06,
-      "search_mom_pct": 100.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 1865,
-      "wiki_mom_pct": 22.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q131445771"
-    },
-    {
-      "rank": 339,
+      "rank": 344,
       "brand": "Koton",
       "qid": "Q6063877",
       "tier": "C",
@@ -5584,7 +5664,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6063877"
     },
     {
-      "rank": 340,
+      "rank": 345,
       "brand": "Sunglass Hut",
       "qid": "Q136311",
       "tier": "C",
@@ -5600,7 +5680,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q136311"
     },
     {
-      "rank": 341,
+      "rank": 346,
       "brand": "A.P.C.",
       "qid": "Q546542",
       "tier": "C",
@@ -5616,7 +5696,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q546542"
     },
     {
-      "rank": 342,
+      "rank": 347,
       "brand": "Emporio Armani",
       "qid": "Q3497483",
       "tier": "C",
@@ -5632,7 +5712,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3497483"
     },
     {
-      "rank": 343,
+      "rank": 348,
       "brand": "Sperry Top-Sider",
       "qid": "Q7576421",
       "tier": "C",
@@ -5648,7 +5728,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7576421"
     },
     {
-      "rank": 344,
+      "rank": 349,
       "brand": "Boot Barn",
       "qid": "Q109825187",
       "tier": "C",
@@ -5664,7 +5744,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q109825187"
     },
     {
-      "rank": 345,
+      "rank": 350,
       "brand": "DSQUARED2",
       "qid": "Q2551058",
       "tier": "C",
@@ -5680,7 +5760,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2551058"
     },
     {
-      "rank": 346,
+      "rank": 351,
       "brand": "Lids",
       "qid": "Q19841609",
       "tier": "C",
@@ -5696,7 +5776,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q19841609"
     },
     {
-      "rank": 347,
+      "rank": 352,
       "brand": "Crocker",
       "qid": "Q10461856",
       "tier": "C",
@@ -5712,7 +5792,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q10461856"
     },
     {
-      "rank": 348,
+      "rank": 353,
       "brand": "Herve Leger",
       "qid": "Q4167754",
       "tier": "C",
@@ -5728,7 +5808,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4167754"
     },
     {
-      "rank": 349,
+      "rank": 354,
       "brand": "Big Star",
       "qid": "Q9171569",
       "tier": "C",
@@ -5744,7 +5824,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q9171569"
     },
     {
-      "rank": 350,
+      "rank": 355,
       "brand": "Zadig & Voltaire",
       "qid": "Q3574548",
       "tier": "C",
@@ -5760,7 +5840,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3574548"
     },
     {
-      "rank": 351,
+      "rank": 356,
       "brand": "Gabe's",
       "qid": "Q5515554",
       "tier": "C",
@@ -5776,7 +5856,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5515554"
     },
     {
-      "rank": 352,
+      "rank": 357,
       "brand": "BALR.",
       "qid": "Q25110413",
       "tier": "C",
@@ -5792,7 +5872,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25110413"
     },
     {
-      "rank": 353,
+      "rank": 358,
       "brand": "Gilly Hicks",
       "qid": "Q5562449",
       "tier": "C",
@@ -5808,7 +5888,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5562449"
     },
     {
-      "rank": 354,
+      "rank": 359,
       "brand": "Vilebrequin",
       "qid": "Q3558391",
       "tier": "C",
@@ -5824,7 +5904,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3558391"
     },
     {
-      "rank": 355,
+      "rank": 360,
       "brand": "Ganni",
       "qid": "Q104842926",
       "tier": "C",
@@ -5840,7 +5920,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q104842926"
     },
     {
-      "rank": 356,
+      "rank": 361,
       "brand": "Urban Behavior",
       "qid": "Q7899859",
       "tier": "C",
@@ -5856,7 +5936,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7899859"
     },
     {
-      "rank": 357,
+      "rank": 362,
       "brand": "Johnston & Murphy",
       "qid": "Q6268615",
       "tier": "C",
@@ -5872,7 +5952,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6268615"
     },
     {
-      "rank": 358,
+      "rank": 363,
       "brand": "Sebago",
       "qid": "Q3476844",
       "tier": "C",
@@ -5888,7 +5968,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3476844"
     },
     {
-      "rank": 359,
+      "rank": 364,
       "brand": "LensCrafters",
       "qid": "Q6523209",
       "tier": "C",
@@ -5904,7 +5984,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6523209"
     },
     {
-      "rank": 360,
+      "rank": 365,
       "brand": "Maurices",
       "qid": "Q6793571",
       "tier": "C",
@@ -5920,7 +6000,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6793571"
     },
     {
-      "rank": 361,
+      "rank": 366,
       "brand": "Away",
       "qid": "Q48743138",
       "tier": "C",
@@ -5936,7 +6016,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q48743138"
     },
     {
-      "rank": 362,
+      "rank": 367,
       "brand": "Fuchsia",
       "qid": "Q5506939",
       "tier": "C",
@@ -5952,7 +6032,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5506939"
     },
     {
-      "rank": 363,
+      "rank": 368,
       "brand": "Corneliani",
       "qid": "Q5171196",
       "tier": "C",
@@ -5968,7 +6048,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5171196"
     },
     {
-      "rank": 364,
+      "rank": 369,
       "brand": "Eileen Fisher",
       "qid": "Q5349364",
       "tier": "C",
@@ -5984,23 +6064,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5349364"
     },
     {
-      "rank": 365,
-      "brand": "Polygon Bikes",
-      "qid": "Q19903561",
-      "tier": "C",
-      "interest_index": 154.9,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 357,
-      "trends_level": null,
-      "search_mom_pct": 7.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 1137,
-      "wiki_mom_pct": 4.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q19903561"
-    },
-    {
-      "rank": 366,
+      "rank": 370,
       "brand": "sacai",
       "qid": "Q43080895",
       "tier": "C",
@@ -6016,7 +6080,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q43080895"
     },
     {
-      "rank": 367,
+      "rank": 371,
       "brand": "Buckle",
       "qid": "Q4983306",
       "tier": "C",
@@ -6032,7 +6096,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4983306"
     },
     {
-      "rank": 368,
+      "rank": 372,
       "brand": "Costume National",
       "qid": "Q1136537",
       "tier": "C",
@@ -6048,7 +6112,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1136537"
     },
     {
-      "rank": 369,
+      "rank": 373,
       "brand": "Lindex",
       "qid": "Q1786717",
       "tier": "C",
@@ -6064,7 +6128,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1786717"
     },
     {
-      "rank": 370,
+      "rank": 374,
       "brand": "Gloria Jeans",
       "qid": "Q4139985",
       "tier": "C",
@@ -6080,7 +6144,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4139985"
     },
     {
-      "rank": 371,
+      "rank": 375,
       "brand": "American Vintage",
       "qid": "Q2422884",
       "tier": "C",
@@ -6096,7 +6160,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2422884"
     },
     {
-      "rank": 372,
+      "rank": 376,
       "brand": "Stitch Fix",
       "qid": "Q18385610",
       "tier": "C",
@@ -6112,7 +6176,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q18385610"
     },
     {
-      "rank": 373,
+      "rank": 377,
       "brand": "Kapital",
       "qid": "Q119149859",
       "tier": "C",
@@ -6128,7 +6192,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q119149859"
     },
     {
-      "rank": 374,
+      "rank": 378,
       "brand": "House",
       "qid": "Q9294202",
       "tier": "C",
@@ -6144,7 +6208,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q9294202"
     },
     {
-      "rank": 375,
+      "rank": 379,
       "brand": "Padini",
       "qid": "Q13657207",
       "tier": "C",
@@ -6160,7 +6224,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q13657207"
     },
     {
-      "rank": 376,
+      "rank": 380,
       "brand": "Dorothy Perkins",
       "qid": "Q5298588",
       "tier": "C",
@@ -6176,7 +6240,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5298588"
     },
     {
-      "rank": 377,
+      "rank": 381,
       "brand": "Shoe Carnival",
       "qid": "Q7500007",
       "tier": "C",
@@ -6192,7 +6256,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7500007"
     },
     {
-      "rank": 378,
+      "rank": 382,
       "brand": "Canada Goose",
       "qid": "Q2988422",
       "tier": "C",
@@ -6208,7 +6272,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2988422"
     },
     {
-      "rank": 379,
+      "rank": 383,
       "brand": "Damart",
       "qid": "Q3012602",
       "tier": "C",
@@ -6224,7 +6288,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3012602"
     },
     {
-      "rank": 380,
+      "rank": 384,
       "brand": "Niko and...",
       "qid": "Q11236730",
       "tier": "C",
@@ -6240,7 +6304,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11236730"
     },
     {
-      "rank": 381,
+      "rank": 385,
       "brand": "Bode",
       "qid": "Q107481263",
       "tier": "C",
@@ -6256,7 +6320,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q107481263"
     },
     {
-      "rank": 382,
+      "rank": 386,
       "brand": "Tailored Brands",
       "qid": "Q108739951",
       "tier": "C",
@@ -6272,7 +6336,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q108739951"
     },
     {
-      "rank": 383,
+      "rank": 387,
       "brand": "Roots Canada",
       "qid": "Q7366633",
       "tier": "C",
@@ -6288,7 +6352,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7366633"
     },
     {
-      "rank": 384,
+      "rank": 388,
       "brand": "White House Black Market",
       "qid": "Q7994858",
       "tier": "C",
@@ -6304,7 +6368,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7994858"
     },
     {
-      "rank": 385,
+      "rank": 389,
       "brand": "AllSaints",
       "qid": "Q4728473",
       "tier": "C",
@@ -6320,7 +6384,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4728473"
     },
     {
-      "rank": 386,
+      "rank": 390,
       "brand": "Jessica McClintock",
       "qid": "Q6187356",
       "tier": "C",
@@ -6336,7 +6400,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6187356"
     },
     {
-      "rank": 387,
+      "rank": 391,
       "brand": "Kinney Shoes",
       "qid": "Q6414100",
       "tier": "C",
@@ -6352,7 +6416,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6414100"
     },
     {
-      "rank": 388,
+      "rank": 392,
       "brand": "Gina Tricot",
       "qid": "Q1524904",
       "tier": "C",
@@ -6368,7 +6432,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1524904"
     },
     {
-      "rank": 389,
+      "rank": 393,
       "brand": "Moosejaw",
       "qid": "Q6908680",
       "tier": "C",
@@ -6384,7 +6448,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6908680"
     },
     {
-      "rank": 390,
+      "rank": 394,
       "brand": "Joules",
       "qid": "Q25351738",
       "tier": "C",
@@ -6400,7 +6464,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q25351738"
     },
     {
-      "rank": 391,
+      "rank": 395,
       "brand": "Chantelle",
       "qid": "Q2956351",
       "tier": "C",
@@ -6416,7 +6480,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2956351"
     },
     {
-      "rank": 392,
+      "rank": 396,
       "brand": "Mark's",
       "qid": "Q6766373",
       "tier": "C",
@@ -6432,7 +6496,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6766373"
     },
     {
-      "rank": 393,
+      "rank": 397,
       "brand": "Kapital",
       "qid": "Q11297188",
       "tier": "C",
@@ -6448,7 +6512,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11297188"
     },
     {
-      "rank": 394,
+      "rank": 398,
       "brand": "Coldwater Creek",
       "qid": "Q5142575",
       "tier": "C",
@@ -6464,7 +6528,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5142575"
     },
     {
-      "rank": 395,
+      "rank": 399,
       "brand": "Jay Jays",
       "qid": "Q6166759",
       "tier": "C",
@@ -6480,7 +6544,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6166759"
     },
     {
-      "rank": 396,
+      "rank": 400,
       "brand": "Payless ShoeSource",
       "qid": "Q7156755",
       "tier": "C",
@@ -6496,7 +6560,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7156755"
     },
     {
-      "rank": 397,
+      "rank": 401,
       "brand": "Vivobarefoot",
       "qid": "Q7937938",
       "tier": "C",
@@ -6512,7 +6576,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7937938"
     },
     {
-      "rank": 398,
+      "rank": 402,
       "brand": "Schmid",
       "qid": "Q1719431",
       "tier": "C",
@@ -6528,7 +6592,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1719431"
     },
     {
-      "rank": 399,
+      "rank": 403,
       "brand": "IKKS",
       "qid": "Q3146711",
       "tier": "C",
@@ -6544,7 +6608,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3146711"
     },
     {
-      "rank": 400,
+      "rank": 404,
       "brand": "Bogner",
       "qid": "Q881017",
       "tier": "C",
@@ -6560,7 +6624,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q881017"
     },
     {
-      "rank": 401,
+      "rank": 405,
       "brand": "Bonia",
       "qid": "Q945463",
       "tier": "C",
@@ -6576,7 +6640,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q945463"
     },
     {
-      "rank": 402,
+      "rank": 406,
       "brand": "Beams",
       "qid": "Q4876226",
       "tier": "C",
@@ -6592,7 +6656,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4876226"
     },
     {
-      "rank": 403,
+      "rank": 407,
       "brand": "The Elder Statesman",
       "qid": "Q18636419",
       "tier": "C",
@@ -6608,7 +6672,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q18636419"
     },
     {
-      "rank": 404,
+      "rank": 408,
       "brand": "Tu",
       "qid": "Q115517249",
       "tier": "C",
@@ -6624,7 +6688,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q115517249"
     },
     {
-      "rank": 405,
+      "rank": 409,
       "brand": "Vineyard Vines",
       "qid": "Q7932495",
       "tier": "C",
@@ -6640,7 +6704,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7932495"
     },
     {
-      "rank": 406,
+      "rank": 410,
       "brand": "The Hundreds",
       "qid": "Q7740985",
       "tier": "C",
@@ -6656,7 +6720,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7740985"
     },
     {
-      "rank": 407,
+      "rank": 411,
       "brand": "Outdoor Research",
       "qid": "Q7111938",
       "tier": "C",
@@ -6672,7 +6736,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7111938"
     },
     {
-      "rank": 408,
+      "rank": 412,
       "brand": "Viyella",
       "qid": "Q55097814",
       "tier": "C",
@@ -6688,23 +6752,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q55097814"
     },
     {
-      "rank": 409,
-      "brand": "Quooker",
-      "qid": "Q47545942",
-      "tier": "C",
-      "interest_index": 138.4,
-      "vgr_mom_pct": 0.9,
-      "aug_rank": 402,
-      "trends_level": 12.8,
-      "search_mom_pct": 0.0,
-      "news_level": null,
-      "news_mom_pct": 5000.0,
-      "wikipedia_pageviews": 1148,
-      "wiki_mom_pct": 1.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q47545942"
-    },
-    {
-      "rank": 410,
+      "rank": 413,
       "brand": "Palm Angels",
       "qid": "Q116783961",
       "tier": "C",
@@ -6720,7 +6768,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q116783961"
     },
     {
-      "rank": 411,
+      "rank": 414,
       "brand": "Volt",
       "qid": "Q136502973",
       "tier": "C",
@@ -6736,23 +6784,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q136502973"
     },
     {
-      "rank": 412,
-      "brand": "Çalık Holding",
-      "qid": "Q272361",
-      "tier": "C",
-      "interest_index": 137.3,
-      "vgr_mom_pct": -0.8,
-      "aug_rank": 400,
-      "trends_level": null,
-      "search_mom_pct": 550.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 672,
-      "wiki_mom_pct": -5.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q272361"
-    },
-    {
-      "rank": 413,
+      "rank": 415,
       "brand": "Jeanswest",
       "qid": "Q6172434",
       "tier": "C",
@@ -6768,7 +6800,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6172434"
     },
     {
-      "rank": 414,
+      "rank": 416,
       "brand": "Jigsaw",
       "qid": "Q6192383",
       "tier": "C",
@@ -6784,7 +6816,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6192383"
     },
     {
-      "rank": 415,
+      "rank": 417,
       "brand": "Joe Fresh",
       "qid": "Q6209926",
       "tier": "C",
@@ -6800,7 +6832,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6209926"
     },
     {
-      "rank": 416,
+      "rank": 418,
       "brand": "Gump's",
       "qid": "Q5618229",
       "tier": "C",
@@ -6816,7 +6848,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5618229"
     },
     {
-      "rank": 417,
+      "rank": 419,
       "brand": "Everlane",
       "qid": "Q21410966",
       "tier": "C",
@@ -6832,7 +6864,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q21410966"
     },
     {
-      "rank": 418,
+      "rank": 420,
       "brand": "Lager 157",
       "qid": "Q10553200",
       "tier": "C",
@@ -6848,7 +6880,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q10553200"
     },
     {
-      "rank": 419,
+      "rank": 421,
       "brand": "Gottex",
       "qid": "Q2903774",
       "tier": "C",
@@ -6864,7 +6896,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2903774"
     },
     {
-      "rank": 420,
+      "rank": 422,
       "brand": "Just Over the Top",
       "qid": "Q104890420",
       "tier": "C",
@@ -6880,7 +6912,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q104890420"
     },
     {
-      "rank": 421,
+      "rank": 423,
       "brand": "Frame",
       "qid": "Q85761879",
       "tier": "C",
@@ -6896,7 +6928,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q85761879"
     },
     {
-      "rank": 422,
+      "rank": 424,
       "brand": "James Perse",
       "qid": "Q125230974",
       "tier": "C",
@@ -6912,7 +6944,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q125230974"
     },
     {
-      "rank": 423,
+      "rank": 425,
       "brand": "Sarenza",
       "qid": "Q3473599",
       "tier": "C",
@@ -6928,7 +6960,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3473599"
     },
     {
-      "rank": 424,
+      "rank": 426,
       "brand": "Tailored Brands",
       "qid": "Q3305660",
       "tier": "C",
@@ -6944,7 +6976,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3305660"
     },
     {
-      "rank": 425,
+      "rank": 427,
       "brand": "Dressmann",
       "qid": "Q3357081",
       "tier": "C",
@@ -6960,7 +6992,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3357081"
     },
     {
-      "rank": 426,
+      "rank": 428,
       "brand": "Sweaty Betty",
       "qid": "Q7654224",
       "tier": "C",
@@ -6976,7 +7008,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7654224"
     },
     {
-      "rank": 427,
+      "rank": 429,
       "brand": "J Brand",
       "qid": "Q16850757",
       "tier": "C",
@@ -6992,7 +7024,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q16850757"
     },
     {
-      "rank": 428,
+      "rank": 430,
       "brand": "Burton",
       "qid": "Q5000795",
       "tier": "C",
@@ -7008,7 +7040,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5000795"
     },
     {
-      "rank": 429,
+      "rank": 431,
       "brand": "PINKO",
       "qid": "Q3905226",
       "tier": "C",
@@ -7024,7 +7056,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3905226"
     },
     {
-      "rank": 430,
+      "rank": 432,
       "brand": "SSENSE",
       "qid": "Q48814393",
       "tier": "C",
@@ -7040,23 +7072,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q48814393"
     },
     {
-      "rank": 431,
-      "brand": "GHOST-Bikes",
-      "qid": "Q86327186",
-      "tier": "C",
-      "interest_index": 124.4,
-      "vgr_mom_pct": -0.9,
-      "aug_rank": 427,
-      "trends_level": null,
-      "search_mom_pct": 0.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 828,
-      "wiki_mom_pct": 218.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q86327186"
-    },
-    {
-      "rank": 432,
+      "rank": 433,
       "brand": "Wood Wood",
       "qid": "Q22032349",
       "tier": "C",
@@ -7072,7 +7088,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q22032349"
     },
     {
-      "rank": 433,
+      "rank": 434,
       "brand": "OWNDAYS",
       "qid": "Q11293025",
       "tier": "C",
@@ -7088,7 +7104,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11293025"
     },
     {
-      "rank": 434,
+      "rank": 435,
       "brand": "Ardène",
       "qid": "Q2860764",
       "tier": "C",
@@ -7104,7 +7120,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2860764"
     },
     {
-      "rank": 435,
+      "rank": 436,
       "brand": "Seraphine",
       "qid": "Q20714032",
       "tier": "C",
@@ -7120,7 +7136,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q20714032"
     },
     {
-      "rank": 436,
+      "rank": 437,
       "brand": "Bonds",
       "qid": "Q4941440",
       "tier": "C",
@@ -7136,7 +7152,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4941440"
     },
     {
-      "rank": 437,
+      "rank": 438,
       "brand": "Khaadi",
       "qid": "Q22031750",
       "tier": "C",
@@ -7152,7 +7168,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q22031750"
     },
     {
-      "rank": 438,
+      "rank": 439,
       "brand": "Falguni Shane Peacock",
       "qid": "Q115799492",
       "tier": "C",
@@ -7168,7 +7184,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q115799492"
     },
     {
-      "rank": 439,
+      "rank": 440,
       "brand": "Women'secret",
       "qid": "Q16648226",
       "tier": "C",
@@ -7184,7 +7200,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q16648226"
     },
     {
-      "rank": 440,
+      "rank": 441,
       "brand": "Orchestra",
       "qid": "Q28042940",
       "tier": "C",
@@ -7200,7 +7216,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q28042940"
     },
     {
-      "rank": 441,
+      "rank": 442,
       "brand": "Rack Room Shoes",
       "qid": "Q17109937",
       "tier": "C",
@@ -7216,7 +7232,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q17109937"
     },
     {
-      "rank": 442,
+      "rank": 443,
       "brand": "Boutique La Vie en rose",
       "qid": "Q4950452",
       "tier": "C",
@@ -7232,7 +7248,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4950452"
     },
     {
-      "rank": 443,
+      "rank": 444,
       "brand": "Terminal X",
       "qid": "Q115310947",
       "tier": "C",
@@ -7248,7 +7264,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q115310947"
     },
     {
-      "rank": 444,
+      "rank": 445,
       "brand": "Chiemsee",
       "qid": "Q1072452",
       "tier": "C",
@@ -7264,7 +7280,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q1072452"
     },
     {
-      "rank": 445,
+      "rank": 446,
       "brand": "X-Large",
       "qid": "Q8041451",
       "tier": "C",
@@ -7280,7 +7296,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q8041451"
     },
     {
-      "rank": 446,
+      "rank": 447,
       "brand": "Number (N)ine",
       "qid": "Q107394070",
       "tier": "C",
@@ -7296,7 +7312,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q107394070"
     },
     {
-      "rank": 447,
+      "rank": 448,
       "brand": "Sunski",
       "qid": "Q28401216",
       "tier": "C",
@@ -7312,7 +7328,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q28401216"
     },
     {
-      "rank": 448,
+      "rank": 449,
       "brand": "KappAhl",
       "qid": "Q4349016",
       "tier": "C",
@@ -7328,7 +7344,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4349016"
     },
     {
-      "rank": 449,
+      "rank": 450,
       "brand": "Rag & Bone",
       "qid": "Q7282768",
       "tier": "C",
@@ -7344,7 +7360,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7282768"
     },
     {
-      "rank": 450,
+      "rank": 451,
       "brand": "F. Engel",
       "qid": "Q119056161",
       "tier": "C",
@@ -7360,7 +7376,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q119056161"
     },
     {
-      "rank": 451,
+      "rank": 452,
       "brand": "Jacob",
       "qid": "Q3157513",
       "tier": "C",
@@ -7376,7 +7392,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3157513"
     },
     {
-      "rank": 452,
+      "rank": 453,
       "brand": "Francesca's",
       "qid": "Q72982331",
       "tier": "C",
@@ -7392,7 +7408,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q72982331"
     },
     {
-      "rank": 453,
+      "rank": 454,
       "brand": "IRFE",
       "qid": "Q15263093",
       "tier": "C",
@@ -7408,7 +7424,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q15263093"
     },
     {
-      "rank": 454,
+      "rank": 455,
       "brand": "Lorna Jane",
       "qid": "Q28857986",
       "tier": "C",
@@ -7424,7 +7440,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q28857986"
     },
     {
-      "rank": 455,
+      "rank": 456,
       "brand": "USC",
       "qid": "Q7866331",
       "tier": "C",
@@ -7440,7 +7456,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7866331"
     },
     {
-      "rank": 456,
+      "rank": 457,
       "brand": "Apple Bottoms",
       "qid": "Q4781133",
       "tier": "C",
@@ -7456,7 +7472,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q4781133"
     },
     {
-      "rank": 457,
+      "rank": 458,
       "brand": "Dolls Kill",
       "qid": "Q18636520",
       "tier": "C",
@@ -7472,7 +7488,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q18636520"
     },
     {
-      "rank": 458,
+      "rank": 459,
       "brand": "Target Optical",
       "qid": "Q19903688",
       "tier": "C",
@@ -7488,7 +7504,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q19903688"
     },
     {
-      "rank": 459,
+      "rank": 460,
       "brand": "Just Jeans",
       "qid": "Q6316068",
       "tier": "C",
@@ -7504,7 +7520,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q6316068"
     },
     {
-      "rank": 460,
+      "rank": 461,
       "brand": "Best Company",
       "qid": "Q55205917",
       "tier": "C",
@@ -7520,7 +7536,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q55205917"
     },
     {
-      "rank": 461,
+      "rank": 462,
       "brand": "IC Group",
       "qid": "Q5392021",
       "tier": "C",
@@ -7536,7 +7552,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5392021"
     },
     {
-      "rank": 462,
+      "rank": 463,
       "brand": "Max Mara",
       "qid": "Q110225120",
       "tier": "C",
@@ -7552,7 +7568,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q110225120"
     },
     {
-      "rank": 463,
+      "rank": 464,
       "brand": "Sleeper",
       "qid": "Q109906064",
       "tier": "C",
@@ -7568,7 +7584,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q109906064"
     },
     {
-      "rank": 464,
+      "rank": 465,
       "brand": "Carlings",
       "qid": "Q10443115",
       "tier": "C",
@@ -7584,7 +7600,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q10443115"
     },
     {
-      "rank": 465,
+      "rank": 466,
       "brand": "2(x)ist",
       "qid": "Q307894",
       "tier": "C",
@@ -7600,7 +7616,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q307894"
     },
     {
-      "rank": 466,
+      "rank": 467,
       "brand": "Anine Bing",
       "qid": "Q111283880",
       "tier": "C",
@@ -7616,7 +7632,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q111283880"
     },
     {
-      "rank": 467,
+      "rank": 468,
       "brand": "Calvin Klein Collection",
       "qid": "Q5024439",
       "tier": "C",
@@ -7632,7 +7648,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5024439"
     },
     {
-      "rank": 468,
+      "rank": 469,
       "brand": "Robert Graham",
       "qid": "Q18390679",
       "tier": "C",
@@ -7648,7 +7664,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q18390679"
     },
     {
-      "rank": 469,
+      "rank": 470,
       "brand": "Sézane",
       "qid": "Q86682767",
       "tier": "C",
@@ -7664,7 +7680,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q86682767"
     },
     {
-      "rank": 470,
+      "rank": 471,
       "brand": "Tezenis",
       "qid": "Q28056374",
       "tier": "C",
@@ -7680,7 +7696,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q28056374"
     },
     {
-      "rank": 471,
+      "rank": 472,
       "brand": "C. Wonder",
       "qid": "Q16985816",
       "tier": "C",
@@ -7696,7 +7712,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q16985816"
     },
     {
-      "rank": 472,
+      "rank": 473,
       "brand": "Swear",
       "qid": "Q11072650",
       "tier": "C",
@@ -7712,7 +7728,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11072650"
     },
     {
-      "rank": 473,
+      "rank": 474,
       "brand": "Sessions",
       "qid": "Q7456144",
       "tier": "C",
@@ -7728,7 +7744,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7456144"
     },
     {
-      "rank": 474,
+      "rank": 475,
       "brand": "Assem",
       "qid": "Q130705749",
       "tier": "C",
@@ -7744,7 +7760,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q130705749"
     },
     {
-      "rank": 475,
+      "rank": 476,
       "brand": "Oleana",
       "qid": "Q11993725",
       "tier": "C",
@@ -7760,7 +7776,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q11993725"
     },
     {
-      "rank": 476,
+      "rank": 477,
       "brand": "Volcano",
       "qid": "Q115804691",
       "tier": "C",
@@ -7776,7 +7792,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q115804691"
     },
     {
-      "rank": 477,
+      "rank": 478,
       "brand": "EXR",
       "qid": "Q5324709",
       "tier": "C",
@@ -7792,7 +7808,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5324709"
     },
     {
-      "rank": 478,
+      "rank": 479,
       "brand": "Matix",
       "qid": "Q3299151",
       "tier": "C",
@@ -7808,7 +7824,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q3299151"
     },
     {
-      "rank": 479,
+      "rank": 480,
       "brand": "Barefoot",
       "qid": "Q20987378",
       "tier": "C",
@@ -7824,7 +7840,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q20987378"
     },
     {
-      "rank": 480,
+      "rank": 481,
       "brand": "Kaporal",
       "qid": "Q125660181",
       "tier": "C",
@@ -7840,7 +7856,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q125660181"
     },
     {
-      "rank": 481,
+      "rank": 482,
       "brand": "Piping Hot",
       "qid": "Q7197417",
       "tier": "C",
@@ -7856,7 +7872,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7197417"
     },
     {
-      "rank": 482,
+      "rank": 483,
       "brand": "The Attico",
       "qid": "Q125995969",
       "tier": "C",
@@ -7872,7 +7888,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q125995969"
     },
     {
-      "rank": 483,
+      "rank": 484,
       "brand": "Shukr",
       "qid": "Q138486466",
       "tier": "C",
@@ -7888,7 +7904,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q138486466"
     },
     {
-      "rank": 484,
+      "rank": 485,
       "brand": "Sirri",
       "qid": "Q2290173",
       "tier": "C",
@@ -7904,7 +7920,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q2290173"
     },
     {
-      "rank": 485,
+      "rank": 486,
       "brand": "Soffe",
       "qid": "Q7553581",
       "tier": "C",
@@ -7920,7 +7936,7 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q7553581"
     },
     {
-      "rank": 486,
+      "rank": 487,
       "brand": "Australian",
       "qid": "Q2872152",
       "tier": "C",
@@ -7934,22 +7950,6 @@
       "wikipedia_pageviews": 74,
       "wiki_mom_pct": -26.0,
       "wikidata_url": "https://www.wikidata.org/wiki/Q2872152"
-    },
-    {
-      "rank": 487,
-      "brand": "Super Champion",
-      "qid": "Q7642242",
-      "tier": "C",
-      "interest_index": 48.1,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 485,
-      "trends_level": null,
-      "search_mom_pct": 0.0,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": 81,
-      "wiki_mom_pct": 1.0,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q7642242"
     },
     {
       "rank": 488,
@@ -8017,38 +8017,22 @@
     },
     {
       "rank": 492,
-      "brand": "Beer",
-      "qid": "Q64852777",
+      "brand": "Ladies",
+      "qid": "Q125191429",
       "tier": "C",
       "interest_index": 19.9,
       "vgr_mom_pct": 0.0,
-      "aug_rank": 492,
+      "aug_rank": 500,
       "trends_level": null,
       "search_mom_pct": null,
       "news_level": null,
-      "news_mom_pct": 0.0,
+      "news_mom_pct": null,
       "wikipedia_pageviews": null,
       "wiki_mom_pct": null,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q64852777"
+      "wikidata_url": "https://www.wikidata.org/wiki/Q125191429"
     },
     {
       "rank": 493,
-      "brand": "Dorko",
-      "qid": "Q140069588",
-      "tier": "C",
-      "interest_index": 19.9,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 493,
-      "trends_level": null,
-      "search_mom_pct": null,
-      "news_level": null,
-      "news_mom_pct": 0.0,
-      "wikipedia_pageviews": null,
-      "wiki_mom_pct": null,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q140069588"
-    },
-    {
-      "rank": 494,
       "brand": "VILA",
       "qid": "Q12340378",
       "tier": "C",
@@ -8064,20 +8048,36 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q12340378"
     },
     {
-      "rank": 495,
-      "brand": "Nalini",
-      "qid": "Q3401000",
+      "rank": 494,
+      "brand": "Fix",
+      "qid": "Q125705303",
       "tier": "C",
       "interest_index": 19.9,
       "vgr_mom_pct": 0.0,
-      "aug_rank": 495,
+      "aug_rank": 499,
       "trends_level": null,
-      "search_mom_pct": 5000.0,
+      "search_mom_pct": null,
       "news_level": null,
       "news_mom_pct": 0.0,
       "wikipedia_pageviews": null,
       "wiki_mom_pct": null,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q3401000"
+      "wikidata_url": "https://www.wikidata.org/wiki/Q125705303"
+    },
+    {
+      "rank": 495,
+      "brand": "Moose Knuckles",
+      "qid": "Q131673087",
+      "tier": "C",
+      "interest_index": 19.9,
+      "vgr_mom_pct": 0.0,
+      "aug_rank": 498,
+      "trends_level": null,
+      "search_mom_pct": 5000.0,
+      "news_level": null,
+      "news_mom_pct": 5000.0,
+      "wikipedia_pageviews": null,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q131673087"
     },
     {
       "rank": 496,
@@ -8097,6 +8097,22 @@
     },
     {
       "rank": 497,
+      "brand": "Dorko",
+      "qid": "Q140069588",
+      "tier": "C",
+      "interest_index": 19.9,
+      "vgr_mom_pct": 0.0,
+      "aug_rank": 493,
+      "trends_level": null,
+      "search_mom_pct": null,
+      "news_level": null,
+      "news_mom_pct": 0.0,
+      "wikipedia_pageviews": null,
+      "wiki_mom_pct": null,
+      "wikidata_url": "https://www.wikidata.org/wiki/Q140069588"
+    },
+    {
+      "rank": 498,
       "brand": "Cotton On",
       "qid": "Q5175717",
       "tier": "C",
@@ -8112,52 +8128,36 @@
       "wikidata_url": "https://www.wikidata.org/wiki/Q5175717"
     },
     {
-      "rank": 498,
-      "brand": "Moose Knuckles",
-      "qid": "Q131673087",
-      "tier": "C",
-      "interest_index": 19.9,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 498,
-      "trends_level": null,
-      "search_mom_pct": 5000.0,
-      "news_level": null,
-      "news_mom_pct": 5000.0,
-      "wikipedia_pageviews": null,
-      "wiki_mom_pct": null,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q131673087"
-    },
-    {
       "rank": 499,
-      "brand": "Fix",
-      "qid": "Q125705303",
+      "brand": "Beer",
+      "qid": "Q64852777",
       "tier": "C",
       "interest_index": 19.9,
       "vgr_mom_pct": 0.0,
-      "aug_rank": 499,
+      "aug_rank": 492,
       "trends_level": null,
       "search_mom_pct": null,
       "news_level": null,
       "news_mom_pct": 0.0,
       "wikipedia_pageviews": null,
       "wiki_mom_pct": null,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q125705303"
+      "wikidata_url": "https://www.wikidata.org/wiki/Q64852777"
     },
     {
       "rank": 500,
-      "brand": "Ladies",
-      "qid": "Q125191429",
+      "brand": "Nude Project",
+      "qid": "Q124984211",
       "tier": "C",
-      "interest_index": 19.9,
-      "vgr_mom_pct": 0.0,
-      "aug_rank": 500,
+      "interest_index": 0.0,
+      "vgr_mom_pct": null,
+      "aug_rank": null,
       "trends_level": null,
       "search_mom_pct": null,
       "news_level": null,
       "news_mom_pct": null,
-      "wikipedia_pageviews": null,
+      "wikipedia_pageviews": 0,
       "wiki_mom_pct": null,
-      "wikidata_url": "https://www.wikidata.org/wiki/Q125191429"
+      "wikidata_url": "https://www.wikidata.org/wiki/Q124984211"
     }
   ]
 }
