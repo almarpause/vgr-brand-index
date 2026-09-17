@@ -145,7 +145,7 @@
 
 ## Website publishing infrastructure (2026-09-09) — replicates VGR 40
 
-Goal: get the 500-brand Brand Index onto the VGR website the same way VGR 40 is
+Goal: get the 500-brand Brand Score onto the VGR website the same way VGR 40 is
 published (GitHub Pages + a GitHub Action, embedded in Lovable via iframe or a
 React component that reads a JSON feed).
 
@@ -153,7 +153,7 @@ React component that reads a JSON feed).
 `push.bat`, `dashboard.py`, `.github/workflows/refresh-index.yml`. VGR 40 repo:
 `github.com/almarpause/vgr-fashion50.git`. Its Action re-pulls Yahoo live daily.
 
-**Key difference:** the Brand Index's inputs (pytrends web+news, Wikipedia
+**Key difference:** the Brand Score's inputs (pytrends web+news, Wikipedia
 pageviews) are rate-limited and collected LOCALLY, so the cloud Action does NOT
 re-collect. It deterministically re-renders the site from the committed
 `refresh_500/*.csv`. Refresh flow = re-run local collection → commit new CSVs →
@@ -167,7 +167,7 @@ push → Action republishes.
   aug_rank, trends/news levels, per-source mom%, wikipedia pageviews, wikidata_url;
   plus tiers, top20, movers). Reads index_500_refreshed.csv + gtrends_news_500.csv
   + aug_vgr_reconstructed.csv + dashboard_template.html + logo asset.
-- `.github/workflows/refresh-index.yml` — "Refresh VGR Brand Index": on push to
+- `.github/workflows/refresh-index.yml` — "Refresh VGR Brand Score": on push to
   main/master + weekly Mon 06:00 UTC + manual dispatch. pip install
   requirements-web.txt → python dashboard.py → assemble site/ (index.html +
   brand_index_data.json) → upload-pages-artifact@v3 → deploy-pages@v4.

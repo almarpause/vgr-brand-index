@@ -1,4 +1,4 @@
-# VGR Brand Index — Handoff / State of the World
+# VGR Brand Score — Handoff / State of the World
 
 A single-file reconstruction of the whole project so work can resume after a
 context clear. Location: `C:\Users\aresi\Claude\code\brand-index` (local git

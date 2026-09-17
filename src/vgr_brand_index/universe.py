@@ -1,4 +1,4 @@
-"""Build the VGR Brand Index universe from Wikidata.
+"""Build the VGR Brand Score universe from Wikidata.
 
 Instead of a hand-typed brand list (which would risk inventing brands or wrong
 Q-IDs), the universe is *queried* from Wikidata: every candidate arrives with a

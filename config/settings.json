@@ -3,7 +3,7 @@
   "top_n": 500,
   "shard_count": 28,
   "do_trends": true,
-  "subject_prefix": "VGR Brand Index",
+  "subject_prefix": "VGR Brand Score",
   "smtp_ini": "../parser/russia/zara/config/email.ini",
   "_notes": "recipients = who the monthly report goes to. top_n = brands published. shard_count = nights to spread the fetch over. smtp_ini = reused from the Zara parser (git-ignored, never in this repo); relative to project root. SMTP can also come from VBI_SMTP_* or ZARA_SMTP_* env vars, which override the ini."
 }

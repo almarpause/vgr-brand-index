@@ -1,7 +1,7 @@
-name: Refresh VGR Brand Index
+name: Refresh VGR Brand Score
 
 # Rebuilds the dashboard + data feed from the committed collection and publishes
-# them to GitHub Pages. Unlike VGR 40, the Brand Index's data collection (Google
+# them to GitHub Pages. Unlike VGR 40, the Brand Score's data collection (Google
 # Trends / News via pytrends, Wikipedia pageviews) is rate-limited and run locally
 # — so this job does NOT re-collect data. It deterministically regenerates the site
 # from the CSVs in refresh_500/ that you commit. To refresh the numbers: run the

@@ -1,4 +1,4 @@
-# VGR Brand Index — 60-brand seed list, four tiers of 15.
+# VGR Brand Score — 60-brand seed list, four tiers of 15.
 #
 # Each entry is either a plain brand name (string) or a mapping with:
 #   name      : display name used everywhere downstream (required)

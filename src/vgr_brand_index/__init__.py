@@ -1,4 +1,4 @@
-"""VGR Brand Index — a fashion-brand attention tracker built from free,
+"""VGR Brand Score — a fashion-brand attention tracker built from free,
 retroactive public sources (Wikipedia pageviews, GDELT, Google Trends).
 
 Every brand is keyed on a Wikidata Q-ID. See resolve.py for Phase 1.

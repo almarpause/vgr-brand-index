@@ -19,7 +19,7 @@ DEFAULTS = {
     "top_n": 500,
     "shard_count": 28,
     "do_trends": True,
-    "subject_prefix": "VGR Brand Index",
+    "subject_prefix": "VGR Brand Score",
     "smtp_ini": "",
 }
 

@@ -45,7 +45,7 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     month = args.month
 
-    print(f"=== VGR Brand Index — monthly assemble {month} ===")
+    print(f"=== VGR Brand Score — monthly assemble {month} ===")
     top = assemble(month)
     counts = top["tier"].value_counts().reindex(["A", "B", "C"]).fillna(0).astype(int)
     print(f"  kept {len(top)} brands (groups dropped) — A={counts['A']} B={counts['B']} C={counts['C']}")

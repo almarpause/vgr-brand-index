@@ -14,7 +14,7 @@ if not exist "%PY%" (
   popd & exit /b 9
 )
 
-echo [task] %DATE% %TIME% VGR Brand Index overnight fetch>>"%LOG%"
+echo [task] %DATE% %TIME% VGR Brand Score overnight fetch>>"%LOG%"
 "%PY%" -m vgr_brand_index.overnight_fetch %* 1>>"%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 >>"%LOG%" echo [task] finished rc=%RC%

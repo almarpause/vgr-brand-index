@@ -1,0 +1,18 @@
+cooldown 600s before first live call...
+=== WEB ===
+    429/again (batch failed after 3 retries: The reques); wait 95s
+    429/again (batch failed after 3 retries: The reques); wait 190s
+    429/again (batch failed after 3 retries: The reques); wait 278s
+    429/again (batch failed after 3 retries: The reques); wait 362s
+Traceback (most recent call last):
+  File "C:\Users\aresi\Claude\code\brand-index\refresh_500\collect_new_trends.py", line 112, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\aresi\Claude\code\brand-index\refresh_500\collect_new_trends.py", line 82, in main
+    web_adi = bridged(web, names, BRIDGE_MID, 1)
+  File "C:\Users\aresi\Claude\code\brand-index\refresh_500\collect_new_trends.py", line 61, in bridged
+    means, was_cached = fetch_patient(client, toks)
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\aresi\Claude\code\brand-index\refresh_500\collect_new_trends.py", line 53, in fetch_patient
+    raise TrendsUnavailable("gave up after patient retries")
+vgr_brand_index.trends.TrendsUnavailable: gave up after patient retries

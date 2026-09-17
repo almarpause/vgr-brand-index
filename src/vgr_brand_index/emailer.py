@@ -71,7 +71,7 @@ def render(top: pd.DataFrame, d: Deltas, prefix: str) -> tuple[str, str, str]:
       <p style="font-family:Arial;font-size:12px;color:#5A6A7A">Full report attached (.docx).
       Sources: Wikipedia, GDELT, Google Trends, Wikidata. Not investment advice.</p>
     </div>"""
-    text = (f"VGR Brand Index — {ml}\n{lead['brand']} leads at {lead['interest_index']:.0f} "
+    text = (f"VGR Brand Score — {ml}\n{lead['brand']} leads at {lead['interest_index']:.0f} "
             f"(top-5=100). See attached report.")
     return subject, text, html
 
@@ -86,7 +86,7 @@ def send_report(docx_path: Path, top: pd.DataFrame, d: Deltas) -> int:
     if missing:
         print(f"    [email] missing SMTP settings: {missing}"); return 1
 
-    subject, text, html = render(top, d, cfg.get("subject_prefix", "VGR Brand Index"))
+    subject, text, html = render(top, d, cfg.get("subject_prefix", "VGR Brand Score"))
     msg = MIMEMultipart("mixed")
     msg["Subject"] = subject
     msg["From"] = smtp["from"]

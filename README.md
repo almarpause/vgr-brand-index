@@ -1,4 +1,4 @@
-# VGR Brand Index — data pipeline
+# VGR Brand Score — data pipeline
 
 A fashion-brand *attention* tracker: ranks the top **500** brands on a single
 interest scale, tiers them **A / B / C**, refreshes on a **monthly cadence**, and

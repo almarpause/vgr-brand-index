@@ -1,4 +1,4 @@
-"""Wikidata entity resolution for the VGR Brand Index.
+"""Wikidata entity resolution for the VGR Brand Score.
 
 Every brand is keyed on its Wikidata Q-ID, never on an article title — titles
 change silently, Q-IDs don't. One Q-ID resolves to the correct article in every

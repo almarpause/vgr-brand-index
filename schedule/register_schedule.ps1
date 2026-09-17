@@ -1,4 +1,4 @@
-# Register the VGR Brand Index with Windows Task Scheduler — two jobs, both at
+# Register the VGR Brand Score with Windows Task Scheduler — two jobs, both at
 # night, mirroring the polyamide-index pattern:
 #
 #   VBI-FetchNightly : every day at 02:30 — fetches one staggered shard of brand

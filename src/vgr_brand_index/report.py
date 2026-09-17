@@ -1,4 +1,4 @@
-"""Build the monthly VGR Brand Index report (.docx).
+"""Build the monthly VGR Brand Score report (.docx).
 
 Renders the Economist-navy Word document with the vendored `economist_navy`
 engine and an economist-chart-style figure. The executive summary is composed
@@ -74,7 +74,7 @@ def build_chart(top: pd.DataFrame, deltas: Deltas, out_png: Path) -> Path:
         lead = top.head(12).iloc[::-1]
         labels = lead["brand"].tolist()
         values = lead["interest_index"].tolist()
-        headline = f"{top.iloc[0]['brand']} leads the VGR Brand Index"
+        headline = f"{top.iloc[0]['brand']} leads the VGR Brand Score"
         subtitle = f"Interest index, top-5 average = 100, {month_label(deltas.month)}"
         unit = "interest index"
 
@@ -102,7 +102,7 @@ def build_chart(top: pd.DataFrame, deltas: Deltas, out_png: Path) -> Path:
     fig.add_artist(plt.Line2D([0.045, 0.16], [0.955, 0.955], color=RED, lw=3.2))
     fig.text(0.045, 0.90, headline, fontsize=13.5, fontweight="bold", family=SERIF, color=INK, va="top")
     fig.text(0.045, 0.845, subtitle, fontsize=9.0, family=SANS, color=DARK, va="top")
-    fig.text(0.045, 0.03, f"VGR Brand Index · {unit} · source: Wikipedia, GDELT, Google Trends",
+    fig.text(0.045, 0.03, f"VGR Brand Score · {unit} · source: Wikipedia, GDELT, Google Trends",
              fontsize=7.4, family=SANS, color=STEEL, va="bottom")
 
     out_png.parent.mkdir(parents=True, exist_ok=True)
@@ -122,7 +122,7 @@ def compose_summary(top: pd.DataFrame, deltas: Deltas) -> tuple[str, list[str], 
     if not deltas.has_prior:
         ruling = f"{lead['brand']} opens the index at {lead['interest_index']:.0f}."
         p1 = (
-            f"{lead['brand']} sits at the top of the {len(top)} brands the VGR Brand Index tracks, "
+            f"{lead['brand']} sits at the top of the {len(top)} brands the VGR Brand Score tracks, "
             f"at {lead['interest_index']:.0f} on a scale where the top five brands average 100. "
             f"{top.iloc[1]['brand']} follows at {top.iloc[1]['interest_index']:.0f} and "
             f"{top.iloc[2]['brand']} at {top.iloc[2]['interest_index']:.0f}."
@@ -197,7 +197,7 @@ def build_report(top: pd.DataFrame, deltas: Deltas, out_path: Path,
     if LOGO.exists():
         en.figure(doc, str(LOGO), width_in=0.6, space_after=4)
     en.cover_masthead(doc, "VGR · BRAND INDEX")
-    en.h1(doc, "The VGR Brand Index", deck=f"Attention across {len(top)} fashion brands — {ml}")
+    en.h1(doc, "The VGR Brand Score", deck=f"Attention across {len(top)} fashion brands — {ml}")
     en.source_line(doc, f"Monthly shot · {ml} · top-5 average = 100")
     en.stripe_band(doc)
     en.h2(doc, ruling)
@@ -251,7 +251,7 @@ def build_report(top: pd.DataFrame, deltas: Deltas, out_path: Path,
             "available for each brand. No figure is estimated — a source with no value for a brand "
             "is simply not counted.")
     en.colophon(doc, [
-        ("VGR | Very Good Retail — Brand Index", "label"),
+        ("VGR | Very Good Retail — Brand Score", "label"),
         (f"Monthly shot: {deltas.month}. Prior: {deltas.prev_month or 'none (baseline)'}.", "text"),
         ("Free public sources; every figure traceable to a source and a fetch timestamp.", "text"),
     ])
